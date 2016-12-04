@@ -61,6 +61,8 @@
       - { name: firefox }
       - { name: flux }
       - { name: google-chrome }
+      - { name: google-japanese-ime }
+      - { name: google-cloud-sdk }
       - { name: iterm2 }
       - { name: intellij-idea }
       - { name: java }
