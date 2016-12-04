@@ -121,6 +121,14 @@
     #  with_items: cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
     - name: caskパッケージをインストール
       homebrew_cask: name=alfred state=present
+    - name: caskパッケージをインストール
+      homebrew_cask: name=google-chrome state=present
+    - name: caskパッケージをインストール
+      homebrew_cask: name=karabiner state=present
+    - name: caskパッケージをインストール
+      homebrew_cask: name=iterm2 state=present
+    - name: caskパッケージをインストール
+      homebrew_cask: name=slack state=present
 
     # Ricty
     - name: xquartz のインストール (for Ricty)
