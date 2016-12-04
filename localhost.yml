@@ -119,8 +119,8 @@
     #- name: cask パッケージの情報を保存
     #  shell: brew cask info {{ item }} > cask_info/{{ item }}
     #  with_items: cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
-    - name: cask
-      homebrew_cask: name=alfred state=present install_options="appdir=/Applications"
+    - name: caskパッケージをインストール
+      homebrew_cask: name=alfred state=present
 
     # Ricty
     - name: xquartz のインストール (for Ricty)
