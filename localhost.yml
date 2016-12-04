@@ -9,10 +9,12 @@
       - railwaycat/emacsmacport
       - sanemat/font
     homebrew_packages:
+      - { name: ansible }
+      - { name: awscli }
+      - { name: heroku-toolbelt }
       - { name: openssl }
       - { name: openssl, state: linked, install_options: force }
       - { name: python }
-      - { name: ansible }
       - { name: coreutils }
       - { name: git }
       - { name: zsh, install_options: disable-etcdir }
