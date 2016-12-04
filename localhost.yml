@@ -57,29 +57,37 @@
       - { name: gibo }
       - { name: source-highlight }
     homebrew_cask_packages:
-      - { name: emacs-mac }
-      - { name: iterm2 }
-      - { name: firefox }
-      - { name: google-chrome }
       - { name: adobe-reader }
+      - { name: alfred }
+      - { name: appcleaner }
+      - { name: apptivate }
+      - { name: atom }
+      - { name: bartender }
+      - { name: caffeine }
+      - { name: dash }
+      - { name: dropbox }
+      - { name: firefox }
+      - { name: flux }
+      - { name: google-chrome }
+      - { name: iterm2 }
+      - { name: intellij-idea }
       - { name: java }
+      - { name: karabiner }
+      - { name: kindle }
+      - { name: moom }
+      - { name: microsoft-office }
+      - { name: phpstorm }
+      - { name: pomodone }
+      - { name: pophub }
+      - { name: rescuetime }
       - { name: skype }
       - { name: slack }
       - { name: sourcetree }
-      - { name: gitx }
-      - { name: karabiner }
-      - { name: seil }
-      - { name: flux }
-      - { name: dash }
+      - { name: sequel-pro }
       - { name: skitch }
-      - { name: seashore }
-      - { name: atom }
-      - { name: kobito }
-      - { name: webstorm }
-      - { name: phpstorm }
-      - { name: intellij-idea }
       - { name: vagrant }
       - { name: virtualbox }
+      - { name: webstorm }
 
   tasks:
     #- name: homebrew の tap リポジトリを追加
@@ -110,10 +118,10 @@
     ## cask
     #- name: homebrew-cask のインストール
     #  homebrew: name=brew-cask state=latest
-    #- name: cask パッケージをインストール
-    #  homebrew_cask: name={{ item.name }} state={{ item.state|default('installed') }}
-    #  with_items: homebrew_cask_packages
-    #  register: cask_result
+    - name: cask パッケージをインストール
+      homebrew_cask: name={{ item.name }} state={{ item.state|default('installed') }}
+      with_items: "{{ homebrew_cask_packages }}"
+      register: cask_result
     #- name: cask パッケージの情報保存先ディレクトリを作成
     #  file: path=cask_info state=directory
     #- name: cask パッケージの情報を保存
