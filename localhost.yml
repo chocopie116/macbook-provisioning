@@ -90,9 +90,9 @@
       - { name: webstorm }
 
   tasks:
-    #- name: homebrew の tap リポジトリを追加
-    #  homebrew_tap: tap={{ item }} state=present
-    #  with_items: homebrew_taps
+    - name: homebrew の tap リポジトリを追加
+      homebrew_tap: tap={{ item }} state=present
+      with_items: '{{ homebrew_taps }}'
 
     - name: homebrew をアップデート
       homebrew: update_homebrew=yes
@@ -120,7 +120,7 @@
     #  homebrew: name=brew-cask state=latest
     - name: cask パッケージをインストール
       homebrew_cask: name={{ item.name }} state={{ item.state|default('installed') }}
-      with_items: "{{ homebrew_cask_packages }}"
+      with_items: '{{ homebrew_cask_packages }}'
       register: cask_result
     - name: cask パッケージの情報保存先ディレクトリを作成
       file: path=cask_info state=directory
