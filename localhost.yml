@@ -1,7 +1,6 @@
 - hosts: localhost
   connection: local
   gather_facts: no           
-  become: yes
   vars:
     homebrew_taps:
       - homebrew/binary
@@ -120,19 +119,21 @@
     #- name: cask パッケージの情報を保存
     #  shell: brew cask info {{ item }} > cask_info/{{ item }}
     #  with_items: cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
+    - name: cask
+      homebrew_cask: name=alfred state=present install_options="appdir=/Applications"
 
     # Ricty
     - name: xquartz のインストール (for Ricty)
       homebrew_cask: name=xquartz
     - name: fontforge のインストール (for Ricty)
       homebrew: name=fontforge
-    - name: Ricty のインストール
-      homebrew: name=ricty
-    - name: 生成されたフォントファイルをコピー
-      shell: cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/
-      args:
-        creates: ~/Library/Fonts/Ricty-Bold.ttf
-      notify: run fc-cache
+    #- name: Ricty のインストール
+    #  homebrew: name=ricty
+    #- name: 生成されたフォントファイルをコピー
+    #  shell: cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/
+    #  args:
+    #    creates: ~/Library/Fonts/Ricty-Bold.ttf
+    #  notify: run fc-cache
 
   handlers:
     - name: run fc-cache
