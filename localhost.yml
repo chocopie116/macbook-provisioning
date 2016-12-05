@@ -28,6 +28,7 @@
       - { name: tree }
       - { name: lv }
       - { name: nkf }
+      - { name: node }
       - { name: jq }
       - { name: go }
       - { name: direnv }
