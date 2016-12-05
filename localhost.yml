@@ -38,6 +38,7 @@
       - { name: rbenv }
       - { name: ruby-build }
       - { name: mysql }
+      - { name: mcrypt }
       - { name: sqlite }
       - { name: redis }
       - { name: imagemagick }
@@ -49,6 +50,7 @@
       - { name: autojump }
       - { name: gibo }
       - { name: source-highlight }
+      - { name: the_silver_searcher }
       - { name: vim }
     homebrew_cask_packages:
       - { name: adobe-reader }
@@ -73,6 +75,7 @@
       - { name: java }
       - { name: karabiner }
       - { name: kindle }
+      - { name: macdown }
       - { name: moom }
       - { name: microsoft-office }
       - { name: phpstorm }
