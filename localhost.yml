@@ -30,6 +30,7 @@
       - { name: lv }
       - { name: nkf }
       - { name: node }
+      - { name: nvm }
       - { name: jq }
       - { name: go }
       - { name: direnv }
@@ -136,9 +137,9 @@
       homebrew_cask: name=xquartz
     - name: fontforge のインストール (for Ricty)
       homebrew: name=fontforge
-      #- name: Ricty のインストール
-      #- homebrew: name=ricty
-    - #- name: 生成されたフォントファイルをコピー
+    #- name: Ricty のインストール
+    # homebrew: name=ricty
+    #- name: 生成されたフォントファイルをコピー
       #- shell: cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/
       #- args:
       #-   creates: ~/Library/Fonts/Ricty-Bold.ttf
