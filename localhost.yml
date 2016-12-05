@@ -11,6 +11,7 @@
     homebrew_packages:
       - { name: ansible }
       - { name: awscli }
+      - { name: doxygen }
       - { name: heroku-toolbelt }
       - { name: openssl }
       - { name: openssl, state: linked, install_options: force }
@@ -135,13 +136,13 @@
       homebrew_cask: name=xquartz
     - name: fontforge のインストール (for Ricty)
       homebrew: name=fontforge
-    #- name: Ricty のインストール
-    #  homebrew: name=ricty
-    #- name: 生成されたフォントファイルをコピー
-    #  shell: cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/
-    #  args:
-    #    creates: ~/Library/Fonts/Ricty-Bold.ttf
-    #  notify: run fc-cache
+      #- name: Ricty のインストール
+      #- homebrew: name=ricty
+    - #- name: 生成されたフォントファイルをコピー
+      #- shell: cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/
+      #- args:
+      #-   creates: ~/Library/Fonts/Ricty-Bold.ttf
+      #- notify: run fc-cache
 
   handlers:
     - name: run fc-cache
