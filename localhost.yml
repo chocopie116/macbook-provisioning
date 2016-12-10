@@ -63,6 +63,8 @@
       - { name: atom }
       - { name: bartender }
       - { name: caffeine }
+      - { name: clipy }
+      - { name: coteditor }
       - { name: cmd-eikana }
       - { name: cyberduck }
       - { name: dash }
@@ -72,12 +74,14 @@
       - { name: google-chrome }
       - { name: google-japanese-ime }
       - { name: google-cloud-sdk }
+      - { name: hyperswitch }
       - { name: iterm2 }
       - { name: intellij-idea }
       - { name: java }
       - { name: karabiner }
       - { name: kindle }
       - { name: macdown }
+      - { name: mplayerx }
       - { name: moom }
       - { name: microsoft-office }
       - { name: phpstorm }
