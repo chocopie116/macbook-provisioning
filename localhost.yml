@@ -120,7 +120,6 @@
     - name: homebrew をアップデート
       homebrew: update_homebrew=yes
 
-    # brew
     - name: brew パッケージをインストール
       homebrew: >
         name={{ item.name }}
@@ -138,7 +137,6 @@
       shell: brew info {{ item }} > brew_info/{{ item }}
       with_items: brew_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
 
-    # cask
     - name: cask パッケージをインストール
       homebrew_cask: name={{ item.name }} state={{ item.state|default('installed') }}
       with_items: '{{ homebrew_cask_packages }}'
