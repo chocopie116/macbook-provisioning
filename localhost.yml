@@ -8,6 +8,7 @@
       - caskroom/cask
       - railwaycat/emacsmacport
       - sanemat/font
+      - argon/mas
     homebrew_packages:
       - { name: ansible }
       - { name: awscli }
@@ -54,10 +55,12 @@
       - { name: source-highlight }
       - { name: the_silver_searcher }
       - { name: vim }
+      - { name: mas }
     homebrew_cask_packages:
       - { name: adobe-reader }
       - { name: adobe-photoshop-cc }
       - { name: alfred }
+      - { name: alternote }
       - { name: appcleaner }
       - { name: apptivate }
       - { name: atom }
@@ -121,9 +124,9 @@
       register: brew_result
     - name: brew パッケージの情報保存先ディレクトリを作成
       file: path=brew_info state=directory
-    #- name: brew パッケージの情報を保存
-    #  shell: brew info {{ item }} > brew_info/{{ item }}
-    #  with_items: brew_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
+    - name: brew パッケージの情報を保存
+      shell: brew info {{ item }} > brew_info/{{ item }}
+      with_items: brew_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
 
     # cask
     - name: cask パッケージをインストール
@@ -132,9 +135,12 @@
       register: cask_result
     - name: cask パッケージの情報保存先ディレクトリを作成
       file: path=cask_info state=directory
-    #- name: cask パッケージの情報を保存
-    #  shell: brew cask info {{ item }} > cask_info/{{ item }}
-    #  with_items: cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
+    - name: cask パッケージの情報を保存
+      shell: brew cask info {{ item }} > cask_info/{{ item }}
+      with_items: cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
+
+    #- name: App Storeのアプリをinstall
+
 
     # Ricty
     - name: xquartz のインストール (for Ricty)
@@ -142,7 +148,7 @@
     - name: fontforge のインストール (for Ricty)
       homebrew: name=fontforge
     #- name: Ricty のインストール
-    # homebrew: name=ricty
+      #- homebrew: name=ricty
     #- name: 生成されたフォントファイルをコピー
       #- shell: cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/
       #- args:
