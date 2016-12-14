@@ -56,6 +56,15 @@
       - { name: the_silver_searcher }
       - { name: vim }
       - { name: mas }
+    mas_packages:
+      # idはapp storeのアプリID
+      - { name: deckset, id: 847496013 }
+      - { name: pocket , id: 568494494 }
+      - { name: reeder , id: 880001334 }
+      - { name: moom , id: 419330170}
+      - { name: tweetdeck, id: 485812721 }
+      - { name: 1password, id: 443987910 }
+      - { name: free-memory-pro, id: 460931672 }
     homebrew_cask_packages:
       - { name: adobe-reader }
       - { name: adobe-photoshop-cc }
@@ -139,8 +148,10 @@
       shell: brew cask info {{ item }} > cask_info/{{ item }}
       with_items: cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
 
-    #- name: App Storeのアプリをinstall
-
+    - name: App Storeのアプリをinstall
+      command: mas install {{ item.id }}
+      with_items: '{{ mas_packages }}'
+      when: APP_STORE_ISNTALL == 'true'
 
     # Ricty
     - name: xquartz のインストール (for Ricty)
