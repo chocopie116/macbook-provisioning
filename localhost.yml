@@ -65,6 +65,7 @@
       - { name: tweetdeck, id: 485812721 }
       - { name: 1password, id: 443987910 }
       - { name: free-memory-pro, id: 460931672 }
+      - { name: x-code, id: 497799835 }
     homebrew_cask_packages:
       - { name: adobe-reader }
       - { name: adobe-photoshop-cc }
