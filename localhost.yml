@@ -5,6 +5,7 @@
     homebrew_taps:
       - homebrew/binary
       - homebrew/dupes
+      - homebrew/php
       - caskroom/cask
       - railwaycat/emacsmacport
       - sanemat/font
@@ -41,7 +42,7 @@
       - { name: rbenv }
       - { name: ruby-build }
       - { name: mysql }
-      - { name: mcrypt }
+      - { name: php56-mcrypt }
       - { name: sqlite }
       - { name: redis }
       - { name: imagemagick }
