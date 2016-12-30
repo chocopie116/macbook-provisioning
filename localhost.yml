@@ -101,7 +101,6 @@
       - { name: phpstorm }
       - { name: pomodone }
       - { name: pophub }
-      - { name: pocketcast }
       - { name: rescuetime }
       - { name: skype }
       - { name: slack }
