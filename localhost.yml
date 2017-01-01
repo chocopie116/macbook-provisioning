@@ -57,6 +57,8 @@
       - { name: the_silver_searcher }
       - { name: vim }
       - { name: mas }
+      - { name: yarn }
+      - { name: glide }
     mas_packages:
       # idはapp storeのアプリID
       - { name: deckset, id: 847496013 }
