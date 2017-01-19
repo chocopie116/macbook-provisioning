@@ -44,6 +44,7 @@
       - { name: ruby-build }
       - { name: mysql }
       - { name: php56-mcrypt }
+      - { name: python3 }
       - { name: sqlite }
       - { name: redis }
       - { name: imagemagick }
@@ -60,6 +61,7 @@
       - { name: mas }
       - { name: yarn }
       - { name: glide }
+      - { name: watch }
     mas_packages:
       # idはapp storeのアプリID
       - { name: deckset, id: 847496013 }
