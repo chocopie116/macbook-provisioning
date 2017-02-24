@@ -13,9 +13,7 @@
     homebrew_packages:
       - { name: ansible }
       - { name: awscli }
-      - { name: doxygen }
       - { name: heroku-toolbelt }
-      - { name: openssl }
       - { name: openssl, state: linked, install_options: force }
       - { name: python }
       - { name: coreutils }
@@ -39,16 +37,8 @@
       - { name: direnv }
       - { name: peco }
       - { name: hub }
-      - { name: tig }
-      - { name: rbenv }
-      - { name: ruby-build }
-      - { name: mysql }
-      - { name: php56-mcrypt }
-      - { name: python3 }
-      - { name: sqlite }
       - { name: redis }
-      - { name: imagemagick }
-      - { name: packer }
+      - { name: tig }
       - { name: socat }
       - { name: tmux }
       - { name: reattach-to-user-namespace }
@@ -102,15 +92,12 @@
       - { name: kindle }
       - { name: macdown }
       - { name: mplayerx }
-      - { name: moom }
       - { name: microsoft-office }
       - { name: phpstorm }
       - { name: pomodone }
       - { name: pophub }
       - { name: rescuetime }
-      - { name: skype }
       - { name: slack }
-      - { name: sourcetree }
       - { name: sequel-pro }
       - { name: skitch }
       - { name: the-unarchiver }
