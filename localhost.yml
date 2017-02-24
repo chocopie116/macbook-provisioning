@@ -44,6 +44,7 @@
       - { name: ruby-build }
       - { name: mysql }
       - { name: php56-mcrypt }
+      - { name: python3 }
       - { name: sqlite }
       - { name: redis }
       - { name: imagemagick }
@@ -60,6 +61,7 @@
       - { name: mas }
       - { name: yarn }
       - { name: glide }
+      - { name: watch }
     mas_packages:
       # idはapp storeのアプリID
       - { name: deckset, id: 847496013 }
@@ -83,7 +85,6 @@
       - { name: caffeine }
       - { name: clipy }
       - { name: coteditor }
-      - { name: cmd-eikana }
       - { name: cyberduck }
       - { name: dash }
       - { name: dropbox }
@@ -97,7 +98,7 @@
       - { name: iterm2 }
       - { name: intellij-idea }
       - { name: java }
-      - { name: karabiner }
+      - { name: karabiner-elements }
       - { name: kindle }
       - { name: macdown }
       - { name: mplayerx }
