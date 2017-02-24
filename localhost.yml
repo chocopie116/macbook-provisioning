@@ -85,7 +85,6 @@
       - { name: caffeine }
       - { name: clipy }
       - { name: coteditor }
-      - { name: cmd-eikana }
       - { name: cyberduck }
       - { name: dash }
       - { name: dropbox }
@@ -99,7 +98,7 @@
       - { name: iterm2 }
       - { name: intellij-idea }
       - { name: java }
-      - { name: karabiner }
+      - { name: karabiner-elements }
       - { name: kindle }
       - { name: macdown }
       - { name: mplayerx }
