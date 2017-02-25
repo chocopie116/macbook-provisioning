@@ -6,4 +6,4 @@ install:
        -e 'APP_STORE_ISNTALL=$(APP_STORE_INSTALL)'
 link:
 	mkdir -p ~/.config/karabiner
-	ln -sF templates/karabiner.json ~/.config/karabiner/karabiner.json
+	ln -sF $(PWD)/templates/karabiner.json ~/.config/karabiner/karabiner.json
