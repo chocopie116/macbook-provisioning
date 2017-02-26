@@ -88,7 +88,6 @@
       - { name: iterm2 }
       - { name: intellij-idea }
       - { name: java }
-      - { name: karabiner-elements }
       - { name: kindle }
       - { name: macdown }
       - { name: mplayerx }
