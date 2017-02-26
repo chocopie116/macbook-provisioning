@@ -1,7 +1,7 @@
 {
     "global": {
         "check_for_updates_on_startup": true,
-        "show_in_menu_bar": true,
+        "show_in_menu_bar": false,
         "show_profile_name_in_menu_bar": false
     },
     "profiles": [
@@ -38,8 +38,8 @@
                 "caps_lock": "left_control"
             },
             "standalone_keys": {
-                "left_control": "caps_lock",
                 "left_command": "japanese_eisuu",
+                "left_control": "caps_lock",
                 "right_command": "japanese_kana"
             },
             "virtual_hid_keyboard": {
