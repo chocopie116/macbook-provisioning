@@ -29,6 +29,8 @@
       - { name: ctags }
       - { name: tree }
       - { name: lv }
+      - { name: libmemcached }
+      - { name: mysql }
       - { name: nkf }
       - { name: node }
       - { name: nvm }
