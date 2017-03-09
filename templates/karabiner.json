@@ -39,7 +39,6 @@
             },
             "standalone_keys": {
                 "left_command": "japanese_eisuu",
-                "left_control": "caps_lock",
                 "right_command": "japanese_kana"
             },
             "virtual_hid_keyboard": {
