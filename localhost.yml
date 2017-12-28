@@ -12,7 +12,6 @@
       - argon/mas
     homebrew_packages:
       - { name: ansible }
-      - { name: awscli }
       - { name: heroku-toolbelt }
       - { name: openssl, state: linked, install_options: force }
       - { name: python }
@@ -66,7 +65,6 @@
       - { name: x-code, id: 497799835 }
     homebrew_cask_packages:
       - { name: adobe-reader }
-      - { name: adobe-photoshop-cc }
       - { name: amazon-music }
       - { name: alfred }
       - { name: alternote }
@@ -84,14 +82,12 @@
       - { name: flux }
       - { name: google-chrome }
       - { name: google-japanese-ime }
-      - { name: google-cloud-sdk }
       - { name: gyazo }
       - { name: hyperswitch }
       - { name: iterm2 }
       - { name: intellij-idea }
       - { name: java }
       - { name: kindle }
-      - { name: macdown }
       - { name: mplayerx }
       - { name: microsoft-office }
       - { name: phpstorm }
