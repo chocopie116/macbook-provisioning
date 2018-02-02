@@ -81,8 +81,6 @@
       - { name: sequel-pro }
       - { name: skitch }
       - { name: the-unarchiver }
-      - { name: vagrant }
-      - { name: virtualbox }
       - { name: webstorm }
 
   tasks:
