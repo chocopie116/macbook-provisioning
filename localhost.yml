@@ -5,7 +5,6 @@
     homebrew_taps:
       - homebrew/binary
       - homebrew/dupes
-      - homebrew/php
       - caskroom/cask
       - railwaycat/emacsmacport
       - sanemat/font
