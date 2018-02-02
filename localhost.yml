@@ -17,7 +17,6 @@
       - { name: coreutils }
       - { name: docker-compose }
       - { name: git }
-      - { name: zsh, install_options: disable-etcdir }
       - { name: wget }
       - { name: curl }
       - { name: cmake }
