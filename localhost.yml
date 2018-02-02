@@ -47,7 +47,6 @@
       - { name: reeder , id: 880001334 }
       - { name: moom , id: 419330170}
       - { name: tweetdeck, id: 485812721 }
-      - { name: 1password, id: 443987910 }
       - { name: free-memory-pro, id: 460931672 }
       - { name: x-code, id: 497799835 }
     homebrew_cask_packages:
@@ -61,13 +60,10 @@
       - { name: clipy }
       - { name: cyberduck }
       - { name: dash }
-      - { name: dropbox }
       - { name: firefox }
-      - { name: google-chrome }
       - { name: google-japanese-ime }
       - { name: gyazo }
       - { name: hyperswitch }
-      - { name: iterm2 }
       - { name: intellij-idea }
       - { name: java }
       - { name: kindle }

@@ -1,19 +1,12 @@
 # macbook-provisioning
-
+dropbox, chrome, 1password, iterm
 ## how to use
 ```
-cd ~/
-mkdir workspaces
-cd workspaces
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-echo export PATH='/usr/local/bin:$PATH' >> ~/.bash_profile
-source ~/.bashrc
-brew doctor
-brew install git
 brew install ansible
 git@github.com:chocopie116/macbook-provisioning.git
 cd macbook-provisioning
-make install
+make install APP_STORE_INSTALL=true
 ```
 ## 参考
 http://t-wada.hatenablog.jp/entry/mac-provisioning-by-ansible
