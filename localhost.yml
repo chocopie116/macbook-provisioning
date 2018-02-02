@@ -33,19 +33,15 @@
       - { name: nvm }
       - { name: jq }
       - { name: go }
-      - { name: direnv }
-      - { name: peco }
       - { name: hub }
       - { name: redis }
       - { name: tig }
-      - { name: tmux }
       - { name: autojump }
       - { name: gibo }
       - { name: source-highlight }
       - { name: the_silver_searcher }
       - { name: vim }
       - { name: mas }
-      - { name: glide }
     mas_packages:
       # idはapp storeのアプリID
       - { name: deckset, id: 847496013 }
@@ -56,9 +52,7 @@
       - { name: free-memory-pro, id: 460931672 }
       - { name: x-code, id: 497799835 }
     homebrew_cask_packages:
-      - { name: adobe-reader }
       - { name: amazon-music }
-      - { name: alfred }
       - { name: alternote }
       - { name: appcleaner }
       - { name: apptivate }
