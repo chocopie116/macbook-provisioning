@@ -11,7 +11,6 @@
       - sanemat/font
       - argon/mas
     homebrew_packages:
-      - { name: ansible }
       - { name: heroku-toolbelt }
       - { name: openssl, state: linked, install_options: force }
       - { name: python }
@@ -28,7 +27,6 @@
       - { name: ctags }
       - { name: tree }
       - { name: lv }
-      - { name: libmemcached }
       - { name: mysql }
       - { name: nkf }
       - { name: node }
@@ -40,23 +38,17 @@
       - { name: hub }
       - { name: redis }
       - { name: tig }
-      - { name: socat }
       - { name: tmux }
-      - { name: reattach-to-user-namespace }
-      - { name: phantomjs }
       - { name: autojump }
       - { name: gibo }
       - { name: source-highlight }
       - { name: the_silver_searcher }
       - { name: vim }
       - { name: mas }
-      - { name: yarn }
       - { name: glide }
-      - { name: watch }
     mas_packages:
       # idはapp storeのアプリID
       - { name: deckset, id: 847496013 }
-      - { name: pocket , id: 568494494 }
       - { name: reeder , id: 880001334 }
       - { name: moom , id: 419330170}
       - { name: tweetdeck, id: 485812721 }
@@ -74,12 +66,10 @@
       - { name: bartender }
       - { name: caffeine }
       - { name: clipy }
-      - { name: coteditor }
       - { name: cyberduck }
       - { name: dash }
       - { name: dropbox }
       - { name: firefox }
-      - { name: flux }
       - { name: google-chrome }
       - { name: google-japanese-ime }
       - { name: gyazo }
@@ -92,7 +82,6 @@
       - { name: microsoft-office }
       - { name: phpstorm }
       - { name: pomodone }
-      - { name: pophub }
       - { name: rescuetime }
       - { name: slack }
       - { name: sequel-pro }
