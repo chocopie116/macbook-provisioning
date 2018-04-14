@@ -25,7 +25,6 @@
       - { name: lv }
       - { name: mysql }
       - { name: nkf }
-      - { name: nvm }
       - { name: jq }
       - { name: go }
       - { name: hub }
