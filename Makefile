@@ -34,3 +34,8 @@ neobundle:
 #http://efcl.info/2015/02/01/github-open-pullrequest/
 git-browse-remote:
 	gem install $@
+
+
+dotfiles:
+	git clone git@github.com:chocopie116/dotfiles.git
+	make -C ./dotfiles
