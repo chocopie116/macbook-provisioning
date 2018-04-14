@@ -8,8 +8,8 @@ link:
 	mkdir -p ~/.config/karabiner
 	ln -sF $(PWD)/templates/karabiner.json ~/.config/karabiner/karabiner.json
 
-awsclil:
-	curl -kL https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
+awscli:
+	curl -kL  https://bootstrap.pypa.io/get-pip.py | python
 	sudo pip install awscli --upgrade --ignore-installed six
 
 gcloudcli:
