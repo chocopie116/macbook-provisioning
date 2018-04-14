@@ -41,6 +41,7 @@
     mas_packages:
       # idはapp storeのアプリID
       - { name: deckset, id: 847496013 }
+      - { name: moom , id: 419330170}
       - { name: reeder , id: 880001334 }
       - { name: tweetdeck, id: 485812721 }
       - { name: free-memory-pro, id: 460931672 }
@@ -63,7 +64,6 @@
       - { name: java }
       - { name: kindle }
       - { name: karabiner-elements }
-      - { name: moom }
       - { name: phpstorm }
       - { name: pomodone }
       - { name: pycharm }
