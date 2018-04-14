@@ -55,6 +55,7 @@
       - { name: clipy }
       - { name: dash }
       - { name: deckset }
+      - { name: docker }
       - { name: firefox }
       - { name: google-japanese-ime }
       - { name: gyazo }
