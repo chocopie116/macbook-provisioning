@@ -30,11 +30,14 @@
       - { name: go }
       - { name: hub }
       - { name: redis }
+      - { name: rbenv }
+      - { name: ruby-build }
       - { name: tig }
       - { name: autojump }
       - { name: the_silver_searcher }
       - { name: vim }
       - { name: mas }
+      - { name: zsh }
     mas_packages:
       # idはapp storeのアプリID
       - { name: deckset, id: 847496013 }
@@ -63,13 +66,14 @@
       - { name: moom }
       - { name: phpstorm }
       - { name: pomodone }
+      - { name: pycharm }
       - { name: rescuetime }
+      - { name: rubymine }
       - { name: slack }
       - { name: sequel-pro }
       - { name: skitch }
       - { name: the-unarchiver }
       - { name: visual-studio-code }
-      - { name: webstorm }
 
   tasks:
     - name: homebrew の tap リポジトリを追加
