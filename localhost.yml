@@ -3,8 +3,6 @@
   gather_facts: no
   vars:
     homebrew_taps:
-      - homebrew/binary
-      - homebrew/dupes
       - caskroom/cask
       - railwaycat/emacsmacport
       - sanemat/font
@@ -27,38 +25,36 @@
       - { name: lv }
       - { name: mysql }
       - { name: nkf }
-      - { name: node }
       - { name: nvm }
       - { name: jq }
       - { name: go }
       - { name: hub }
       - { name: redis }
+      - { name: rbenv }
+      - { name: ruby-build }
       - { name: tig }
       - { name: autojump }
-      - { name: gibo }
-      - { name: source-highlight }
       - { name: the_silver_searcher }
       - { name: vim }
       - { name: mas }
+      - { name: zsh }
     mas_packages:
       # idはapp storeのアプリID
       - { name: deckset, id: 847496013 }
-      - { name: reeder , id: 880001334 }
       - { name: moom , id: 419330170}
+      - { name: reeder , id: 880001334 }
       - { name: tweetdeck, id: 485812721 }
       - { name: free-memory-pro, id: 460931672 }
-      - { name: x-code, id: 497799835 }
     homebrew_cask_packages:
-      - { name: amazon-music }
+      - { name: alfred }
       - { name: alternote }
       - { name: appcleaner }
       - { name: apptivate }
       - { name: atom }
       - { name: bartender }
-      - { name: caffeine }
       - { name: clipy }
-      - { name: cyberduck }
       - { name: dash }
+      - { name: deckset }
       - { name: firefox }
       - { name: google-japanese-ime }
       - { name: gyazo }
@@ -66,16 +62,17 @@
       - { name: intellij-idea }
       - { name: java }
       - { name: kindle }
-      - { name: mplayerx }
-      - { name: microsoft-office }
+      - { name: karabiner-elements }
       - { name: phpstorm }
       - { name: pomodone }
+      - { name: pycharm }
       - { name: rescuetime }
+      - { name: rubymine }
       - { name: slack }
       - { name: sequel-pro }
       - { name: skitch }
       - { name: the-unarchiver }
-      - { name: webstorm }
+      - { name: visual-studio-code }
 
   tasks:
     - name: homebrew の tap リポジトリを追加
