@@ -45,7 +45,6 @@
       - { name: reeder , id: 880001334 }
       - { name: tweetdeck, id: 485812721 }
       - { name: free-memory-pro, id: 460931672 }
-      - { name: x-code, id: 497799835 }
     homebrew_cask_packages:
       - { name: alfred }
       - { name: alternote }
