@@ -62,7 +62,6 @@
       - { name: gyazo }
       - { name: hyperswitch }
       - { name: intellij-idea }
-      - { name: jetbrains-toolbox }
       - { name: java }
       - { name: kindle }
       - { name: karabiner-elements }
