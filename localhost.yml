@@ -62,6 +62,7 @@
       - { name: gyazo }
       - { name: hyperswitch }
       - { name: intellij-idea }
+      - { name: jetbrains-toolbox }
       - { name: java }
       - { name: kindle }
       - { name: karabiner-elements }
@@ -73,8 +74,10 @@
       - { name: slack }
       - { name: sequel-pro }
       - { name: skitch }
+      - { name: sketch }
       - { name: the-unarchiver }
       - { name: visual-studio-code }
+      - { name: window-switch }
 
   tasks:
     - name: homebrew の tap リポジトリを追加
