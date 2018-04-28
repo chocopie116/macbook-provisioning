@@ -73,6 +73,7 @@
       - { name: slack }
       - { name: sequel-pro }
       - { name: skitch }
+      - { name: sketch }
       - { name: the-unarchiver }
       - { name: visual-studio-code }
 
