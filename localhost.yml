@@ -76,7 +76,6 @@
       - { name: sketch }
       - { name: the-unarchiver }
       - { name: visual-studio-code }
-      - { name: window-switch }
 
   tasks:
     - name: homebrew の tap リポジトリを追加
