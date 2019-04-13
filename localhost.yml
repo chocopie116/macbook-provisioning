@@ -7,8 +7,9 @@
       - railwaycat/emacsmacport
       - sanemat/font
       - argon/mas
+      - heroku/brew
     homebrew_packages:
-      - { name: heroku-toolbelt }
+      - { name: heroku }
       - { name: openssl, state: linked, install_options: force }
       - { name: python }
       - { name: coreutils }
