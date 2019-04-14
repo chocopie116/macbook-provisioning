@@ -1,11 +1,14 @@
 # macbook-provisioning
-dropbox, chrome, 1password, iterm
+chrome, 1password, iterm
+
 ## how to use
+install xcode, homebrew, ansible
+
 ```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install ansible
-git@github.com:chocopie116/macbook-provisioning.git
-cd macbook-provisioning
+$ xcode-select --install
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew install ansible
+
 make install APP_STORE_INSTALL=true
 ```
 ## 参考
