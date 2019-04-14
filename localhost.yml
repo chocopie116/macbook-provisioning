@@ -58,6 +58,7 @@
       - { name: atom }
       - { name: bartender }
       - { name: clipy }
+
       - { name: dash }
       - { name: deckset }
       - { name: docker }
@@ -68,6 +69,7 @@
       - { name: java }
       - { name: kindle }
       - { name: karabiner-elements }
+      - { name: licecap  }
       - { name: pomodone }
       - { name: rescuetime }
       - { name: slack }
