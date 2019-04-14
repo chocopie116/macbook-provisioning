@@ -71,6 +71,7 @@
       - { name: karabiner-elements }
       - { name: licecap  }
       - { name: pomodone }
+      - { name: quik }
       - { name: rescuetime }
       - { name: slack }
       - { name: sequel-pro }
