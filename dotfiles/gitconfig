@@ -1,0 +1,54 @@
+[user]
+  name = chocopie116
+  email = chocopie116@gmail.com
+
+[core]
+  editor = vim
+  quotepath = false
+  excludesfile = ~/.gitignore_global
+
+[color]
+  ui = auto
+
+[push]
+  # push only the current branch
+  default = tracking
+
+[alias]
+  co = checkout
+  ci = commit -v
+  st = status
+  d = diff
+  dc = diff --cached
+  initialize = commit --allow-empty -m 'Initial commit'
+  init = commit --allow-empty -m 'Initial commit'
+  empty = commit --allow-empty
+  lg = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
+  l = log --graph --date=short --pretty='format:[%<(18,trunc)%ci%x08%x08] %C(yellow)%h%Cblue%d%Creset %s %C(green)%an %Creset'
+  ll = log
+  ld = log -p
+  sb = show-branch -a
+  br = branch
+  f = fetch --prune
+  s = status --short --branch
+  st = status
+  p = push
+  pr = pull-request
+  see = browse
+  see-pr = browse-remote --pr
+  showpr = !"f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
+  openpr = "!f() { hub browse -- `git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1 | cut -f5 -d' ' | sed -e 's%#%pull/%'`; }; f"
+
+
+[filter "media"]
+  clean = git media clean %f
+  smudge = git media smudge %f
+  required = true
+
+[ghq]
+  root = ~/.go/src
+
+[include]
+  #最後に読み込んで.localの設定でoverwriteできるようにした
+  path = .gitconfig.local
+

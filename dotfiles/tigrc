@@ -1,0 +1,17 @@
+set line-graphics = utf-8       # グラフ描画時の種別
+set tab-size = 8                # TAB 文字の表示幅
+set ignore-space = all          # 空白無視
+set split-view-width = 75%      # 垂直分割時の比率
+
+# main画面で Gを押すとGitHubの該当commitのページをブラウザで開く
+bind main G !@hub browse -- commit/%(commit)
+# diff画面で Gを押すとGitHubの該当commitのページをブラウザで開く
+bind diff G !@hub browse -- commit/%(commit)
+
+# main viewの左端にコミットIDを表示する
+set main-view = id date author commit-title:graph=yes,refs=yes
+# デフォルト
+#set main-view = date author commit-title:graph=yes,refs=yes
+
+# ステータスビューで V 押下すると、差分表示モードでコミットログ入力画面を開く
+bind status V !git commit -v

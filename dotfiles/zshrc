@@ -1,0 +1,172 @@
+# -------------------------------------
+# 環境変数
+# -------------------------------------
+export LANG=ja_JP.UTF-8
+export EDITOR=vim
+
+# ls 時の色を設定する
+export CLICOLOR=true
+export LSCOLORS='exfxcxdxbxGxDxabagacad'
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg=36;40;07:tw=32;40;07:ow=33;40;07:'
+
+
+# -------------------------------------
+# zsh plugin
+# -------------------------------------
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug 'zsh-users/zsh-completions', use:'src/_*', lazy:true
+zplug "mafredri/zsh-async", on:sindresorhus/pure # https://github.com/zplug/zplug2/issues/13
+zplug "sindresorhus/pure", use:pure.zsh # simple prompt design https://github.com/sindresorhus/pure
+zplug "b4b4r07/enhancd", use:init.sh # https://github.com/b4b4r07/enhancd
+zplug "zsh-users/zsh-syntax-highlighting" # https://github.com/zsh-users/zsh-syntax-highlighting
+zplug "mollifier/cd-gitroot" # https://github.com/mollifier/cd-gitroot
+
+if ! zplug check --verbose; then
+  printf 'Install? [y/N]: '
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+
+zplug load
+
+# -------------------------------------
+# zshのオプション
+# -------------------------------------
+autoload -Uz compinit && compinit -u # コマンドのオプションや引数を補完する
+autoload -Uz add-zsh-hook # フック機能を有効にする
+autoload -Uz url-quote-magic # URLをエスケープする
+autoload -Uz vcs_info # VCS情報の表示を有効にする
+zle -N self-insert url-quote-magic # 文字入力時にURLをエスケープする
+
+setopt auto_list # 補完候補を一覧で表示する
+setopt auto_menu # 補完キー連打で候補順に自動で補完する
+setopt print_eight_bit # 日本語ファイル名を表示可能にする
+
+# ビープを無効
+setopt no_beep
+setopt no_hist_beep
+setopt no_list_beep
+setopt rm_star_wait # rm * の前に確認をとる
+setopt print_exit_value # 終了ステータスが0以外の場合にステータスを表示する
+setopt notify # バックグラウンド処理の状態変化をすぐに通知する
+setopt interactive_comments # '#' 以降をコメントとして扱う
+
+# ヒストリの設定
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+setopt share_history        # Zsh間で履歴を共有する
+setopt hist_ignore_dups     # 直前と同じコマンドをヒストリに追加しない
+setopt hist_ignore_all_dups # 重複をヒストリに追加しない
+setopt hist_ignore_space    # スペースから始まるコマンド行はヒストリに残さない
+setopt hist_reduce_blanks   # ヒストリに保存するときに余分なスペースを削除する
+
+# -------------------------------------
+# zshの補完
+# -------------------------------------
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' use-cache true
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*:default' menu select=2
+zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
+zstyle ':completion:*:options' description 'yes'
+
+# -------------------------------------
+# パス
+# -------------------------------------
+# 重複する要素を自動的に削除
+typeset -U path cdpath fpath manpath
+
+path=(
+    $HOME/bin(N-/)
+    /usr/local/bin(N-/)
+    /usr/local/sbin(N-/)
+    $path
+)
+
+# -------------------------------------
+# golang
+# -------------------------------------
+if [ -x "`which go`" ]; then
+    # http://blog.kentarok.org/entry/2014/06/03/135300
+    export GOPATH=$HOME/.go
+    export PATH=$PATH:$GOPATH/bin
+fi
+
+# -------------------------------------
+# go-tools
+# -------------------------------------
+_ENHANCD_FILTER=peco;export _ENHANCD_FILTER #surpress error
+function peco_select_history() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(\history -n 1 | \
+        eval $tac | \
+        peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+}
+zle -N peco_select_history
+
+function peco_src() {
+  local src_dir=$(ghq list --full-path | peco --query "$LBUFFER")
+  if [ -n "$src_dir" ]; then
+      BUFFER="cd $src_dir"
+      zle accept-line
+  fi
+  # zle clean-screen
+  zle -R -c               # refresh
+}
+zle -N peco_src
+
+
+#----------------------------------------
+# key-bind
+#----------------------------------------
+bindkey -e #emacモードのkey bind
+
+bindkey '^r' peco_select_history
+bindkey '^]' peco_src
+
+#----------------------------------------
+# alias
+#----------------------------------------
+alias la="ls -la"
+alias ll="ls -la"
+alias g="git"
+alias d="docker"
+alias z="source ~/.zshrc"
+# cdしたあとで、自動的に ls する
+function chpwd() { ls }
+
+# gitでhubコマンドも使えるように
+function git(){hub "$@"}
+
+
+# C で標準出力をクリップボードにコピーする
+# mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
+if which pbcopy >/dev/null 2>&1 ; then
+    # Mac
+    alias -g C='| pbcopy'
+elif which xsel >/dev/null 2>&1 ; then
+    # Linux
+    alias -g C='| xsel --input --clipboard'
+elif which putclip >/dev/null 2>&1 ; then
+    # Cygwin
+    alias -g C='| putclip'
+fi
+
+#----------------------------------------
+# local dependencies
+#----------------------------------------
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
