@@ -58,14 +58,15 @@
       - { name: atom }
       - { name: bartender }
       - { name: clipy }
-
       - { name: dash }
       - { name: deckset }
       - { name: docker }
       - { name: firefox }
+      - { name: franz }
       - { name: google-japanese-ime }
       - { name: gyazo }
       - { name: hyperswitch }
+      - { name: intellij-idea }
       - { name: java }
       - { name: kindle }
       - { name: karabiner-elements }
