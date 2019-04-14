@@ -48,6 +48,7 @@
       - { name: free-memory-pro, id: 460931672 }
       - { name: get-plain-text, id: 508368068 }
       - { name: Amphetamine, id: 937984704 }
+      - { name: todoist , id: 585829637 }
     homebrew_cask_packages:
       - { name: alfred }
       - { name: alternote }
