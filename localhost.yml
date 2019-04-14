@@ -57,6 +57,7 @@
       - { name: apptivate }
       - { name: atom }
       - { name: bartender }
+      - { name: bettertouchtool }
       - { name: clipy }
       - { name: dash }
       - { name: deckset }
