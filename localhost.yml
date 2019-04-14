@@ -37,6 +37,7 @@
       - { name: the_silver_searcher }
       - { name: vim }
       - { name: mas }
+      - { name: yarn }
       - { name: zsh }
       - { name: zplug }
     mas_packages:
