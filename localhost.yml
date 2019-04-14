@@ -50,6 +50,7 @@
       - { name: get-plain-text, id: 508368068 }
       - { name: Amphetamine, id: 937984704 }
       - { name: todoist , id: 585829637 }
+      - { name: snap , id: 418073146 }
       - { name: yoink , id: 457622435 }
     homebrew_cask_packages:
       - { name: alfred }
