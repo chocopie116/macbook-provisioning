@@ -75,6 +75,7 @@
       - { name: sketch }
       - { name: the-unarchiver }
       - { name: visual-studio-code }
+      - { name: zoom }
 
   tasks:
     - name: homebrew の tap リポジトリを追加
