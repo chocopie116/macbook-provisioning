@@ -24,18 +24,11 @@ go-tools:
 
 zsh-tools:
 	which zsh
-	@#@see https://github.com/zplug/zplug
 	curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
-
-neobundle:
-	mkdir -p ~/.vim/bundle
-	git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 #http://efcl.info/2015/02/01/github-open-pullrequest/
 git-browse-remote:
 	gem install $@
 
-
 dotfiles:
-	git clone git@github.com:chocopie116/dotfiles.git
 	make -C ./dotfiles

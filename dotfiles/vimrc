@@ -33,7 +33,6 @@ NeoBundle 'raymond-w-ko/vim-niji' "scheme用の()の対応の可視化
 NeoBundle 'editorconfig/editorconfig-vim' "http://editorconfig.org/
 
 NeoBundle 'lunaru/vim-twig' " テンプレートエンジンtwigのシンタックスハイライト
-NeoBundle 'soramugi/auto-ctags.vim' "ctags
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'JavaScript-syntax' " JavaScriptのシンタクスハイライト
 NeoBundle 'pangloss/vim-javascript' " JavaScriptのインデント
