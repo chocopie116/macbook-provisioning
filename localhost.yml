@@ -46,6 +46,7 @@
       - { name: deckset, id: 847496013 }
       - { name: tweetdeck, id: 485812721 }
       - { name: free-memory-pro, id: 460931672 }
+      - { name: final-cut-pro, id: 424389933}
       - { name: get-plain-text, id: 508368068 }
       - { name: Amphetamine, id: 937984704 }
       - { name: todoist , id: 585829637 }
