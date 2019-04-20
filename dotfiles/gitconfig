@@ -20,7 +20,6 @@
   st = status
   d = diff
   dc = diff --cached
-  initialize = commit --allow-empty -m 'Initial commit'
   init = commit --allow-empty -m 'Initial commit'
   empty = commit --allow-empty
   lg = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
@@ -32,7 +31,7 @@
   f = fetch --prune
   s = status --short --branch
   st = status
-  p = push
+  p = !git push origin `git rev-parse --abbrev-ref HEAD`
   pr = pull-request
   see = browse
   see-pr = browse-remote --pr

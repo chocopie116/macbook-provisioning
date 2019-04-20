@@ -67,6 +67,7 @@
       - { name: firefox }
       - { name: franz }
       - { name: google-japanese-ime }
+      - { name: grandperspective }
       - { name: gyazo }
       - { name: hyperswitch }
       - { name: intellij-idea }
