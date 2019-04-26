@@ -37,6 +37,7 @@
       - { name: the_silver_searcher }
       - { name: vim }
       - { name: mas }
+      - { name: watch }
       - { name: yarn }
       - { name: zsh }
       - { name: zplug }
