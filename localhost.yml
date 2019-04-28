@@ -85,6 +85,7 @@
       - { name: skitch }
       - { name: sketch }
       - { name: the-unarchiver }
+      - { name: tripmode }
       - { name: visual-studio-code }
       - { name: zoom }
 
