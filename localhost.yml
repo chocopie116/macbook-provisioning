@@ -79,6 +79,7 @@
       - { name: kindle }
       - { name: karabiner-elements }
       - { name: licecap  }
+      - { name: ngrok }
       - { name: pomodone }
       - { name: quik }
       - { name: rescuetime }
