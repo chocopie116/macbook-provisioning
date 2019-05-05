@@ -29,6 +29,7 @@
       - { name: jq }
       - { name: go }
       - { name: hub }
+      - { name: nodebrew }
       - { name: redis }
       - { name: rbenv }
       - { name: ruby-build }
