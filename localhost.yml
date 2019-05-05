@@ -54,6 +54,7 @@
       - { name: line , id: 539883307 }
       - { name: snap , id: 418073146 }
       - { name: Speedtest by Ookla , id: 1153157709 }
+      - { name: unsplash wallpaper, id: 1284863847 }
       - { name: yoink , id: 457622435 }
     homebrew_cask_packages:
       - { name: alfred }
