@@ -166,6 +166,12 @@ elif which putclip >/dev/null 2>&1 ; then
     alias -g C='| putclip'
 fi
 
+
+#----------------------------------------
+# nodebrew
+#----------------------------------------
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 #----------------------------------------
 # local dependencies
 #----------------------------------------
