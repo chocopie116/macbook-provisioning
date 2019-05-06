@@ -26,6 +26,9 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 # Bluetoothヘッドフォン/ヘッドセットの音質を向上させる
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+# キーの入力を早くする
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 1
 
 
 ##### Dock ######
