@@ -68,6 +68,7 @@
       - { name: dash }
       - { name: deckset }
       - { name: docker }
+      - { name: duet }
       - { name: endurance }
       - { name: firefox }
       - { name: franz }
