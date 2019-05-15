@@ -64,7 +64,6 @@
       - { name: atom }
       - { name: bartender }
       - { name: bettertouchtool }
-      - { name: clipy }
       - { name: dash }
       - { name: deckset }
       - { name: docker }
@@ -82,6 +81,7 @@
       - { name: karabiner-elements }
       - { name: licecap  }
       - { name: ngrok }
+      - { name: paste }
       - { name: pomodone }
       - { name: quik }
       - { name: rescuetime }
