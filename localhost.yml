@@ -66,6 +66,7 @@
       - { name: bettertouchtool }
       - { name: dash }
       - { name: deckset }
+      - { name: discord }
       - { name: docker }
       - { name: duet }
       - { name: endurance }
