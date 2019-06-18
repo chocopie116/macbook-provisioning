@@ -77,6 +77,7 @@
       - { name: gyazo }
       - { name: hyperswitch }
       - { name: intellij-idea }
+      - { name: jasper }
       - { name: java }
       - { name: kindle }
       - { name: karabiner-elements }
