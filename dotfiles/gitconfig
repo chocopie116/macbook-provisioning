@@ -32,6 +32,7 @@
   s = status --short --branch
   st = status
   p = !git push origin `git rev-parse --abbrev-ref HEAD`
+  pu = pull
   pl = pull-request
   see = browse-remote --pr
   c = browse-remote --pr
