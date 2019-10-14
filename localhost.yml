@@ -86,7 +86,6 @@
       - { name: paste }
       - { name: pomodone }
       - { name: quik }
-      - { name: rescuetime }
       - { name: slack }
       - { name: sequel-pro }
       - { name: skitch }
