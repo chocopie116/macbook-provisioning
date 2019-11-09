@@ -76,6 +76,7 @@
       - { name: grandperspective }
       - { name: gyazo }
       - { name: hyperswitch }
+      - { name: inkscape }
       - { name: intellij-idea }
       - { name: jasper }
       - { name: java }
