@@ -68,6 +68,7 @@
       - { name: discord }
       - { name: docker }
       - { name: duet }
+      - { name: dropbox }
       - { name: endurance }
       - { name: firefox }
       - { name: franz }
