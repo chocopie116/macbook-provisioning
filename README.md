@@ -7,6 +7,7 @@ install homebrew, ansible
 ```
 $ git clnoe git@github.com:chocopie116/macbook-provisioning.git
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew install cask
 $ brew install ansible
 
 make install APP_STORE_INSTALL=true
