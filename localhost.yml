@@ -93,7 +93,6 @@
       - { name: sketch }
       - { name: the-unarchiver }
       - { name: visual-studio-code }
-      - { name: virtualbox }
       - { name: zoom }
 
   tasks:
