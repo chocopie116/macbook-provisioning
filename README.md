@@ -1,11 +1,11 @@
 # macbook-provisioning
 chrome, 1password, iterm
 
-## how to use
-install xcode, homebrew, ansible
+## requirements
+install homebrew, ansible
 
 ```
-$ xcode-select --install
+$ git clnoe git@github.com:chocopie116/macbook-provisioning.git
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew install ansible
 
