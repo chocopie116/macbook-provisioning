@@ -3,7 +3,6 @@
   gather_facts: no
   vars:
     homebrew_taps:
-      - caskroom/cask
       - railwaycat/emacsmacport
       - sanemat/font
       - argon/mas
@@ -77,6 +76,7 @@
       - { name: gyazo }
       - { name: hyperswitch }
       - { name: inkscape }
+      - { name: iterm2 }
       - { name: jasper }
       - { name: java }
       - { name: kindle }
