@@ -48,10 +48,12 @@
       - { name: deckset, id: 847496013 }
       - { name: tweetdeck, id: 485812721 }
       - { name: free-memory-pro, id: 460931672 }
+      - { name: fantstical, id: 975937182}
       - { name: final-cut-pro, id: 424389933}
       - { name: get-plain-text, id: 508368068 }
       - { name: Amphetamine, id: 937984704 }
       - { name: todoist , id: 585829637 }
+      - { name: paste , id: 967805235}
       - { name: line , id: 539883307 }
       - { name: snap , id: 418073146 }
       - { name: Speedtest by Ookla , id: 1153157709 }
@@ -69,7 +71,6 @@
       - { name: discord }
       - { name: docker }
       - { name: duet }
-      - { name: dropbox }
       - { name: endurance }
       - { name: firefox }
       - { name: franz }
@@ -85,7 +86,6 @@
       - { name: karabiner-elements }
       - { name: licecap  }
       - { name: ngrok }
-      - { name: paste }
       - { name: pomodone }
       - { name: quik }
       - { name: slack }
