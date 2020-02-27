@@ -63,6 +63,7 @@
       - { name: alfred }
       - { name: alternote }
       - { name: appcleaner }
+      - { name: authy }
       - { name: atom }
       - { name: bartender }
       - { name: bettertouchtool }
