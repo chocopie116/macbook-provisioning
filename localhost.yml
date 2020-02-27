@@ -13,6 +13,7 @@
       - { name: python }
       - { name: coreutils }
       - { name: docker-compose }
+      - { name: fontforge }
       - { name: git }
       - { name: wget }
       - { name: curl }
