@@ -67,6 +67,7 @@
       - { name: atom }
       - { name: bartender }
       - { name: bettertouchtool }
+      - { name: coteditor }
       - { name: dash }
       - { name: deckset }
       - { name: discord }
