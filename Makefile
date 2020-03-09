@@ -10,7 +10,7 @@ link:
 
 awscli:
 	curl -kL  https://bootstrap.pypa.io/get-pip.py | python
-	sudo pip install awscli --upgrade --ignore-installed six
+	sudo pip3 install awscli --upgrade --ignore-installed six
 
 gcloudcli:
 	curl https://sdk.cloud.google.com | bash
