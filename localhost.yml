@@ -94,6 +94,7 @@
       - { name: sequel-pro }
       - { name: skitch }
       - { name: sketch }
+      - { name: tg-pro }
       - { name: the-unarchiver }
       - { name: visual-studio-code }
       - { name: zoom }
