@@ -76,6 +76,7 @@
       - { name: endurance }
       - { name: firefox }
       - { name: franz }
+      - { name: fuwari }
       - { name: google-japanese-ime }
       - { name: grandperspective }
       - { name: gyazo }
