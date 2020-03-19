@@ -8,6 +8,7 @@
       - argon/mas
       - heroku/brew
     homebrew_packages:
+      - { name: bat }
       - { name: heroku }
       - { name: openssl, state: linked, install_options: force }
       - { name: python }
@@ -88,6 +89,7 @@
       - { name: kindle }
       - { name: karabiner-elements }
       - { name: licecap  }
+      - { name: mysqlworkbench }
       - { name: ngrok }
       - { name: pomodone }
       - { name: quik }
