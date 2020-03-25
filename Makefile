@@ -33,5 +33,11 @@ git-browse-remote:
 dotfiles:
 	make -C ./dotfiles
 
-vscode/setup:
+vscode/install:
 	ln -sF $(PWD)/vscode/setting.json ~/Library/Application\ Support/Code/User/setting.json
+	sh ./vscode/install.sh
+
+vscode/restore:
+	code --list-extensions > ./vscode/extensions.txt
+
+
