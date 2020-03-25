@@ -32,3 +32,6 @@ git-browse-remote:
 
 dotfiles:
 	make -C ./dotfiles
+
+vscode/setup:
+	ln -sF $(PWD)/vscode/setting.json ~/Library/Application\ Support/Code/User/setting.json
