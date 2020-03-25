@@ -6,7 +6,8 @@ install:
        -e 'APP_STORE_ISNTALL=$(APP_STORE_INSTALL)'
 link:
 	mkdir -p ~/.config/karabiner
-	ln -sF $(PWD)/templates/karabiner.json ~/.config/karabiner/karabiner.json
+	rm -f ~/.config/karabiner/karabiner.json
+	ln -s $(PWD)/templates/karabiner.json ~/.config/karabiner/karabiner.json
 
 awscli:
 	curl -kL  https://bootstrap.pypa.io/get-pip.py | python
@@ -32,3 +33,12 @@ git-browse-remote:
 
 dotfiles:
 	make -C ./dotfiles
+
+vscode/install:
+	rm ~/Library/Application\ Support/Code/User/setting.json
+	ln -s $(PWD)/vscode/setting.json ~/Library/Application\ Support/Code/User/setting.json
+	sh ./vscode/install.sh
+
+vscode/restore:
+	code --list-extensions > ./vscode/extensions.txt
+
