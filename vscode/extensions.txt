@@ -11,6 +11,7 @@ octref.vetur
 oderwat.indent-rainbow
 pranaygp.vscode-css-peek
 rebornix.ruby
+shyykoserhiy.vscode-spotify
 sianglim.slim
 Vense.rails-snippets
 vscodevim.vim
