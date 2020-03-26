@@ -4,9 +4,12 @@ castwide.solargraph
 casualjim.gotemplate
 CoenraadS.bracket-pair-colorizer
 ecmel.vscode-html-css
+EditorConfig.EditorConfig
 esbenp.prettier-vscode
 formulahendry.auto-rename-tag
+ionutvmi.path-autocomplete
 jebbs.plantuml
+mechatroner.rainbow-csv
 octref.vetur
 oderwat.indent-rainbow
 pranaygp.vscode-css-peek
@@ -14,5 +17,6 @@ rebornix.ruby
 shyykoserhiy.vscode-spotify
 sianglim.slim
 Vense.rails-snippets
+vscode-icons-team.vscode-icons
 vscodevim.vim
 wingrunr21.vscode-ruby
