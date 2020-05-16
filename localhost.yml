@@ -73,6 +73,7 @@
       - { name: docker }
       - { name: duet }
       - { name: endurance }
+      - { name: figma }
       - { name: firefox }
       - { name: franz }
       - { name: fuwari }
