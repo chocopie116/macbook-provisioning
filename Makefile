@@ -9,6 +9,9 @@ link:
 	rm -f ~/.config/karabiner/karabiner.json
 	ln -s $(PWD)/templates/karabiner.json ~/.config/karabiner/karabiner.json
 
+import/karabiner:
+	cp -f ~/.config/karabiner/karabiner.json $(PWD)/templates/karabiner.json
+
 awscli:
 	curl -kL  https://bootstrap.pypa.io/get-pip.py | python
 	sudo pip3 install awscli --upgrade --ignore-installed six
