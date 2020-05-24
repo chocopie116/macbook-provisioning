@@ -52,6 +52,7 @@
       - { name: final-cut-pro, id: 424389933}
       - { name: get-plain-text, id: 508368068 }
       - { name: irvue , id: 1039633667 }
+      - { name: koala, id: 1449584007}
       - { name: Amphetamine, id: 937984704 }
       - { name: todoist , id: 585829637 }
       - { name: paste , id: 967805235}
@@ -89,6 +90,7 @@
       - { name: kindle }
       - { name: karabiner-elements }
       - { name: licecap  }
+      - { name: loopback }
       - { name: mysqlworkbench }
       - { name: ngrok }
       - { name: pomodone }
