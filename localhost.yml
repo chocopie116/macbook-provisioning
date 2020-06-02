@@ -45,6 +45,7 @@
       - { name: zplug }
     mas_packages:
       # idはapp storeのアプリID
+      - { name: dayone , id: 1055511498}
       - { name: deckset, id: 847496013 }
       - { name: tweetdeck, id: 485812721 }
       - { name: free-memory-pro, id: 460931672 }
