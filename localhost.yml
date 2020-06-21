@@ -78,6 +78,7 @@
       - { name: endurance }
       - { name: figma }
       - { name: firefox }
+      - { name: flux }
       - { name: franz }
       - { name: fuwari }
       - { name: google-japanese-ime }
