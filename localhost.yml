@@ -9,6 +9,7 @@
       - heroku/brew
     homebrew_packages:
       - { name: bat }
+      - { name: bluetoothconnector }
       - { name: heroku }
       - { name: openssl, state: linked, install_options: force }
       - { name: python }
@@ -102,6 +103,7 @@
       - { name: skitch }
       - { name: sketch }
       - { name: tg-pro }
+      - { name: tripmode }
       - { name: the-unarchiver }
       - { name: visual-studio-code }
       - { name: zoom }
