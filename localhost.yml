@@ -69,6 +69,7 @@
       - { name: authy }
       - { name: atom }
       - { name: bartender }
+      - { name: biscuit }
       - { name: bettertouchtool }
       - { name: coteditor }
       - { name: dash }
