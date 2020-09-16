@@ -1,8 +1,11 @@
+aaron-bond.better-comments
+amiralizadeh9480.laravel-extra-intellisense
 bmewburn.vscode-intelephense-client
 bung87.rails
 bung87.vscode-gemfile
 castwide.solargraph
 casualjim.gotemplate
+christian-kohler.path-intellisense
 codingyu.laravel-goto-view
 CoenraadS.bracket-pair-colorizer
 ecmel.vscode-html-css
@@ -12,6 +15,9 @@ felixfbecker.php-debug
 felixfbecker.php-intellisense
 felixfbecker.php-pack
 formulahendry.auto-rename-tag
+hediet.vscode-drawio
+higoka.php-cs-fixer
+ICS.japanese-proofreading
 ionutvmi.path-autocomplete
 jebbs.plantuml
 mechatroner.rainbow-csv
@@ -26,8 +32,8 @@ onecentlin.laravel5-snippets
 pranaygp.vscode-css-peek
 rebornix.ruby
 ryannaddy.laravel-artisan
-shyykoserhiy.vscode-spotify
 sianglim.slim
+stef-k.laravel-goto-controller
 Vense.rails-snippets
 vscode-icons-team.vscode-icons
 vscodevim.vim
