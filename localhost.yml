@@ -70,6 +70,7 @@
       - { name: dash }
       - { name: discord }
       - { name: docker }
+      - { name: dropbox }
       - { name: duet }
       - { name: endurance }
       - { name: figma }
