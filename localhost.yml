@@ -45,6 +45,9 @@
       - { name: yarn }
       - { name: zsh }
       - { name: zplug }
+      # dependencies brew install go
+      - { name: peco }
+      - { name: ghq }
     mas_packages:
       # idはapp storeのアプリID
       - { name: dayone , id: 1055511498}
