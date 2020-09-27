@@ -83,7 +83,6 @@
       - { name: hyperswitch }
       - { name: iterm2 }
       - { name: jasper }
-      - { name: java }
       - { name: kindle }
       - { name: karabiner-elements }
       - { name: licecap  }
