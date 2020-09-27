@@ -13,16 +13,6 @@ link:
 	rm -f ~/.config/karabiner/karabiner.json
 	ln -s $(PWD)/templates/karabiner.json ~/.config/karabiner/karabiner.json
 
-import/karabiner:
-	cp -f ~/.config/karabiner/karabiner.json $(PWD)/templates/karabiner.json
-
-awscli:
-	curl -kL  https://bootstrap.pypa.io/get-pip.py | python
-	sudo pip3 install awscli --upgrade --ignore-installed six
-
-gcloudcli:
-	curl https://sdk.cloud.google.com | bash
-
 go-tools:
 	go get -u github.com/peco/peco/cmd/peco
 	go get -u github.com/motemen/ghq
@@ -46,6 +36,9 @@ vscode/install:
 	ln -s $(PWD)/vscode/setting.json ~/Library/Application\ Support/Code/User/setting.json
 	sh ./vscode/install.sh
 
-vscode/save:
+import/vscode:
 	code --list-extensions > ./vscode/extensions.txt
+
+import/karabiner:
+	cp -f ~/.config/karabiner/karabiner.json $(PWD)/templates/karabiner.json
 

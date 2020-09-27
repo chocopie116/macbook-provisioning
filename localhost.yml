@@ -8,6 +8,7 @@
       - argon/mas
       - heroku/brew
     homebrew_packages:
+      - { name: awscli }
       - { name: bat }
       - { name: bluetoothconnector }
       - { name: heroku }
@@ -78,6 +79,7 @@
       - { name: flux }
       - { name: fuwari }
       - { name: google-japanese-ime }
+      - { name: google-cloud-sdk }
       - { name: grandperspective }
       - { name: gyazo }
       - { name: hyperswitch }
