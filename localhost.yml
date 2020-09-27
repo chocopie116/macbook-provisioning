@@ -66,6 +66,7 @@
       - { name: bartender }
       - { name: biscuit }
       - { name: bettertouchtool }
+      - { name: coteditor }
       - { name: dash }
       - { name: discord }
       - { name: docker }
