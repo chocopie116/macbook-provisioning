@@ -12,7 +12,3 @@ link:
 unlink:
 	$(foreach src, $(srcs), rm  $(HOME)/.$(src);)
 
-clean-zsh-cache:
-	rm ~/.zplug/zcompdump
-	rm ~/.zcompdump
-
