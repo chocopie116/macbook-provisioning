@@ -18,7 +18,7 @@
       - { name: docker-compose }
       - { name: fontforge }
       - { name: git }
-      - { name: java }
+      - { name: java6 }
       - { name: wget }
       - { name: curl }
       - { name: cmake }
