@@ -18,6 +18,7 @@
       - { name: docker-compose }
       - { name: fontforge }
       - { name: git }
+      - { name: java }
       - { name: wget }
       - { name: curl }
       - { name: cmake }
@@ -79,7 +80,6 @@
       - { name: endurance }
       - { name: figma }
       - { name: firefox }
-      - { name: flux }
       - { name: fuwari }
       - { name: google-japanese-ime }
       - { name: google-cloud-sdk }
@@ -93,12 +93,12 @@
       - { name: licecap  }
       - { name: mysqlworkbench }
       - { name: ngrok }
-      - { name: quik }
       - { name: slack }
       - { name: sequel-pro }
       - { name: skitch }
       - { name: sketch }
       - { name: tg-pro }
+      - { name: turbo-boost-switcher }
       - { name: tripmode }
       - { name: the-unarchiver }
       - { name: visual-studio-code }
