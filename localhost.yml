@@ -44,6 +44,7 @@
       - { name: mas }
       - { name: watch }
       - { name: yarn }
+      - { name: zlib }
       - { name: zsh }
       - { name: zplug }
       # dependencies brew install go

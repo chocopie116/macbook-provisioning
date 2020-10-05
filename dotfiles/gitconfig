@@ -53,3 +53,5 @@
   #最後に読み込んで.localの設定でoverwriteできるようにした
   path = .gitconfig.local
 
+[pull]
+	rebase = false
