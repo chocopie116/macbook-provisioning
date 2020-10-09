@@ -172,6 +172,9 @@ fi
 #----------------------------------------
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# pyenv
+eval "$(pyenv init -)"
+
 #----------------------------------------
 # local dependencies
 #----------------------------------------

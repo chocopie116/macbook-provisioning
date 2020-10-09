@@ -28,7 +28,7 @@
       - { name: ctags }
       - { name: tree }
       - { name: lv }
-      - { name: mysql }
+      - { name: mysql@5.7 }
       - { name: nkf }
       - { name: jq }
       - { name: go }
