@@ -7,6 +7,8 @@
       - sanemat/font
       - argon/mas
       - heroku/brew
+      - shopify/shopify
+
     homebrew_packages:
       - { name: awscli }
       - { name: bat }
@@ -40,6 +42,7 @@
       - { name: tig }
       - { name: autojump }
       - { name: the_silver_searcher }
+      - { name: themekit }
       - { name: vim }
       - { name: mas }
       - { name: watch }
