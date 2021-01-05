@@ -3,19 +3,21 @@ APP_STORE_INSTALL=false#App Storeのinstallは毎回上書きのためdefaultで
 
 setup:
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	brew install cask ansible
 
-install:
-	HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook -i hosts -vv  localhost.yml \
-       -e 'APP_STORE_ISNTALL=$(APP_STORE_INSTALL)'
+package/install:
+	brew bundle
+
+package/cleanup:
+	brew bundle cleanup
+
+package/check:
+	brew bundle check
 
 #http://efcl.info/2015/02/01/github-open-pullrequest/
 git-browse-remote:
 	gem install $@
 
-
 restore: _restore/karabiner _restore/vscode
-
 
 _backup/vscode:
 	code --list-extensions > ./vscode/extensions.txt
