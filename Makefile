@@ -13,6 +13,10 @@ package/cleanup:
 package/check:
 	brew bundle check
 
+package/dump:
+	@#brew bundle dump --force --describe
+	brew bundle dump --force
+
 #http://efcl.info/2015/02/01/github-open-pullrequest/
 git-browse-remote:
 	gem install $@
