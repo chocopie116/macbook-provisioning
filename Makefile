@@ -1,6 +1,3 @@
-# 実行時間短縮のために引数で動きを制御する
-APP_STORE_INSTALL=false#App Storeのinstallは毎回上書きのためdefaultでは実行しない
-
 setup:
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
