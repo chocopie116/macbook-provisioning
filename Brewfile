@@ -26,9 +26,9 @@ brew "ctags"
 brew "curl"
 brew "docker-compose"
 brew "gobject-introspection"
-brew "fontforge"
 brew "git"
 brew "go"
+brew "ghq"
 brew "graphviz"
 brew "hub"
 brew "jq"
@@ -38,6 +38,7 @@ brew "mysql"
 brew "nkf"
 brew "nodebrew"
 brew "openjdk@11"
+brew "peco"
 brew "pyenv"
 brew "python@3.8"
 brew "ruby-build"
@@ -86,7 +87,6 @@ cask "kindle"
 cask "licecap"
 cask "mysqlworkbench"
 cask "ngrok"
-cask "quik"
 cask "sequel-pro"
 cask "sketch"
 cask "skitch"
@@ -99,7 +99,6 @@ cask "visual-studio-code"
 cask "zoom"
 mas "1Password 7", id: 1333542190
 mas "Amphetamine", id: 937984704
-mas "Bear", id: 1091189122
 mas "com.alice.mac.GetPlainText", id: 508368068
 mas "com.rockysandstudio.FreeMemory", id: 460931672
 mas "Day One", id: 1055511498
@@ -116,6 +115,5 @@ mas "Pages", id: 409201541
 mas "Paste", id: 967805235
 mas "Simplenote", id: 692867256
 mas "Todoist", id: 585829637
-mas "TweetDeck", id: 485812721
 mas "Xcode", id: 497799835
 mas "Yoink", id: 457622435
