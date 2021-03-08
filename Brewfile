@@ -93,7 +93,6 @@ cask "slack"
 cask "tg-pro"
 cask "the-unarchiver"
 cask "tripmode"
-cask "turbo-boost-switcher"
 cask "visual-studio-code"
 cask "zoom"
 mas "1Password 7", id: 1333542190
