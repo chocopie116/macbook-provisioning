@@ -32,7 +32,7 @@ _restore/karabiner:
 	ln -s $(PWD)/templates/karabiner.json ~/.config/karabiner/karabiner.json
 
 _restore/vscode:
-	rm ~/Library/Application\ Support/Code/User/setting.json
+	rm -rf ~/Library/Application\ Support/Code/User/setting.json
 	ln -s $(PWD)/vscode/setting.json ~/Library/Application\ Support/Code/User/setting.json
 	sh ./vscode/install.sh
 

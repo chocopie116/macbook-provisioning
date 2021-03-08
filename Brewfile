@@ -65,6 +65,7 @@ cask "authy"
 cask "bartender"
 cask "bettertouchtool"
 cask "coteditor"
+cask "clipy"
 cask "dash"
 cask "discord"
 cask "dropbox"
@@ -80,11 +81,9 @@ cask "grandperspective"
 cask "gyazo"
 cask "hyperswitch"
 cask "iterm2"
-cask "jasper"
 cask "java6"
 cask "karabiner-elements"
 cask "kindle"
-cask "licecap"
 cask "mysqlworkbench"
 cask "ngrok"
 cask "sequel-pro"
@@ -99,7 +98,6 @@ cask "visual-studio-code"
 cask "zoom"
 mas "1Password 7", id: 1333542190
 mas "Amphetamine", id: 937984704
-mas "com.alice.mac.GetPlainText", id: 508368068
 mas "com.rockysandstudio.FreeMemory", id: 460931672
 mas "Day One", id: 1055511498
 mas "Deckset", id: 847496013
