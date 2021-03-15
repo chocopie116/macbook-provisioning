@@ -114,5 +114,6 @@ mas "Pages", id: 409201541
 mas "Paste", id: 967805235
 mas "Simplenote", id: 692867256
 mas "Todoist", id: 585829637
+mas "Unarchiver", id: 425424353
 mas "Xcode", id: 497799835
 mas "Yoink", id: 457622435
