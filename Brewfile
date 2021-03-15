@@ -1,5 +1,6 @@
 cask_args appdir: "/Applications"
 
+tap "AdoptOpenJDK/openjdk"
 tap "argon/mas"
 tap "heroku/brew"
 tap "homebrew/bundle"

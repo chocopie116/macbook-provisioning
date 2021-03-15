@@ -179,4 +179,6 @@ eval "$(pyenv init -)"
 # local dependencies
 #----------------------------------------
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+PATH=${JAVA_HOME}/bin:${PATH}
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
