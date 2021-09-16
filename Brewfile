@@ -101,6 +101,7 @@ mas "com.rockysandstudio.FreeMemory", id: 460931672
 mas "Day One", id: 1055511498
 mas "Deckset", id: 847496013
 mas "Final Cut Pro", id: 424389933
+mas "Firstseed Calender", id: 1348617240
 mas "GarageBand", id: 682658836
 mas "GIPHY CAPTURE", id: 668208984
 mas "iMovie", id: 408981434
