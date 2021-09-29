@@ -69,14 +69,11 @@ cask "authy"
 cask "bartender"
 cask "bettertouchtool"
 cask "coteditor"
-cask "clipy"
 cask "dash"
 cask "discord"
 cask "dropbox"
 cask "figma"
 cask "firefox"
-cask "flux"
-cask "fuwari"
 cask "google-cloud-sdk"
 cask "google-japanese-ime"
 cask "grandperspective"
@@ -88,7 +85,6 @@ cask "kindle"
 cask "mysqlworkbench"
 cask "ngrok"
 cask "sequel-pro"
-cask "sketch"
 cask "skitch"
 cask "slack"
 cask "the-unarchiver"
@@ -97,13 +93,11 @@ cask "visual-studio-code"
 cask "zoom"
 mas "1Password 7", id: 1333542190
 mas "Amphetamine", id: 937984704
-mas "com.rockysandstudio.FreeMemory", id: 460931672
 mas "Day One", id: 1055511498
 mas "Deckset", id: 847496013
 mas "Final Cut Pro", id: 424389933
 mas "Firstseed Calender", id: 1348617240
 mas "GarageBand", id: 682658836
-mas "GIPHY CAPTURE", id: 668208984
 mas "iMovie", id: 408981434
 mas "Irvue", id: 1039633667
 mas "Keynote", id: 409183694
@@ -113,6 +107,5 @@ mas "Pages", id: 409201541
 mas "Paste", id: 967805235
 mas "Simplenote", id: 692867256
 mas "Todoist", id: 585829637
-mas "Unarchiver", id: 425424353
 mas "Xcode", id: 497799835
 mas "Yoink", id: 457622435
