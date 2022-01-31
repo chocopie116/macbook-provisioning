@@ -106,5 +106,6 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paste", id: 967805235
 mas "Todoist", id: 585829637
+mas "UnsplashWallpaper", id: 1284863847
 mas "Xcode", id: 497799835
 mas "Yoink", id: 457622435
