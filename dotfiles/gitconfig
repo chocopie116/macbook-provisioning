@@ -6,9 +6,24 @@
   editor = vim
   quotepath = false
   excludesfile = ~/.gitignore_global
+  pager = delta
 
 [color]
   ui = auto
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true  # use n and N to move between diff sections
+  side-by-side = true
+  syntax-theme = Solarized (dark)
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
 
 [push]
   # push only the current branch
