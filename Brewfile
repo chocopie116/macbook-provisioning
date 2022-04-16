@@ -19,6 +19,7 @@ brew "google-chrome"
 cask "karabiner-elements"
 cask "iterm2"
 cask "slack"
+cask "keycastr"
 
 brew "ansible"
 brew "alt-tab"
