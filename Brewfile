@@ -105,6 +105,7 @@ mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Numbers", id: 409203825
 mas "MeetingBar", id: 1532419400
+mas "MonitorControl Lite", id: 1595464182
 mas "Pages", id: 409201541
 mas "Paste", id: 967805235
 mas "Todoist", id: 585829637
