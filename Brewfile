@@ -20,7 +20,6 @@ cask "karabiner-elements"
 cask "iterm2"
 cask "slack"
 
-brew "ansible"
 brew "alt-tab"
 brew "autoconf"
 brew "autojump"
@@ -98,7 +97,6 @@ mas "Amphetamine", id: 937984704
 mas "Day One", id: 1055511498
 mas "Deckset", id: 847496013
 mas "Final Cut Pro", id: 424389933
-mas "Firstseed Calender", id: 1348617240
 mas "iMovie", id: 408981434
 mas "Irvue", id: 1039633667
 mas "Keynote", id: 409183694
