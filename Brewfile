@@ -98,7 +98,6 @@ mas "Day One", id: 1055511498
 mas "Deckset", id: 847496013
 mas "Final Cut Pro", id: 424389933
 mas "iMovie", id: 408981434
-mas "Irvue", id: 1039633667
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Numbers", id: 409203825
