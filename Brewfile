@@ -111,3 +111,4 @@ mas "Todoist", id: 585829637
 mas "UnsplashWallpaper", id: 1284863847
 mas "Xcode", id: 497799835
 mas "Yoink", id: 457622435
+mas "1focus", id: 969210610
