@@ -147,6 +147,7 @@ alias ll="ls -la"
 alias g="git"
 alias d="docker"
 alias z="source ~/.zshrc"
+alias sourceenv="export $(cat .env| grep -v "#" | xargs)"
 # cdしたあとで、自動的に ls する
 function chpwd() { ls }
 
@@ -179,7 +180,6 @@ eval "$(pyenv init -)"
 #----------------------------------------
 # local dependencies
 #----------------------------------------
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 PATH=${JAVA_HOME}/bin:${PATH}
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
@@ -189,3 +189,4 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 . /opt/homebrew/opt/asdf/asdf.sh
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
