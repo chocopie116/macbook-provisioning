@@ -13,11 +13,12 @@ tap "sanemat/font"
 tap "shopify/shopify"
 
 cask "bettertouchtool"
-cask "alfred"
+#cask "alfred"
 cask "dropbox"
 brew "google-chrome"
 cask "karabiner-elements"
 cask "iterm2"
+cask "raycast"
 cask "slack"
 
 brew "autoconf"
