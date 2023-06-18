@@ -22,13 +22,10 @@ cask "raycast"
 cask "slack"
 
 brew "autoconf"
-brew "autojump"
 brew "automake"
-brew "aws-elasticbeanstalk"
 brew "awscli"
 cask "bartender"
 brew "bat"
-brew "bluetoothconnector"
 brew "cairo"
 brew "cmake"
 brew "composer", link: false
@@ -70,21 +67,17 @@ brew "zsh"
 brew "heroku/brew/heroku"
 brew "rcmdnk/file/brew-file"
 brew "shopify/shopify/themekit"
-brew "tfenv"
 brew "alt-tab"
-cask "alternote"
 cask "appcleaner"
 cask "authy"
 cask "biscuit"
 cask "coteditor"
 cask "cleanshot"
-cask "duet"
 cask "dash"
 cask "discord"
 cask "docker"
 cask "figma"
 cask "firefox"
-cask "gather"
 cask "google-cloud-sdk"
 cask "google-japanese-ime"
 cask "grandperspective"
@@ -95,12 +88,10 @@ cask "mysqlworkbench"
 cask "ngrok"
 cask "sequel-pro"
 cask "the-unarchiver"
-cask "tripmode"
 cask "visual-studio-code"
 cask "zoom"
 mas "Amphetamine", id: 937984704
 mas "Day One", id: 1055511498
-mas "Deckset", id: 847496013
 mas "Final Cut Pro", id: 424389933
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
@@ -113,5 +104,4 @@ mas "Paste", id: 967805235
 mas "Todoist", id: 585829637
 mas "UnsplashWallpaper", id: 1284863847
 mas "Xcode", id: 497799835
-mas "Yoink", id: 457622435
 mas "1focus", id: 969210610
