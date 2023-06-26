@@ -147,7 +147,7 @@ alias ll="ls -la"
 alias g="git"
 alias d="docker"
 alias z="source ~/.zshrc"
-alias sourceenv="export $(cat .env| grep -v "#" | xargs)"
+#alias sourceenv="export $(cat .env| grep -v "#" | xargs)"
 # cdしたあとで、自動的に ls する
 function chpwd() { ls }
 
