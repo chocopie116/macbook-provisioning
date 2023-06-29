@@ -4,7 +4,7 @@
 ```
 $ git clnoe git@github.com:chocopie116/macbook-provisioning.git
 $ export PATH=$PATH:/opt/homebrew/bin
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 $ make package/install
 ```
 ## 参考
