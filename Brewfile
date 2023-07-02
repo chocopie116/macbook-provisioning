@@ -21,7 +21,6 @@ brew "python@3.11"
 brew "aws-elasticbeanstalk"
 brew "awscli"
 brew "bat"
-brew "bluetoothconnector"
 brew "cairo"
 brew "circleci"
 brew "cmake"
@@ -76,14 +75,13 @@ brew "zsh"
 brew "heroku/brew/heroku"
 brew "rcmdnk/file/brew-file"
 brew "shopify/shopify/themekit"
-cask "1password-cli"
-cask "alfred", args: { appdir: "/Applications" }
-cask "alt-tab"
-cask "alternote", args: { appdir: "/Applications" }
-cask "appcleaner", args: { appdir: "/Applications" }
-cask "authy", args: { appdir: "/Applications" }
-cask "bartender", args: { appdir: "/Applications" }
-cask "bettertouchtool", args: { appdir: "/Applications" }
+brew "alt-tab"
+cask "alternote"
+cask "appcleaner"
+cask "authy"
+brew "alt-tab"
+cask "appcleaner"
+cask "authy"
 cask "biscuit"
 cask "cleanshot"
 cask "coteditor", args: { appdir: "/Applications" }
@@ -112,11 +110,9 @@ cask "slack", args: { appdir: "/Applications" }
 cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "tripmode", args: { appdir: "/Applications" }
 cask "visual-studio-code", args: { appdir: "/Applications" }
-cask "warp"
 cask "zoom", args: { appdir: "/Applications" }
 mas "Amphetamine", id: 937984704
 mas "Day One", id: 1055511498
-mas "Deckset", id: 847496013
 mas "Final Cut Pro", id: 424389933
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
@@ -184,3 +180,4 @@ vscode "wingrunr21.vscode-ruby"
 vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
 vscode "Yog.yog-plantuml-highlight"
+mas "1focus", id: 969210610
