@@ -174,8 +174,6 @@ fi
 #----------------------------------------
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-# pyenv
-eval "$(pyenv init -)"
 
 #----------------------------------------
 # local dependencies
@@ -183,10 +181,10 @@ eval "$(pyenv init -)"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 PATH=${JAVA_HOME}/bin:${PATH}
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 # for asdf-ruby
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
-. /opt/homebrew/opt/asdf/asdf.sh
+ . /opt/homebrew/opt/asdf/libexec/asdf.sh
+ 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
