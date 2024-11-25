@@ -51,6 +51,7 @@ brew "mongosh"
 brew "mysql"
 brew "nkf"
 brew "openjdk"
+brew "orbstack"
 brew "openjdk@11"
 brew "peco"
 brew "perl"
@@ -87,7 +88,6 @@ cask "cleanshot"
 cask "coteditor", args: { appdir: "/Applications" }
 cask "dash", args: { appdir: "/Applications" }
 cask "discord", args: { appdir: "/Applications" }
-cask "docker"
 cask "dropbox", args: { appdir: "/Applications" }
 cask "duet"
 cask "figma", args: { appdir: "/Applications" }
