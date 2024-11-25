@@ -1,32 +1,30 @@
 tap "1password/tap"
+tap "adoptopenjdk/openjdk"
+tap "argon/mas"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "homebrew/services"
-tap "ngrok/ngrok"
 tap "railwaycat/emacsmacport"
 tap "rcmdnk/file"
 tap "sanemat/font"
 tap "shopify/shopify"
-tap "stripe/stripe-cli"
-
 brew "jpeg-xl"
 brew "autoconf"
 brew "automake"
 brew "coreutils"
 brew "asdf"
+brew "python@3.10"
 brew "autojump"
 brew "python@3.11"
+brew "aws-elasticbeanstalk"
 brew "awscli"
 brew "bat"
 brew "cairo"
-brew "circleci"
 brew "cmake"
 brew "curl"
 brew "libpq"
-brew "php"
 brew "composer"
 brew "docker-compose"
 brew "gawk"
@@ -36,7 +34,6 @@ brew "p11-kit"
 brew "unbound"
 brew "gnutls"
 brew "gnupg"
-brew "go"
 brew "gobject-introspection"
 brew "harfbuzz"
 brew "pango"
@@ -47,22 +44,14 @@ brew "jq"
 brew "libfido2"
 brew "lv"
 brew "mas"
-brew "mongosh"
-brew "mysql@8.0"
+brew "mysql"
 brew "nkf"
 brew "openjdk"
 brew "orbstack"
 brew "openjdk@11"
 brew "peco"
-brew "perl"
-brew "plantuml"
 brew "postgresql@14"
-brew "pyenv"
-brew "python@3.8"
-brew "ruby-build"
-brew "rbenv"
 brew "redis"
-brew "tfenv"
 brew "the_silver_searcher"
 brew "tig"
 brew "tree"
@@ -76,54 +65,55 @@ brew "zsh"
 brew "heroku/brew/heroku"
 brew "rcmdnk/file/brew-file"
 brew "shopify/shopify/themekit"
-
-cask "alt-tab"
+brew "alt-tab"
+cask "alternote"
 cask "appcleaner"
 cask "authy"
-cask "bartender"
-cask "bettertouchtool"
+brew "alt-tab"
+cask "appcleaner"
+cask "authy"
 cask "biscuit"
 cask "cleanshot"
-cask "coteditor"
-cask "dash"
-cask "discord"
-cask "docker"
-cask "dropbox"
-cask "figma"
-cask "firefox"
+cask "coteditor", args: { appdir: "/Applications" }
+cask "dash", args: { appdir: "/Applications" }
+cask "discord", args: { appdir: "/Applications" }
+cask "dropbox", args: { appdir: "/Applications" }
+cask "duet"
+cask "figma", args: { appdir: "/Applications" }
+cask "firefox", args: { appdir: "/Applications" }
 cask "focus"
-cask "font-ipaexfont"
 cask "gather"
-cask "google-cloud-sdk"
+cask "google-cloud-sdk", args: { appdir: "/Applications" }
 cask "google-japanese-ime"
-cask "grandperspective"
-cask "graphql-playground"
-cask "gyazo"
-cask "iterm2"
-cask "karabiner-elements"
-cask "kindle"
-cask "mysqlworkbench"
-cask "ngrok"
-cask "orbstack"
-cask "raycast"
-cask "slack"
-cask "the-unarchiver"
-cask "tripmode"
-cask "visual-studio-code"
-cask "zoom"
-
+cask "grandperspective", args: { appdir: "/Applications" }
+cask "iterm2", args: { appdir: "/Applications" }
+cask "java6", args: { appdir: "/Applications" }
+cask "karabiner-elements", args: { appdir: "/Applications" }
+cask "kindle", args: { appdir: "/Applications" }
+cask "ngrok", args: { appdir: "/Applications" }
+cask "sequel-pro", args: { appdir: "/Applications" }
+cask "skitch", args: { appdir: "/Applications" }
+cask "slack", args: { appdir: "/Applications" }
+cask "the-unarchiver", args: { appdir: "/Applications" }
+cask "tripmode", args: { appdir: "/Applications" }
+cask "visual-studio-code", args: { appdir: "/Applications" }
+cask "zoom", args: { appdir: "/Applications" }
 mas "Amphetamine", id: 937984704
 mas "Day One", id: 1055511498
+mas "Final Cut Pro", id: 424389933
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
+mas "MeetingBar", id: 1532419400
+mas "MonitorControlLite", id: 1595464182
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paste", id: 967805235
-mas "Prime Video", id: 545519333
-mas "Session", id: 1521432881
 mas "Todoist", id: 585829637
+mas "Unsplash Wallpapers", id: 1284863847
 mas "Xcode", id: 497799835
-
+mas "Yoink", id: 457622435
 vscode "4ops.terraform"
 vscode "aaron-bond.better-comments"
 vscode "bierner.color-info"
