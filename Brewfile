@@ -22,11 +22,9 @@ brew "aws-elasticbeanstalk"
 brew "awscli"
 brew "bat"
 brew "cairo"
-brew "circleci"
 brew "cmake"
 brew "curl"
 brew "libpq"
-brew "php"
 brew "composer"
 brew "docker-compose"
 brew "gawk"
@@ -36,7 +34,6 @@ brew "p11-kit"
 brew "unbound"
 brew "gnutls"
 brew "gnupg"
-brew "go"
 brew "gobject-introspection"
 brew "harfbuzz"
 brew "pango"
@@ -47,22 +44,14 @@ brew "jq"
 brew "libfido2"
 brew "lv"
 brew "mas"
-brew "mongosh"
 brew "mysql"
 brew "nkf"
 brew "openjdk"
 brew "orbstack"
 brew "openjdk@11"
 brew "peco"
-brew "perl"
-brew "plantuml"
 brew "postgresql@14"
-brew "pyenv"
-brew "python@3.8"
-brew "ruby-build"
-brew "rbenv"
 brew "redis"
-brew "tfenv"
 brew "the_silver_searcher"
 brew "tig"
 brew "tree"
@@ -97,12 +86,10 @@ cask "gather"
 cask "google-cloud-sdk", args: { appdir: "/Applications" }
 cask "google-japanese-ime"
 cask "grandperspective", args: { appdir: "/Applications" }
-cask "gyazo", args: { appdir: "/Applications" }
 cask "iterm2", args: { appdir: "/Applications" }
 cask "java6", args: { appdir: "/Applications" }
 cask "karabiner-elements", args: { appdir: "/Applications" }
 cask "kindle", args: { appdir: "/Applications" }
-cask "mysqlworkbench", args: { appdir: "/Applications" }
 cask "ngrok", args: { appdir: "/Applications" }
 cask "sequel-pro", args: { appdir: "/Applications" }
 cask "skitch", args: { appdir: "/Applications" }
@@ -180,4 +167,3 @@ vscode "wingrunr21.vscode-ruby"
 vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
 vscode "Yog.yog-plantuml-highlight"
-mas "1focus", id: 969210610
