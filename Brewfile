@@ -18,16 +18,13 @@ brew "asdf" # 複数の言語のバージョン管理ツール
 brew "autoconf" # ソースコードの自動設定スクリプト生成
 brew "autojump" # ディレクトリ移動を効率化するツール
 brew "automake" # Makefileの自動生成ツール
-brew "aws-elasticbeanstalk" # AWS Elastic Beanstalk CLI
 brew "awscli" # AWSの公式コマンドラインツール
 brew "bat" # catの代替コマンド（シンタックスハイライト付き）
 brew "brew-file" # Brewfileの管理ツール
 brew "cairo" # 2Dグラフィックスライブラリ
 brew "cmake" # クロスプラットフォームビルドツール
-brew "composer" # PHP用パッケージマネージャー
 brew "coreutils" # GNU基本コマンドラインツール
 brew "curl" # URLデータ転送ツール
-brew "docker-compose" # Dockerコンテナ管理ツール
 brew "ffmpeg" # 動画・音声処理ツール
 brew "flyctl" # Fly.ioのCLIツール
 brew "gawk" # テキスト処理言語
@@ -35,9 +32,6 @@ brew "gh" # GitHub CLI
 brew "ghq" # リモートリポジトリ管理ツール
 brew "git-delta" # gitの差分表示を改善するツール
 brew "gnupg" # 暗号化・署名ツール
-brew "go" # Googleが開発したプログラミング言語
-brew "gobject-introspection" # GObjectの型情報を扱うツール
-brew "graphviz" # グラフ視覚化ツール
 brew "harfbuzz" # テキストシェーピングエンジン
 brew "heroku" # HerokuのCLIツール
 brew "hub" # GitHubのCLIツール
@@ -50,30 +44,18 @@ brew "librsvg" # SVG描画ライブラリ
 brew "lv" # 多機能テキストビューア
 brew "marp-cli" # Markdownプレゼンテーションツール
 brew "mas" # Mac App Store CLIツール
-brew "mkcert" # ローカル開発用SSL証明書作成ツール
-brew "mysql" # オープンソースRDBMS
 brew "mysql@8.0" # MySQL 8.0
 brew "nkf" # 文字コード変換ツール
-brew "node" # Node.js
-brew "node@16" # Node.js 16
 brew "openjdk" # Java開発キット
-brew "openjdk@11" # Java 11
-brew "openjdk@17" # Java 17
 brew "pango" # テキストレイアウトエンジン
 brew "peco" # インタラクティブフィルタリングツール
 brew "postgresql@14" # PostgreSQL 14
-brew "python@3.11" # Python 3.11
-brew "python@3.12" # Python 3.12
-brew "redis" # インメモリデータストア
-brew "ruby" # Rubyプログラミング言語
 brew "stripe" # Stripe CLIツール
-brew "tfenv" # Terraformバージョン管理
 brew "the_silver_searcher" # 高速コード検索ツール
 brew "tig" # テキストモードのgitインターフェース
 brew "tree" # ディレクトリツリー表示ツール
 brew "uv" # Python用の高速パッケージインストーラー
 brew "vim" # テキストエディタ
-brew "volta" # Node.jsツールチェーン管理
 brew "watch" # コマンド実行結果の定期的な監視
 brew "wget" # ネットワークファイルダウンロード
 brew "yarn" # Node.jsパッケージマネージャー
@@ -129,7 +111,6 @@ mas "iMovie", id: 408981434 # 動画編集ソフト
 mas "LINE", id: 539883307 # メッセージングアプリ
 mas "Numbers", id: 409203825 # スプレッドシートアプリ
 mas "Pages", id: 409201541 # ワードプロセッサ
-mas "Paste", id: 967805235 # クリップボード管理
 mas "Prime Video", id: 545519333 # Amazonビデオストリーミング
 mas "Todoist", id: 585829637 # タスク管理アプリ
 
