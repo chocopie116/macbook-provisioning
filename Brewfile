@@ -83,36 +83,28 @@ brew "zsh"
 # Casks
 cask "alt-tab"
 cask "appcleaner"
-cask "authy"
 cask "bartender"
 cask "bettertouchtool"
 cask "cleanshot"
 cask "coteditor"
-cask "dash"
 cask "discord"
 cask "docker"
 cask "dropbox"
 cask "duet"
-cask "figma"
 cask "firefox"
-cask "focus"
 cask "font-ipaexfont"
-cask "gather"
 cask "google-cloud-sdk"
 cask "google-japanese-ime"
 cask "grandperspective"
-cask "graphql-playground"
 cask "gyazo"
 cask "iterm2"
 cask "java6"
 cask "karabiner-elements"
 cask "kindle"
-cask "mysqlworkbench"
 cask "ngrok"
 cask "orbstack"
 cask "raycast"
 cask "sequel-pro"
-cask "skitch"
 cask "slack"
 cask "the-unarchiver"
 cask "tripmode"
@@ -127,7 +119,6 @@ mas "iMovie", id: 408981434
 mas "LINE", id: 539883307
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Paste", id: 967805235
 mas "Prime Video", id: 545519333
 mas "Todoist", id: 585829637
 
