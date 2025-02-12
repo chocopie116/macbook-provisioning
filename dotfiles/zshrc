@@ -169,22 +169,8 @@ elif which putclip >/dev/null 2>&1 ; then
 fi
 
 
-#----------------------------------------
-# nodebrew
-#----------------------------------------
-export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
-#----------------------------------------
-# local dependencies
-#----------------------------------------
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
-PATH=${JAVA_HOME}/bin:${PATH}
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-# for asdf-ruby
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-
- . /opt/homebrew/opt/asdf/libexec/asdf.sh
- 
+export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
-
