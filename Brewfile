@@ -71,18 +71,13 @@ cask "bettertouchtool" # マウス・キーボードカスタマイズ
 cask "cleanshot" # スクリーンショットツール
 cask "coteditor" # テキストエディタ
 cask "cursor" # AIアシスト機能付きコードエディタ
-cask "dash" # APIドキュメントブラウザ
 cask "discord" # コミュニケーションツール
-cask "docker" # コンテナ化プラットフォーム
 cask "dropbox" # クラウドストレージ
-cask "figma" # デザインツール
 cask "firefox" # Webブラウザ
 cask "font-ipaexfont" # IPAexフォント
-cask "gather" # バーチャルオフィス
 cask "google-cloud-sdk" # Google Cloud Platform CLI
 cask "google-japanese-ime" # 日本語入力メソッド
 cask "grandperspective" # ディスク使用量視覚化
-cask "graphql-playground" # GraphQLIDE
 cask "gyazo" # スクリーンショット共有
 cask "iterm2" # ターミナルエミュレータ
 cask "karabiner-elements" # キーボードカスタマイズ
@@ -91,11 +86,8 @@ cask "mysqlworkbench" # MySQLビジュアル管理ツール
 cask "ngrok" # ローカル環境の公開
 cask "orbstack" # 軽量コンテナ・VM管理
 cask "raycast" # ランチャー・生産性向上ツール
-cask "sequel-pro" # MySQLクライアント
-cask "skitch" # 画像編集・共有ツール
 cask "slack" # ビジネスチャット
 cask "the-unarchiver" # 圧縮ファイル解凍ツール
-cask "tripmode" # モバイルデータ使用量管理
 cask "visual-studio-code" # コードエディタ
 cask "zoom" # ビデオ会議ツール
 
