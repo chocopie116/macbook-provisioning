@@ -66,7 +66,6 @@ brew "zsh" # Zシェル
 cask "alt-tab" # Windowsライクなアプリケーション切り替え
 cask "appcleaner" # アプリケーション完全削除ツール
 cask "arc" # 革新的なWebブラウザ
-cask "authy" # 2要素認証アプリ
 cask "bartender" # メニューバー整理ツール
 cask "bettertouchtool" # マウス・キーボードカスタマイズ
 cask "cleanshot" # スクリーンショットツール
@@ -76,10 +75,8 @@ cask "dash" # APIドキュメントブラウザ
 cask "discord" # コミュニケーションツール
 cask "docker" # コンテナ化プラットフォーム
 cask "dropbox" # クラウドストレージ
-cask "duet" # iPadをサブディスプレイ化
 cask "figma" # デザインツール
 cask "firefox" # Webブラウザ
-cask "focus" # 集中力向上アプリ
 cask "font-ipaexfont" # IPAexフォント
 cask "gather" # バーチャルオフィス
 cask "google-cloud-sdk" # Google Cloud Platform CLI
@@ -88,7 +85,6 @@ cask "grandperspective" # ディスク使用量視覚化
 cask "graphql-playground" # GraphQLIDE
 cask "gyazo" # スクリーンショット共有
 cask "iterm2" # ターミナルエミュレータ
-cask "java6" # Java 6ランタイム
 cask "karabiner-elements" # キーボードカスタマイズ
 cask "kindle" # 電子書籍リーダー
 cask "mysqlworkbench" # MySQLビジュアル管理ツール
@@ -117,7 +113,6 @@ mas "Todoist", id: 585829637 # タスク管理アプリ
 # Cursor Extensions
 vscode "bierner.markdown-mermaid" # Mermaid図表のプレビュー
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting" # Mermaidシンタックスハイライト
-vscode "cognition.devin" # AIコーディングアシスタント
 vscode "dbaeumer.vscode-eslint" # JavaScriptリンター
 vscode "esbenp.prettier-vscode" # コードフォーマッター
 vscode "graphql.vscode-graphql" # GraphQLサポート
@@ -133,8 +128,6 @@ vscode "ms-python.vscode-pylance" # Python言語サーバー
 vscode "ms-vsliveshare.vsliveshare" # リアルタイムコラボレーション
 vscode "nucllear.vscode-extension-auto-import" # 自動インポート
 vscode "oderwat.indent-rainbow" # インデントの視覚化
-vscode "openai.openai-chatgpt-adhoc" # ChatGPT統合
-vscode "orsenkucher.vscode-graphql" # GraphQLクライアント
 vscode "prisma.prisma" # Prismaデータベース統合
 vscode "rooveterinaryinc.roo-cline" # Roo Cline拡張
 vscode "saoudrizwan.claude-dev" # Claude AI統合
@@ -142,4 +135,3 @@ vscode "steoates.autoimport" # TypeScript自動インポート
 vscode "vscodevim.vim" # Vimエミュレーション
 vscode "wix.vscode-import-cost" # インポートサイズ表示
 vscode "yoavbls.pretty-ts-errors" # TypeScriptエラー改善
-vscode "zenstack.zenstack" # フルスタック開発ツール
