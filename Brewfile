@@ -12,33 +12,20 @@ tap "sanemat/font" # フォント関連ツール
 tap "stripe/stripe-cli" # Stripe CLIツール
 
 # Formulae
-brew "abseil" # C++用の高性能なユーティリティライブラリ
-brew "act" # GitHubアクションをローカルで実行するツール
 brew "asdf" # 複数の言語のバージョン管理ツール
-brew "autoconf" # ソースコードの自動設定スクリプト生成
-brew "autojump" # ディレクトリ移動を効率化するツール
 brew "automake" # Makefileの自動生成ツール
-brew "awscli" # AWSの公式コマンドラインツール
 brew "bat" # catの代替コマンド（シンタックスハイライト付き）
 brew "brew-file" # Brewfileの管理ツール
-brew "cairo" # 2Dグラフィックスライブラリ
 brew "cmake" # クロスプラットフォームビルドツール
 brew "coreutils" # GNU基本コマンドラインツール
 brew "curl" # URLデータ転送ツール
 brew "ffmpeg" # 動画・音声処理ツール
 brew "flyctl" # Fly.ioのCLIツール
-brew "gawk" # テキスト処理言語
 brew "gh" # GitHub CLI
 brew "ghq" # リモートリポジトリ管理ツール
-brew "git-delta" # gitの差分表示を改善するツール
-brew "gnupg" # 暗号化・署名ツール
-brew "harfbuzz" # テキストシェーピングエンジン
 brew "heroku" # HerokuのCLIツール
 brew "hub" # GitHubのCLIツール
-brew "imagemagick" # 画像処理ツール
-brew "jpeg-xl" # 次世代JPEG形式
 brew "jq" # JSONプロセッサ
-brew "libfido2" # FIDO 2.0ライブラリ
 brew "libpq" # PostgreSQLクライアントライブラリ
 brew "librsvg" # SVG描画ライブラリ
 brew "lv" # 多機能テキストビューア
@@ -56,7 +43,6 @@ brew "tig" # テキストモードのgitインターフェース
 brew "tree" # ディレクトリツリー表示ツール
 brew "uv" # Python用の高速パッケージインストーラー
 brew "vim" # テキストエディタ
-brew "watch" # コマンド実行結果の定期的な監視
 brew "wget" # ネットワークファイルダウンロード
 brew "zplug" # Zshプラグイン管理
 brew "zsh" # Zシェル
@@ -72,13 +58,9 @@ cask "biscuit" # ワークスペース統合ブラウザ
 cask "bluebird" # Twitterクライアント
 cask "chatgpt" # ChatGPTデスクトップアプリ
 cask "cleanshot" # スクリーンショットツール
-cask "coteditor" # テキストエディタ
 cask "cursor" # AIアシスト機能付きコードエディタ
 cask "discord" # コミュニケーションツール
 cask "dropbox" # クラウドストレージ
-cask "firefox" # Webブラウザ
-cask "font-ipaexfont" # IPAexフォント
-cask "google-cloud-sdk" # Google Cloud Platform CLI
 cask "google-japanese-ime" # 日本語入力メソッド
 cask "grandperspective" # ディスク使用量視覚化
 cask "gyazo" # スクリーンショット共有
@@ -86,7 +68,6 @@ cask "iterm2" # ターミナルエミュレータ
 cask "inyourface" # ミーティング通知アプリ
 cask "karabiner-elements" # キーボードカスタマイズ
 cask "lark" # オールインワンコラボレーションプラットフォーム
-cask "mysqlworkbench" # MySQLビジュアル管理ツール
 cask "microsoft-teams" # Microsoftのビジネスコミュニケーションプラットフォーム
 cask "ngrok" # ローカル環境の公開
 cask "orbstack" # 軽量コンテナ・VM管理
