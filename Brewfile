@@ -58,7 +58,6 @@ brew "uv" # Python用の高速パッケージインストーラー
 brew "vim" # テキストエディタ
 brew "watch" # コマンド実行結果の定期的な監視
 brew "wget" # ネットワークファイルダウンロード
-brew "yarn" # Node.jsパッケージマネージャー
 brew "zplug" # Zshプラグイン管理
 brew "zsh" # Zシェル
 
@@ -67,7 +66,11 @@ cask "alt-tab" # Windowsライクなアプリケーション切り替え
 cask "appcleaner" # アプリケーション完全削除ツール
 cask "arc" # 革新的なWebブラウザ
 cask "bartender" # メニューバー整理ツール
+cask "battery" # Apple Silicon Mac用バッテリー管理アプリ
 cask "bettertouchtool" # マウス・キーボードカスタマイズ
+cask "biscuit" # ワークスペース統合ブラウザ
+cask "bluebird" # Twitterクライアント
+cask "chatgpt" # ChatGPTデスクトップアプリ
 cask "cleanshot" # スクリーンショットツール
 cask "coteditor" # テキストエディタ
 cask "cursor" # AIアシスト機能付きコードエディタ
@@ -80,14 +83,18 @@ cask "google-japanese-ime" # 日本語入力メソッド
 cask "grandperspective" # ディスク使用量視覚化
 cask "gyazo" # スクリーンショット共有
 cask "iterm2" # ターミナルエミュレータ
+cask "inyourface" # ミーティング通知アプリ
 cask "karabiner-elements" # キーボードカスタマイズ
-cask "kindle" # 電子書籍リーダー
+cask "lark" # オールインワンコラボレーションプラットフォーム
 cask "mysqlworkbench" # MySQLビジュアル管理ツール
+cask "microsoft-teams" # Microsoftのビジネスコミュニケーションプラットフォーム
 cask "ngrok" # ローカル環境の公開
 cask "orbstack" # 軽量コンテナ・VM管理
 cask "raycast" # ランチャー・生産性向上ツール
 cask "slack" # ビジネスチャット
+cask "superwhisper" # 音声文字起こしアプリ
 cask "the-unarchiver" # 圧縮ファイル解凍ツール
+cask "tldv" # ミーティング録画・文字起こしツール
 cask "visual-studio-code" # コードエディタ
 cask "zoom" # ビデオ会議ツール
 

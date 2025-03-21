@@ -174,3 +174,4 @@ fi
 
 export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
