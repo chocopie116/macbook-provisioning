@@ -32,28 +32,20 @@
 [alias]
   co = checkout
   ci = commit -v
+  s = status --short --branch
   st = status
   cancel = reset --soft HEAD^
   d = diff
   dc = diff --cached
   empty = commit --allow-empty -m 'wip'
   lg = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
-  l = log --graph --date=short --pretty='format:[%<(18,trunc)%ci%x08%x08] %C(yellow)%h%Cblue%d%Creset %s %C(green)%an %Creset'
-  ll = log
-  ld = log -p
-  sb = show-branch -a
   br = branch
   f = fetch --prune
-  s = status --short --branch
-  st = status
   p = !git push origin `git rev-parse --abbrev-ref HEAD`
   pu = pull
   pl = pull-request
-  see = browse-remote --pr
-  c = browse-remote --pr
   osouji = ! git branch | xargs git branch -D
-  showpr = !"f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
-  openpr = "!f() { hub browse -- `git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1 | cut -f5 -d' ' | sed -e 's%#%pull/%'`; }; f"
+  c = !gh pr view --web
   ac = !git add -A && aicommits -a
 
 
@@ -71,3 +63,5 @@
 
 [pull]
 	rebase = false
+[hub]
+	protocol = ssh
