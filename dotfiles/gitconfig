@@ -46,6 +46,7 @@
   pl = pull-request
   osouji = ! git branch | xargs git branch -D
   c = !gh repo view --web
+  cpr= "!f() { git push -u origin HEAD; gh pr create --body \"$1\" --title \"[WIP]\"; gh pr view -w; }; f"
   wip = "!f() { git commit --allow-empty -m \"empty commit\"; git push -u origin HEAD; gh pr create --body \"$1\" --title \"[WIP]\"; gh pr view -w; }; f"
   ac = !git add -A && aicommits -a
 

@@ -78,6 +78,7 @@ cask "the-unarchiver" # 圧縮ファイル解凍ツール
 cask "tldv" # ミーティング録画・文字起こしツール
 cask "visual-studio-code" # コードエディタ
 cask "zoom" # ビデオ会議ツール
+cask "coteditor" # 軽量なテキストエディタ
 
 # Mac App Store
 mas "Amphetamine", id: 937984704 # スリープ防止ツール

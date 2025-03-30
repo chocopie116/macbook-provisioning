@@ -171,3 +171,6 @@ fi
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
