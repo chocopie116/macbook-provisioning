@@ -3,7 +3,6 @@ tap "adoptopenjdk/openjdk" # AdoptOpenJDKの公式パッケージ
 tap "argon/mas" # Mac App Store CLIの公式パッケージ
 tap "heroku/brew" # Herokuの公式パッケージ
 tap "homebrew/bundle" # Brewfileを使用したパッケージ管理
-tap "homebrew/cask-versions" # 特定バージョンのアプリケーション用
 tap "homebrew/services" # バックグラウンドサービス管理
 tap "ngrok/ngrok" # ngrokの公式パッケージ
 tap "railwaycat/emacsmacport" # macOS用Emacsの特別ビルド
@@ -55,7 +54,6 @@ cask "bartender" # メニューバー整理ツール
 cask "battery" # Apple Silicon Mac用バッテリー管理アプリ
 cask "bettertouchtool" # マウス・キーボードカスタマイズ
 cask "biscuit" # ワークスペース統合ブラウザ
-cask "bluebird" # Twitterクライアント
 cask "chatgpt" # ChatGPTデスクトップアプリ
 cask "cleanshot" # スクリーンショットツール
 cask "cursor" # AIアシスト機能付きコードエディタ
@@ -65,7 +63,6 @@ cask "google-japanese-ime" # 日本語入力メソッド
 cask "grandperspective" # ディスク使用量視覚化
 cask "gyazo" # スクリーンショット共有
 cask "iterm2" # ターミナルエミュレータ
-cask "inyourface" # ミーティング通知アプリ
 cask "karabiner-elements" # キーボードカスタマイズ
 cask "lark" # オールインワンコラボレーションプラットフォーム
 cask "microsoft-teams" # Microsoftのビジネスコミュニケーションプラットフォーム
@@ -75,7 +72,6 @@ cask "raycast" # ランチャー・生産性向上ツール
 cask "slack" # ビジネスチャット
 cask "superwhisper" # 音声文字起こしアプリ
 cask "the-unarchiver" # 圧縮ファイル解凍ツール
-cask "tldv" # ミーティング録画・文字起こしツール
 cask "visual-studio-code" # コードエディタ
 cask "zoom" # ビデオ会議ツール
 cask "coteditor" # 軽量なテキストエディタ
