@@ -1,0 +1,143 @@
+#!/usr/bin/env python3
+import os
+import fnmatch
+import subprocess
+from pathlib import Path
+
+def load_gitignore_patterns():
+    """
+    .gitignoreからコメント行と空行を除いたパターンを読み込み、
+    各パターンに"./"を接頭辞として追加したリストを返す。
+    """
+    patterns = []
+    gitignore_file = Path('.gitignore')
+    if gitignore_file.is_file():
+        content = gitignore_file.read_text(encoding='utf-8')
+        for line in content.splitlines():
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+            # gitignoreの各行に"./"を付与しておく
+            patterns.append("./" + line)
+    return patterns
+
+def should_ignore(rel_path: Path, ignore_patterns):
+    """
+    rel_pathは現在のディレクトリからの相対パス（例: "a/b.py"）です。
+    先頭に"./"を付与して、.gitignore由来のパターンとfnmatchで比較します。
+    一致する場合、Trueを返してスキップ対象とします。
+    """
+    check_path = "./" + rel_path.as_posix()
+    for pattern in ignore_patterns:
+        if fnmatch.fnmatch(check_path, pattern):
+            return True
+    return False
+
+def combine_code():
+    print("コードを組み合わせています...")
+    output_path = Path("files.md")
+
+    output_file = output_path
+    # 既存のfiles.mdがあれば削除
+    if output_file.exists():
+        output_file.unlink()
+
+    # 最初に"# README.md"を書き込み、README.mdが存在すればその内容を追記する
+    # さらに、package.json、pyproject.yamlが存在すれば読み込んで追加する
+    with output_file.open("w", encoding="utf-8") as outf:
+        outf.write("# README.md\n")
+        readme_file = Path("README.md")
+        if readme_file.is_file():
+            outf.write(
+                f"<content>\n{readme_file.read_text(encoding='utf-8')}\n</content>\n"
+            )
+        
+        package_file = Path("package.json")
+        if package_file.is_file():
+            outf.write("\n\n# package.json\n")
+            outf.write(f"<content>\n{package_file.read_text(encoding='utf-8')}\n</content>\n")
+        
+        pyproject_file = Path("pyproject.yaml")
+        if pyproject_file.is_file():
+            outf.write("\n\n# pyproject.yaml\n")
+            outf.write(f"<content>\n{pyproject_file.read_text(encoding='utf-8')}\n</content>\n")
+
+    # .gitignoreから無視するパターンを読み込む
+    ignore_patterns = load_gitignore_patterns()
+
+    # 対象とする拡張子のセット
+    valid_extensions = {
+        # 既存の拡張子
+        ".ts", ".tsx", ".svelte", ".prisma", ".py",
+        # JSONファイル
+        ".json",
+        # Android関連ファイル
+        ".java", ".kt", ".xml", ".gradle",
+        # iOS関連ファイル
+        ".swift", ".m", ".h", ".storyboard", ".xib", ".pbxproj", ".plist"
+    }
+
+    # 除外するディレクトリのセット
+    exclude_dirs = {"node_modules", ".venv", "build", "Pods"}
+
+    # 再帰的に現在のディレクトリ以下を探索
+    # os.walkを使って、探索中にnode_modulesと.venvをスキップする
+    for root, dirs, files in os.walk("."):
+        # 除外ディレクトリのリスト
+        dirs[:] = [d for d in dirs if d not in exclude_dirs]
+        for file in files:
+            file_path = Path(root) / file
+            # 対象拡張子かどうかをチェック
+            if file_path.suffix in valid_extensions:
+                # 現在のディレクトリからの相対パスを取得
+                try:
+                    rel_path = file_path.relative_to(Path(".").resolve())
+                except ValueError:
+                    rel_path = file_path
+                # .gitignoreのパターンにマッチしている場合はスキップ
+                if should_ignore(rel_path, ignore_patterns):
+                    continue
+                # ファイルの行数をカウント
+                with file_path.open("r", encoding="utf-8", errors="ignore") as f:
+                    lines = f.readlines()
+                    line_count = len(lines)
+                    
+                    # 1000行以下のファイルのみ処理
+                    if line_count <= 1000:
+                        content = "".join(lines)
+                        with output_file.open("a", encoding="utf-8") as outf:
+                            outf.write(f"\n\n# {file_path}\n")
+                            outf.write(f"<content>\n{content}\n</content>\n")
+                    else:
+                        # 1000行を超えるファイルはスキップし、スキップした旨を記録
+                        with output_file.open("a", encoding="utf-8") as outf:
+                            outf.write(f"\n\n# {file_path}\n")
+                            outf.write(f"<skipped - {line_count} lines (exceeds 1000 line limit)>\n")
+
+def copy_to_clipboard(file_path):
+    """ファイルの内容をクリップボードにコピーする"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            content = file.read()
+        # macOSのpbcopyコマンドを使用してクリップボードにコピー
+        process = subprocess.Popen(['pbcopy'], stdin=subprocess.PIPE)
+        process.communicate(content.encode('utf-8'))
+        return True
+    except Exception as e:
+        print(f"クリップボードへのコピー中にエラーが発生しました: {e}")
+        return False
+
+if __name__ == "__main__":
+    combine_code()
+    output_path = Path("files.md")
+    if output_path.exists():
+        # ファイルの文字数を計算
+        file_content = output_path.read_text(encoding='utf-8')
+        char_count = len(file_content)
+        
+        if copy_to_clipboard(output_path):
+            print(f"{output_path}の内容をクリップボードにコピーしました。")
+            print(f"合計文字数: {char_count}文字")
+        else:
+            print("クリップボードへのコピーに失敗しました。")
+            print(f"合計文字数: {char_count}文字")
