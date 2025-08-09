@@ -18,7 +18,7 @@ package/dump:
 git-browse-remote:
 	gem install $@
 
-restore: _restore/karabiner _restore/vscode
+restore: _restore/karabiner _restore/vscode _restore/claude
 
 _backup/karabiner:
 	cp -f ~/.config/karabiner/karabiner.json $(PWD)/templates/karabiner.json
@@ -27,4 +27,9 @@ _restore/karabiner:
 	mkdir -p ~/.config/karabiner
 	rm -f ~/.config/karabiner/karabiner.json
 	ln -s $(PWD)/templates/karabiner.json ~/.config/karabiner/karabiner.json
+
+_restore/claude:
+	mkdir -p ~/.claude
+	ln -sf $(PWD)/.claude/commands ~/.claude/commands
+	ln -sf $(PWD)/.claude/CLAUDE.md ~/.claude/CLAUDE.md
 
