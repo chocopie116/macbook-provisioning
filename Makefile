@@ -30,7 +30,10 @@ _restore/karabiner:
 
 _restore/claude:
 	mkdir -p ~/.claude
-	ln -sf $(PWD)/.claude/commands ~/.claude/commands
-	ln -sf $(PWD)/.claude/CLAUDE.md ~/.claude/CLAUDE.md
-	ln -sf $(PWD)/.claude/settings.local.json ~/.claude/settings.local.json
+	rm -rf ~/.claude/commands
+	rm -f ~/.claude/CLAUDE.md
+	rm -f ~/.claude/settings.local.json
+	ln -s $(PWD)/.claude/commands ~/.claude/commands
+	ln -s $(PWD)/.claude/CLAUDE.md ~/.claude/CLAUDE.md
+	ln -s $(PWD)/.claude/settings.local.json ~/.claude/settings.local.json
 
