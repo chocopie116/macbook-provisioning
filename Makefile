@@ -32,4 +32,5 @@ _restore/claude:
 	mkdir -p ~/.claude
 	ln -sf $(PWD)/.claude/commands ~/.claude/commands
 	ln -sf $(PWD)/.claude/CLAUDE.md ~/.claude/CLAUDE.md
+	ln -sf $(PWD)/.claude/settings.local.json ~/.claude/settings.local.json
 
