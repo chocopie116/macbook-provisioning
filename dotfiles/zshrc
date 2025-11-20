@@ -170,4 +170,8 @@ elif which putclip >/dev/null 2>&1 ; then
 fi
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+export PATH="$HOME/.local/bin:/opt/homebrew/bin:$PATH"
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# Added by Antigravity
+export PATH="/Users/tsubasa/.antigravity/antigravity/bin:$PATH"
