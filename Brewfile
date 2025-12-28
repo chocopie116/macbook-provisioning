@@ -1,13 +1,10 @@
 tap "1password/tap" # 1Passwordの公式パッケージ
-tap "adoptopenjdk/openjdk" # AdoptOpenJDKの公式パッケージ
 tap "argon/mas" # Mac App Store CLIの公式パッケージ
 tap "heroku/brew" # Herokuの公式パッケージ
 tap "homebrew/bundle" # Brewfileを使用したパッケージ管理
 tap "homebrew/services" # バックグラウンドサービス管理
 tap "ngrok/ngrok" # ngrokの公式パッケージ
-tap "railwaycat/emacsmacport" # macOS用Emacsの特別ビルド
 tap "rcmdnk/file" # brew-fileなどのツール
-tap "sanemat/font" # フォント関連ツール
 tap "stripe/stripe-cli" # Stripe CLIツール
 
 # Formulae
@@ -24,22 +21,18 @@ brew "flyctl" # Fly.ioのCLIツール
 brew "gh" # GitHub CLI
 brew "ghq" # リモートリポジトリ管理ツール
 brew "heroku" # HerokuのCLIツール
-brew "hub" # GitHubのCLIツール
 brew "jq" # JSONプロセッサ
 brew "libpq" # PostgreSQLクライアントライブラリ
 brew "librsvg" # SVG描画ライブラリ
 brew "lv" # 多機能テキストビューア
 brew "marp-cli" # Markdownプレゼンテーションツール
 brew "mas" # Mac App Store CLIツール
-brew "mysql@8.0" # MySQL 8.0
 brew "nkf" # 文字コード変換ツール
 brew "openjdk" # Java開発キット
-brew "pango" # テキストレイアウトエンジン
 brew "peco" # インタラクティブフィルタリングツール
 brew "postgresql@14" # PostgreSQL 14
 brew "stripe" # Stripe CLIツール
 brew "the_silver_searcher" # 高速コード検索ツール
-brew "tig" # テキストモードのgitインターフェース
 brew "tree" # ディレクトリツリー表示ツール
 brew "uv" # Python用の高速パッケージインストーラー
 brew "vim" # テキストエディタ
@@ -71,11 +64,9 @@ cask "ngrok" # ローカル環境の公開
 cask "orbstack" # 軽量コンテナ・VM管理
 cask "raycast" # ランチャー・生産性向上ツール
 cask "slack" # ビジネスチャット
-cask "superwhisper" # 音声文字起こしアプリ
 cask "the-unarchiver" # 圧縮ファイル解凍ツール
 cask "visual-studio-code" # コードエディタ
 cask "zoom" # ビデオ会議ツール
-cask "coteditor" # 軽量なテキストエディタ
 
 # Mac App Store
 mas "Amphetamine", id: 937984704 # スリープ防止ツール
@@ -88,28 +79,25 @@ mas "Pages", id: 409201541 # ワードプロセッサ
 mas "Prime Video", id: 545519333 # Amazonビデオストリーミング
 mas "Todoist", id: 585829637 # タスク管理アプリ
 
-# Cursor Extensions
+# VSCode/Cursor Extensions
+vscode "anthropic.claude-code" # Claude Code
 vscode "bierner.markdown-mermaid" # Mermaid図表のプレビュー
+vscode "biomejs.biome" # Biomeリンター/フォーマッター
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting" # Mermaidシンタックスハイライト
+vscode "cognition.devin" # Devin AI
 vscode "dbaeumer.vscode-eslint" # JavaScriptリンター
 vscode "esbenp.prettier-vscode" # コードフォーマッター
-vscode "graphql.vscode-graphql" # GraphQLサポート
-vscode "graphql.vscode-graphql-syntax" # GraphQLシンタックス
 vscode "ionutvmi.path-autocomplete" # パス補完
 vscode "kimuson.ts-type-expand" # TypeScript型展開
 vscode "marp-team.marp-vscode" # Markdownスライド作成
 vscode "mohd-akram.vscode-html-format" # HTMLフォーマッター
-vscode "mquandalle.graphql" # GraphQLツール
-vscode "ms-python.debugpy" # Pythonデバッガー
-vscode "ms-python.python" # Python言語サポート
-vscode "ms-python.vscode-pylance" # Python言語サーバー
 vscode "ms-vsliveshare.vsliveshare" # リアルタイムコラボレーション
-vscode "nucllear.vscode-extension-auto-import" # 自動インポート
 vscode "oderwat.indent-rainbow" # インデントの視覚化
 vscode "prisma.prisma" # Prismaデータベース統合
-vscode "rooveterinaryinc.roo-cline" # Roo Cline拡張
-vscode "saoudrizwan.claude-dev" # Claude AI統合
+vscode "shd101wyy.markdown-preview-enhanced" # Markdownプレビュー強化
+vscode "simonsiefke.svg-preview" # SVGプレビュー
 vscode "steoates.autoimport" # TypeScript自動インポート
 vscode "vscodevim.vim" # Vimエミュレーション
+vscode "waymondo.todoist" # Todoist統合
 vscode "wix.vscode-import-cost" # インポートサイズ表示
 vscode "yoavbls.pretty-ts-errors" # TypeScriptエラー改善
