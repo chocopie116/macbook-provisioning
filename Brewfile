@@ -41,7 +41,10 @@ brew "zplug" # Zshプラグイン管理
 brew "zsh" # Zシェル
 
 # Casks
+cask "1password" # パスワードマネージャー
 cask "alt-tab" # Windowsライクなアプリケーション切り替え
+cask "antigravity" # Antigravity
+cask "aqua-voice" # 音声入力アプリ
 cask "appcleaner" # アプリケーション完全削除ツール
 cask "arc" # 革新的なWebブラウザ
 cask "bartender" # メニューバー整理ツール
@@ -49,6 +52,7 @@ cask "battery" # Apple Silicon Mac用バッテリー管理アプリ
 cask "bettertouchtool" # マウス・キーボードカスタマイズ
 cask "biscuit" # ワークスペース統合ブラウザ
 cask "chatgpt" # ChatGPTデスクトップアプリ
+cask "claude" # Claude AIデスクトップアプリ
 cask "cleanshot" # スクリーンショットツール
 cask "cursor" # AIアシスト機能付きコードエディタ
 cask "discord" # コミュニケーションツール
@@ -59,8 +63,11 @@ cask "gyazo" # スクリーンショット共有
 cask "iterm2" # ターミナルエミュレータ
 cask "karabiner-elements" # キーボードカスタマイズ
 cask "lark" # オールインワンコラボレーションプラットフォーム
+cask "limitless" # AIミーティングアシスタント
 cask "microsoft-teams" # Microsoftのビジネスコミュニケーションプラットフォーム
 cask "ngrok" # ローカル環境の公開
+cask "notion" # ノートアプリ
+cask "obsidian" # Markdownノートアプリ
 cask "orbstack" # 軽量コンテナ・VM管理
 cask "raycast" # ランチャー・生産性向上ツール
 cask "slack" # ビジネスチャット
