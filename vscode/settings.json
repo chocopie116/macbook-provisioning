@@ -1,8 +1,0 @@
-{
-    "editor.formatOnSave": true,
-    "window.zoomLevel": 0,
-    "editor.rename.enablePreview": false,
-    "workbench.editor.enablePreview": false,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "explorer.confirmDelete": false
-}
