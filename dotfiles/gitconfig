@@ -57,7 +57,7 @@
   required = true
 
 [ghq]
-  root = ~/.go/src
+  root = ~/ghq
 
 [include]
   #最後に読み込んで.localの設定でoverwriteできるようにした
