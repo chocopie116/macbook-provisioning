@@ -8,41 +8,62 @@
 - Apple ID でログイン済み
 - インターネットに接続している
 
-## 1. 初期設定
+## 1. 最初に手動でインストールするアプリ
 
-### Xcode Command Line Tools のインストール
-ターミナルを開いて実行：
+### 1Password のインストール
+1. [1Password](https://1password.com/downloads/mac/) をダウンロードしてインストール
+2. アカウントにログイン
+3. SSH 鍵や各種認証情報にアクセスできることを確認
+
+### Chrome のインストール
+1. Safari で [Google Chrome](https://www.google.com/chrome/) をダウンロード
+2. インストールして既定のブラウザに設定
+
+## 2. SSH 鍵の設定
+
+### 1Password から SSH 鍵を復元する場合
+1. 1Password から SSH 秘密鍵をエクスポート
+2. `~/.ssh/` に配置して権限を設定：
 ```bash
-xcode-select --install
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+# 1Password から鍵をコピー後
+chmod 600 ~/.ssh/id_ed25519
+chmod 644 ~/.ssh/id_ed25519.pub
 ```
 
-### このリポジトリをクローン
+### 新規に SSH 鍵を作成する場合
 ```bash
-# ghq を使う場合（Homebrew インストール後）
-ghq get git@github.com:chocopie116/macbook-provisioning.git
+ssh-keygen -t ed25519 -C "your_email@example.com"
+cat ~/.ssh/id_ed25519.pub | pbcopy
+```
+GitHub > Settings > SSH and GPG keys で公開鍵を追加
 
-# または直接クローン
+### SSH 接続テスト
+```bash
+ssh -T git@github.com
+# "Hi username!" と表示されれば成功
+```
+
+## 3. リポジトリのクローン
+
+```bash
 mkdir -p ~/.go/src/github.com/chocopie116
 cd ~/.go/src/github.com/chocopie116
 git clone git@github.com:chocopie116/macbook-provisioning.git
 cd macbook-provisioning
 ```
 
-> **Note**: SSH 鍵がない場合は HTTPS でクローンするか、先に SSH 鍵を設定してください。
+## 4. Homebrew セットアップ
 
-## 2. Homebrew セットアップ
-
-### Homebrew のインストール
+### Xcode Command Line Tools と Homebrew のインストール
 ```bash
+xcode-select --install  # 必要に応じて
 make setup
-```
-
-### PATH の設定
-```bash
 export PATH=$PATH:/opt/homebrew/bin
 ```
 
-## 3. パッケージのインストール
+## 5. パッケージのインストール
 
 ### 全パッケージをインストール
 ```bash
@@ -60,12 +81,13 @@ make package/install
 npm install -g aicommits
 ```
 
-## 4. dotfiles の設定
+## 6. dotfiles の設定
 
 ### シンボリックリンクの作成
 ```bash
 cd dotfiles
 make install
+cd ..
 ```
 
 これにより以下が設定されます：
@@ -77,7 +99,7 @@ make install
 ### zplug プラグインのインストール
 新しいターミナルを開くと自動的にプラグインのインストールが促されます。
 
-## 5. アプリケーション設定の復元
+## 7. アプリケーション設定の復元
 
 ### Karabiner と Claude Code の設定
 ```bash
@@ -92,17 +114,7 @@ bash .macos
 
 > **Note**: 一部の設定は再起動後に有効になります。
 
-## 6. 手動設定が必要な項目
-
-### SSH 鍵の設定
-```bash
-# 新規作成する場合
-ssh-keygen -t ed25519 -C "your_email@example.com"
-
-# GitHub に公開鍵を登録
-cat ~/.ssh/id_ed25519.pub | pbcopy
-# GitHub > Settings > SSH and GPG keys で追加
-```
+## 8. その他の設定
 
 ### Git のローカル設定
 ```bash
@@ -111,16 +123,16 @@ vim ~/.gitconfig.local
 ```
 
 ### アプリケーションへのログイン
-- [ ] 1Password
 - [ ] Dropbox
 - [ ] Slack
 - [ ] Discord
+- [ ] Notion
 - [ ] その他のアプリ
 
 ### 手動インストールが必要なアプリ
 - [InYourFace](https://inyourface.app/) - カレンダー通知アプリ
 
-## 7. 確認作業
+## 9. 確認作業
 
 ### 動作確認
 - [ ] ターミナルで `peco` が動作するか
@@ -145,11 +157,17 @@ asdf plugin add ruby
 ## クイックリファレンス
 
 ```bash
-# すべてを一気にセットアップ（SSH 鍵設定済みの場合）
+# 1Password と Chrome を手動インストール後
+# SSH 鍵を設定してから以下を実行
+
+mkdir -p ~/.go/src/github.com/chocopie116
+cd ~/.go/src/github.com/chocopie116
 git clone git@github.com:chocopie116/macbook-provisioning.git
 cd macbook-provisioning
-export PATH=$PATH:/opt/homebrew/bin
+
+xcode-select --install
 make setup
+export PATH=$PATH:/opt/homebrew/bin
 make package/install
 cd dotfiles && make install && cd ..
 make restore
