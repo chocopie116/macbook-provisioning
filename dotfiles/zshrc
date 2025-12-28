@@ -20,7 +20,10 @@ source $ZPLUG_HOME/init.zsh
 zplug 'zsh-users/zsh-completions', use:'src/_*', lazy:true
 zplug "mafredri/zsh-async", on:sindresorhus/pure # https://github.com/zplug/zplug2/issues/13
 zplug "sindresorhus/pure", use:pure.zsh # simple prompt design https://github.com/sindresorhus/pure
-zplug "b4b4r07/enhancd", use:init.sh # https://github.com/b4b4r07/enhancd
+
+# Claude Code等の外部ツールでのエラー回避のため、対話モード時のみ読み込む
+zplug "b4b4r07/enhancd", use:init.sh, if:"[[ -o interactive ]]"
+
 zplug "zsh-users/zsh-syntax-highlighting" # https://github.com/zsh-users/zsh-syntax-highlighting
 zplug "mollifier/cd-gitroot" # https://github.com/mollifier/cd-gitroot
 
@@ -175,3 +178,10 @@ export PATH="$HOME/.local/bin:/opt/homebrew/bin:$PATH"
 
 # Added by Antigravity
 export PATH="/Users/tsubasa/.antigravity/antigravity/bin:$PATH"
+
+# bun completions
+[ -s "/Users/tsubasa/.bun/_bun" ] && source "/Users/tsubasa/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
