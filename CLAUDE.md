@@ -12,6 +12,7 @@ macOS の環境構築を自動化するプロビジョニングリポジトリ�
 ```bash
 make setup              # Homebrew インストール
 make package/install    # brew bundle でパッケージインストール
+npm install -g aicommits  # AI コミットメッセージ生成（git ac で使用）
 ```
 
 ### パッケージ管理
@@ -30,18 +31,22 @@ cd dotfiles && make unlink   # シンボリックリンク削除
 
 ### 設定ファイル復元
 ```bash
-make restore            # karabiner, vscode, claude 設定を復元
+make restore            # karabiner, claude 設定を復元
+```
+
+### macOS システム設定
+```bash
+cd dotfiles && bash .macos  # macOS のシステム設定を適用（要再起動）
 ```
 
 ## アーキテクチャ
 
 ```
-├── Brewfile           # Homebrew パッケージ定義
+├── Brewfile           # Homebrew パッケージ定義（VSCode/Cursor 拡張含む）
 ├── Makefile           # メインのプロビジョニングタスク
-├── dotfiles/          # シェル・エディタ設定（zshrc, vimrc, tmux.conf など）
+├── dotfiles/          # シェル・エディタ設定（zshrc, vimrc, gitconfig など）
 │   └── Makefile       # dotfiles 用シンボリックリンク管理
 ├── templates/         # アプリ設定ファイル（karabiner.json）
-├── vscode/            # VSCode 拡張リストと設定
 └── .claude/           # Claude Code 設定（commands, settings）
 ```
 

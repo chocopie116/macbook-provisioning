@@ -20,6 +20,7 @@ brew "ffmpeg" # 動画・音声処理ツール
 brew "flyctl" # Fly.ioのCLIツール
 brew "gh" # GitHub CLI
 brew "ghq" # リモートリポジトリ管理ツール
+brew "git-delta" # gitの差分表示ツール
 brew "heroku" # HerokuのCLIツール
 brew "jq" # JSONプロセッサ
 brew "libpq" # PostgreSQLクライアントライブラリ
