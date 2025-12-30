@@ -4,7 +4,7 @@
 input=$(cat)
 
 TRANSCRIPT_PATH=$(echo "$input" | jq -r '.transcript_path // empty')
-CURRENT_DIR=$(echo "$input" | jq -r '.workspace.current_dir // empty')
+CURRENT_DIR=$(echo "$input" | jq -r '.cwd // empty')
 
 # Get repository name from current directory
 REPO_NAME=""

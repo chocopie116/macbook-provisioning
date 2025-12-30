@@ -56,7 +56,6 @@
     "deny": [
       "Bash(sudo:*)",
       "Bash(rm -rf:*)",
-      "Bash(git push:*)",
       "Bash(git reset:*)",
       "Bash(git rebase:*)",
       "Read(.env.*)",
