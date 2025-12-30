@@ -5,7 +5,7 @@ install: link
 PWD:=$(shell pwd)
 REPO_ROOT:=$(shell dirname $(PWD))
 srcs:=gitconfig vimrc zshrc
-claude_srcs:=commands settings.json statusline.sh
+claude_srcs:=commands settings.json statusline.sh notify.sh
 
 link:
 	mkdir -p $(HOME)/.config/peco/
