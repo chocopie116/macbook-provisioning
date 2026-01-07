@@ -1,4 +1,13 @@
 {
+  "env": {
+    "ENABLE_TOOL_SEARCH": "true"
+  },
+  "permissions": {
+    "allow": [],
+    "deny": []
+  },
+  "model": "opusplan",
+  "enableAllProjectMcpServers": false,
   "hooks": {
     "Stop": [
       {
@@ -26,25 +35,5 @@
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh"
-  },
-  "enabledPlugins": {
-    "claude-mem@thedotmack": true
-  },
-  "env": {},
-  "permissions": {
-    "deny": [
-      "Bash(sudo:*)",
-      "Bash(rm -rf:*)",
-      "Bash(git reset:*)",
-      "Bash(git rebase:*)",
-      "Read(.env.*)",
-      "Read(id_rsa)",
-      "Read(id_ed25519)",
-      "Write(.env*)",
-      "Bash(curl:*)",
-      "Bash(wget:*)"
-    ]
-  },
-  "model": "opus",
-  "enableAllProjectMcpServers": false
+  }
 }

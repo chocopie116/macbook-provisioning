@@ -58,10 +58,10 @@ cask "cleanshot" # スクリーンショットツール
 cask "cursor" # AIアシスト機能付きコードエディタ
 cask "discord" # コミュニケーションツール
 cask "dropbox" # クラウドストレージ
+cask "ghostty" # 高速ターミナルエミュレータ
 cask "google-japanese-ime" # 日本語入力メソッド
 cask "grandperspective" # ディスク使用量視覚化
 cask "gyazo" # スクリーンショット共有
-cask "iterm2" # ターミナルエミュレータ
 cask "karabiner-elements" # キーボードカスタマイズ
 cask "lark" # オールインワンコラボレーションプラットフォーム
 cask "limitless" # AIミーティングアシスタント
