@@ -17,7 +17,6 @@ make setup
 make package/install
 cd dotfiles && make install && cd ..
 make restore
-npm install -g aicommits
 ```
 
 ## 手動インストールが必要なアプリ
