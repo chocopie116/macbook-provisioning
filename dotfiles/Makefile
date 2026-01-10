@@ -21,9 +21,9 @@ link:
 	mkdir -p $(HOME)/.config/karabiner/
 	ln -Fs $(PWD)/karabiner.json $(HOME)/.config/karabiner/karabiner.json
 	mkdir -p $(HOME)/.config/yazi/
-	ln -Fs $(PWD)/yazi.toml $(HOME)/.config/yazi/yazi.toml
-	ln -Fs $(PWD)/keymap.toml $(HOME)/.config/yazi/keymap.toml
-	ln -Fs $(PWD)/init.lua $(HOME)/.config/yazi/init.lua
+	ln -Fs $(PWD)/yazi/yazi.toml $(HOME)/.config/yazi/yazi.toml
+	ln -Fs $(PWD)/yazi/keymap.toml $(HOME)/.config/yazi/keymap.toml
+	ln -Fs $(PWD)/yazi/init.lua $(HOME)/.config/yazi/init.lua
 
 unlink:
 	$(foreach src, $(srcs), rm  $(HOME)/.$(src);)
