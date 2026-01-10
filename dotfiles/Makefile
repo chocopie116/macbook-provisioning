@@ -18,8 +18,11 @@ link:
 	mkdir -p $(HOME)/.config/borders/
 	ln -Fs $(PWD)/bordersrc $(HOME)/.config/borders/bordersrc
 	ln -Fs $(PWD)/aerospace.toml $(HOME)/.aerospace.toml
+	mkdir -p $(HOME)/.config/karabiner/
+	ln -Fs $(PWD)/karabiner.json $(HOME)/.config/karabiner/karabiner.json
 
 unlink:
 	$(foreach src, $(srcs), rm  $(HOME)/.$(src);)
 	$(foreach src, $(claude_srcs), rm  $(HOME)/.claude/$(src);)
+	rm $(HOME)/.config/karabiner/karabiner.json
 
