@@ -1,0 +1,18 @@
+# yazi configuration
+# https://yazi-rs.github.io/docs/configuration/yazi
+
+[mgr]
+# Show hidden files (dotfiles) by default
+show_hidden = true
+
+# Sort settings
+sort_by = "natural"
+sort_sensitive = false
+sort_reverse = false
+sort_dir_first = true
+
+# Line mode: size, permissions, mtime, etc.
+linemode = "size"
+
+# Show symlink targets
+show_symlink = true
