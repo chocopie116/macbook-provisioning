@@ -15,6 +15,9 @@ link:
 	$(foreach src,$(claude_srcs),ln -Fs $(REPO_ROOT)/.claude/$(src) $(HOME)/.claude/$(src);)
 	mkdir -p $(HOME)/.config/ghostty/
 	ln -Fs $(PWD)/ghostty.config $(HOME)/.config/ghostty/config
+	mkdir -p $(HOME)/.config/borders/
+	ln -Fs $(PWD)/bordersrc $(HOME)/.config/borders/bordersrc
+	ln -Fs $(PWD)/aerospace.toml $(HOME)/.aerospace.toml
 
 unlink:
 	$(foreach src, $(srcs), rm  $(HOME)/.$(src);)
