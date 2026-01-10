@@ -1,28 +1,11 @@
-# AeroSpace 設定
+# AeroSpace 設定（シンプル版）
 # https://nikitabobko.github.io/AeroSpace/guide
 
 start-at-login = true
 
-# 起動時に borders を実行
-after-startup-command = ['exec-and-forget borders']
-
-# 正規化設定
-enable-normalization-flatten-containers = true
-enable-normalization-opposite-orientation-for-nested-containers = true
-
-# レイアウト設定
-accordion-padding = 20
-default-root-container-layout = 'tiles'
-default-root-container-orientation = 'auto'
-
-# マウス追従
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-
-# キーボード設定
 [key-mapping]
 preset = 'qwerty'
 
-# ギャップ設定
 [gaps]
 inner.horizontal = 3
 inner.vertical = 3
@@ -31,31 +14,7 @@ outer.bottom = 3
 outer.top = 3
 outer.right = 3
 
-# =============================================================================
-# キーバインディング
-# =============================================================================
 [mode.main.binding]
-
-# フォーカス移動 (alt + hjkl)
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
-
-# ウィンドウ移動 (alt + shift + hjkl)
-alt-shift-h = 'move left'
-alt-shift-j = 'move down'
-alt-shift-k = 'move up'
-alt-shift-l = 'move right'
-
-# リサイズ
-alt-minus = 'resize smart -50'
-alt-shift-minus = 'resize smart +50'
-
-# レイアウト切り替え
-alt-slash = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
-
 # ワークスペース切り替え (alt + 数字)
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
@@ -77,53 +36,3 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
-
-# ワークスペースをモニター間で移動
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
-
-# サービスモード
-alt-shift-semicolon = 'mode service'
-
-# サービスモード
-[mode.service.binding]
-esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main']
-f = ['layout floating tiling', 'mode main']
-backspace = ['close-all-windows-but-current', 'mode main']
-
-# =============================================================================
-# アプリ自動配置
-# =============================================================================
-
-# ワークスペース 1: Arc (メインモニター)
-[[on-window-detected]]
-if.app-id = 'company.thebrowser.Browser'
-run = 'move-node-to-workspace 1'
-
-# ワークスペース 2: Ghostty (右モニター, フローティング)
-[[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
-run = ['layout floating', 'move-node-to-workspace 2']
-
-# ワークスペース 3: Notion (メインモニター)
-[[on-window-detected]]
-if.app-id = 'notion.id'
-run = 'move-node-to-workspace 3'
-
-# ワークスペース 4: Obsidian (メインモニター)
-[[on-window-detected]]
-if.app-id = 'md.obsidian'
-run = 'move-node-to-workspace 4'
-
-# ワークスペース 5: Biscuit (左モニター)
-[[on-window-detected]]
-if.app-id = 'com.eatbiscult.biscult'
-run = 'move-node-to-workspace 5'
-
-# =============================================================================
-# モニター割り当て (3画面時)
-# =============================================================================
-# モニター名は `aerospace list-monitors` で確認できます
-# 例: [workspace-to-monitor-force-assignment]
-#     2 = 'right'   # Ghostty
-#     5 = 'left'    # Biscuit
