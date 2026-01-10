@@ -13,6 +13,8 @@ link:
 	$(foreach src,$(srcs),ln -Fs $(PWD)/$(src) $(HOME)/.$(src);)
 	mkdir -p $(HOME)/.claude/
 	$(foreach src,$(claude_srcs),ln -Fs $(REPO_ROOT)/.claude/$(src) $(HOME)/.claude/$(src);)
+	mkdir -p $(HOME)/.config/ghostty/
+	ln -Fs $(PWD)/ghostty.config $(HOME)/.config/ghostty/config
 
 unlink:
 	$(foreach src, $(srcs), rm  $(HOME)/.$(src);)
