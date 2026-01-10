@@ -6,7 +6,7 @@
     "allow": [],
     "deny": []
   },
-  "model": "opus",
+  "model": "opusplan",
   "enableAllProjectMcpServers": false,
   "hooks": {},
   "statusLine": {
