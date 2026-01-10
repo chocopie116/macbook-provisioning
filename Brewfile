@@ -1,17 +1,20 @@
 tap "1password/tap" # 1Passwordの公式パッケージ
 tap "argon/mas" # Mac App Store CLIの公式パッケージ
+tap "FelixKratz/formulae" # JankyBorders等のツール
 tap "heroku/brew" # Herokuの公式パッケージ
 tap "homebrew/bundle" # Brewfileを使用したパッケージ管理
 tap "homebrew/services" # バックグラウンドサービス管理
 tap "ngrok/ngrok" # ngrokの公式パッケージ
 tap "rcmdnk/file" # brew-fileなどのツール
+tap "nikitabobko/tap" # AeroSpaceタイリングウィンドウマネージャー
 tap "stripe/stripe-cli" # Stripe CLIツール
 
 # Formulae
 brew "asdf" # 複数の言語のバージョン管理ツール
 brew "automake" # Makefileの自動生成ツール
 brew "bat" # catの代替コマンド（シンタックスハイライト付き）
-brew "blackhole-2ch" #画面収録用ツール
+brew "blackhole-2ch" # 画面収録用ツール
+brew "borders" # ウィンドウにボーダーを追加するツール
 brew "brew-file" # Brewfileの管理ツール
 brew "cmake" # クロスプラットフォームビルドツール
 brew "coreutils" # GNU基本コマンドラインツール
@@ -43,6 +46,7 @@ brew "zsh" # Zシェル
 
 # Casks
 cask "1password" # パスワードマネージャー
+cask "aerospace" # タイリングウィンドウマネージャー
 cask "alt-tab" # Windowsライクなアプリケーション切り替え
 cask "antigravity" # Antigravity
 cask "aqua-voice" # 音声入力アプリ
