@@ -22,7 +22,6 @@ source $ZPLUG_HOME/init.zsh
 zplug 'zsh-users/zsh-completions', use:'src/_*', lazy:true
 zplug "mafredri/zsh-async", on:sindresorhus/pure
 zplug "sindresorhus/pure", use:pure.zsh
-zplug "b4b4r07/enhancd", use:init.sh, if:"[[ -o interactive ]]"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "mollifier/cd-gitroot"
 
@@ -133,6 +132,7 @@ bindkey '^]' peco_src
 alias ll="ls -la"
 alias la="ls -la"
 alias g="git"
+alias cdg="cd-gitroot"
 alias z="source ~/.zshrc"
 alias cr="cursor"
 alias -g C='| pbcopy'
@@ -151,11 +151,10 @@ export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+[ -s "/Users/tsubasa/.bun/_bun" ] && source "/Users/tsubasa/.bun/_bun"
+
+alias claude-mem='bun "/Users/tsubasa/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
 
 # ローカル設定
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-# bun completions
-[ -s "/Users/tsubasa/.bun/_bun" ] && source "/Users/tsubasa/.bun/_bun"
-
-alias claude-mem='bun "/Users/tsubasa/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'

@@ -4,9 +4,13 @@
   },
   "permissions": {
     "allow": [],
-    "deny": []
+    "deny": [
+      "Read(**/.env*)",
+      "Edit(**/.env*)",
+      "Write(**/.env*)"
+    ]
   },
-  "model": "opusplan",
+  "model": "opus",
   "enableAllProjectMcpServers": false,
   "hooks": {},
   "statusLine": {

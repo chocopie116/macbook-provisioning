@@ -19,12 +19,15 @@ brew "brew-file" # Brewfileの管理ツール
 brew "cmake" # クロスプラットフォームビルドツール
 brew "coreutils" # GNU基本コマンドラインツール
 brew "curl" # URLデータ転送ツール
+brew "fd" # findの代替コマンド（高速検索）
 brew "ffmpeg" # 動画・音声処理ツール
 brew "flyctl" # Fly.ioのCLIツール
+brew "fzf" # コマンドラインファジーファインダー
 brew "gh" # GitHub CLI
 brew "ghq" # リモートリポジトリ管理ツール
 brew "git-delta" # gitの差分表示ツール
 brew "heroku" # HerokuのCLIツール
+brew "imagemagick" # 画像処理ツール
 brew "jq" # JSONプロセッサ
 brew "libpq" # PostgreSQLクライアントライブラリ
 brew "librsvg" # SVG描画ライブラリ
@@ -34,17 +37,23 @@ brew "mas" # Mac App Store CLIツール
 brew "nkf" # 文字コード変換ツール
 brew "openjdk" # Java開発キット
 brew "peco" # インタラクティブフィルタリングツール
+brew "poppler" # PDFレンダリングライブラリ
 brew "postgresql@14" # PostgreSQL 14
+brew "ripgrep" # 高速grep代替コマンド
+brew "sevenzip" # 7-Zip圧縮・解凍ツール
 brew "stripe" # Stripe CLIツール
 brew "the_silver_searcher" # 高速コード検索ツール
 brew "tree" # ディレクトリツリー表示ツール
 brew "uv" # Python用の高速パッケージインストーラー
 brew "vim" # テキストエディタ
+brew "yazi" # ターミナルファイルエクスプローラー
 brew "wget" # ネットワークファイルダウンロード
+brew "zoxide" # スマートなcdコマンド
 brew "zplug" # Zshプラグイン管理
 brew "zsh" # Zシェル
 
 # Casks
+cask "font-symbols-only-nerd-font" # Nerd Fontシンボルフォント
 cask "1password" # パスワードマネージャー
 cask "aerospace" # タイリングウィンドウマネージャー
 cask "alt-tab" # Windowsライクなアプリケーション切り替え
