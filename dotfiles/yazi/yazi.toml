@@ -16,3 +16,14 @@ linemode = "size"
 
 # Show symlink targets
 show_symlink = true
+
+# gitプラグイン用
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"

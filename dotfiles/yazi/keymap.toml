@@ -1,0 +1,16 @@
+# yazi keymap configuration
+# https://yazi-rs.github.io/docs/configuration/keymap
+
+# 選択したファイル/ディレクトリをゴミ箱に移動
+#（デフォルトはdだけでゴミ箱行きなので、誤削除防止に２回にする）
+[[mgr.prepend_keymap]]
+on   = [ "d", "d" ]
+run  = "remove"
+desc = "ゴミ箱に移動"
+
+# ファイル/ディレクトリのパスをクリップボードにコピー
+#（デフォルトはc->c,でファイル、c->dでディレクトリになっており、コマンド別れるのが嫌だったので）
+[[mgr.prepend_keymap]]
+on   = [ "y", "p" ]
+run  = "shell 'printf \"%s\" $0 | pbcopy' --orphan"
+desc = "パスをクリップボードにコピー"
