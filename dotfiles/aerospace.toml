@@ -100,10 +100,10 @@ backspace = ['close-all-windows-but-current', 'mode main']
 if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace 1'
 
-# ワークスペース 2: Ghostty (右モニター)
+# ワークスペース 2: Ghostty (右モニター, フローティング)
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = 'move-node-to-workspace 2'
+run = ['layout floating', 'move-node-to-workspace 2']
 
 # ワークスペース 3: Notion (メインモニター)
 [[on-window-detected]]
