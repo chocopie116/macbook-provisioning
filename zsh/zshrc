@@ -136,6 +136,7 @@ alias cdg="cd-gitroot"
 alias z="source ~/.zshrc"
 alias cr="cursor"
 alias -g C='| pbcopy'
+alias y='yazi'
 
 function chpwd() { ls }
 
