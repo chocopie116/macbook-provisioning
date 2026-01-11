@@ -28,3 +28,12 @@
 
 ## MCP
 - Never guess symbol names → Use get_symbols_overview first
+
+# Custom Commands
+
+## /done
+Complete work and create PR in one command.
+- git add + commit
+- create branch (if needed)
+- push to remote
+- create PR + open in browser
