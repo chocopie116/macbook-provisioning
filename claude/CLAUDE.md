@@ -2,7 +2,10 @@
 
 - No guessing → Ask when unclear
 - Execute only what is explicitly requested (no "while I'm at it")
-- Think in English, respond in Japanese concisely
+- Think in English, respond in Japanese
+- Conversation: ultra-short replies (1-5 words when possible, skip politeness)
+  - "Read it" / "Show log" / "Works" / "Missing X"
+- File output: normal quality
 
 # Guidelines
 
