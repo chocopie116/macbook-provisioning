@@ -36,6 +36,7 @@ brew "marp-cli" # Markdownプレゼンテーションツール
 brew "mas" # Mac App Store CLIツール
 brew "nkf" # 文字コード変換ツール
 brew "openjdk" # Java開発キット
+brew "pandoc" # ドキュメント変換ツール
 brew "peco" # インタラクティブフィルタリングツール
 brew "poppler" # PDFレンダリングライブラリ
 brew "postgresql@14" # PostgreSQL 14
@@ -77,6 +78,7 @@ cask "grandperspective" # ディスク使用量視覚化
 cask "gyazo" # スクリーンショット共有
 cask "karabiner-elements" # キーボードカスタマイズ
 cask "lark" # オールインワンコラボレーションプラットフォーム
+cask "libreoffice" # オフィススイート（DOCX/XLSX/PPTX変換用）
 cask "limitless" # AIミーティングアシスタント
 cask "microsoft-teams" # Microsoftのビジネスコミュニケーションプラットフォーム
 cask "ngrok" # ローカル環境の公開

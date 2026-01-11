@@ -40,3 +40,27 @@ Complete work and create PR in one command.
 - create branch (if needed)
 - push to remote
 - create PR + open in browser
+
+# Skills
+
+Claude Codeの機能を拡張する専門スキル。`claude/skills/`に配置。
+
+## Document Processing
+- **/pdf**: PDFからテキスト・表抽出、結合・注釈
+- **/docx**: Word文書の作成・編集・分析
+- **/pptx**: スライドの読み込み・生成・レイアウト調整
+- **/xlsx**: スプレッドシート操作、数式・チャート
+
+## Development & Code Tools
+- **/skill-creator**: 新しいClaude Skill作成ガイドライン
+- **/skill-share**: スキルを作成しSlackで自動共有
+- **/webapp-testing**: Playwrightでローカルアプリのテスト
+- **/connect**: Gmail, Slack, GitHub等1000+サービス連携
+
+## Productivity & Organization
+- **/lead-research-assistant**: 見込み顧客企業を調査・特定
+- **/content-research-writer**: リサーチ・引用追加でコンテンツ執筆支援
+- **/invoice-organizer**: 請求書・領収書を自動整理
+
+## Integration
+- **/notebooklm**: NotebookLMと連携してドキュメントベースQ&A
