@@ -8,9 +8,10 @@
       "Read(**/.env*)",
       "Edit(**/.env*)",
       "Write(**/.env*)"
-    ]
+    ],
+    "defaultMode": "plan"
   },
-  "model": "opus",
+  "model": "opusplan",
   "enableAllProjectMcpServers": false,
   "hooks": {},
   "statusLine": {
