@@ -28,6 +28,7 @@ link/claude:
 	mkdir -p $(HOME)/.claude
 	ln -Fs $(PWD)/claude/CLAUDE.md $(HOME)/.claude/CLAUDE.md
 	ln -Fs $(PWD)/claude/commands $(HOME)/.claude/commands
+	ln -Fs $(PWD)/claude/agents $(HOME)/.claude/agents
 	ln -Fs $(PWD)/claude/settings.json $(HOME)/.claude/settings.json
 	ln -Fs $(PWD)/claude/statusline.sh $(HOME)/.claude/statusline.sh
 	ln -Fs $(PWD)/claude/notify.sh $(HOME)/.claude/notify.sh
@@ -40,6 +41,7 @@ unlink:
 	rm -f $(HOME)/.config/peco/config.json
 	rm -rf $(HOME)/.config/yazi
 	rm -rf $(HOME)/.claude/commands
+	rm -rf $(HOME)/.claude/agents
 	rm -f $(HOME)/.claude/CLAUDE.md $(HOME)/.claude/settings.json $(HOME)/.claude/statusline.sh $(HOME)/.claude/notify.sh
 
 setup:
