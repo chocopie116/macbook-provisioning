@@ -1,6 +1,6 @@
 PWD := $(shell pwd)
 
-.PHONY: link unlink link/home link/config link/claude setup package/install package/cleanup package/check package/dump
+.PHONY: link unlink link/home link/config link/claude setup package/install package/cleanup package/check package/dump yazi/install
 
 link: link/home link/config link/claude
 
@@ -23,11 +23,7 @@ link/config:
 	ln -Fs $(PWD)/yazi/yazi.toml $(HOME)/.config/yazi/yazi.toml
 	ln -Fs $(PWD)/yazi/keymap.toml $(HOME)/.config/yazi/keymap.toml
 	ln -Fs $(PWD)/yazi/init.lua $(HOME)/.config/yazi/init.lua
-	mkdir -p $(HOME)/.config/yazi/plugins
-	ln -Fs $(PWD)/yazi/plugins/git.yazi $(HOME)/.config/yazi/plugins/git.yazi
-	ln -Fs $(PWD)/yazi/plugins/full-border.yazi $(HOME)/.config/yazi/plugins/full-border.yazi
-	ln -Fs $(PWD)/yazi/plugins/smart-enter.yazi $(HOME)/.config/yazi/plugins/smart-enter.yazi
-	ln -Fs $(PWD)/yazi/plugins/toggle-pane.yazi $(HOME)/.config/yazi/plugins/toggle-pane.yazi
+	ln -Fs $(PWD)/yazi/package.toml $(HOME)/.config/yazi/package.toml
 
 link/claude:
 	mkdir -p $(HOME)/.claude
@@ -63,3 +59,6 @@ package/check:
 
 package/dump:
 	brew bundle dump --force
+
+yazi/install:
+	ya pkg install

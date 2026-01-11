@@ -32,6 +32,17 @@ make link/claude        # ~/.claude/配下にリンク
 make unlink             # リンク解除
 ```
 
+### yaziプラグイン管理
+```bash
+make yazi/install       # yaziプラグインをインストール（ya packコマンド使用）
+```
+
+**インストールされるプラグイン:**
+- git.yazi: Git統合機能
+- full-border.yazi: 完全な境界線表示
+- smart-enter.yazi: エンターキー挙動の最適化
+- toggle-pane.yazi: プレビューペイン表示制御
+
 ### macOS システム設定
 ```bash
 bash macos/defaults.sh  # macOS のシステム設定を適用（要再起動）

@@ -1,1 +1,4 @@
 localhost.retry
+
+# yazi plugins (managed by ya pack)
+yazi/plugins/
