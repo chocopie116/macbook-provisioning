@@ -14,3 +14,15 @@ desc = "ゴミ箱に移動"
 on   = [ "y", "p" ]
 run  = "shell 'printf \"%s\" $0 | pbcopy' --orphan"
 desc = "パスをクリップボードにコピー"
+
+# toggle-pane: プレビューペインの表示/非表示
+[[mgr.prepend_keymap]]
+on   = "T"
+run  = "plugin toggle-pane --args=min-preview"
+desc = "プレビューペインの表示/非表示"
+
+# toggle-pane: プレビューペインの最大化/復元
+[[mgr.prepend_keymap]]
+on   = "i"
+run  = "plugin toggle-pane --args=max-preview"
+desc = "プレビューペインの最大化/復元"

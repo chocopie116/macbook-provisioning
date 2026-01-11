@@ -23,6 +23,11 @@ link/config:
 	ln -Fs $(PWD)/yazi/yazi.toml $(HOME)/.config/yazi/yazi.toml
 	ln -Fs $(PWD)/yazi/keymap.toml $(HOME)/.config/yazi/keymap.toml
 	ln -Fs $(PWD)/yazi/init.lua $(HOME)/.config/yazi/init.lua
+	mkdir -p $(HOME)/.config/yazi/plugins
+	ln -Fs $(PWD)/yazi/plugins/git.yazi $(HOME)/.config/yazi/plugins/git.yazi
+	ln -Fs $(PWD)/yazi/plugins/full-border.yazi $(HOME)/.config/yazi/plugins/full-border.yazi
+	ln -Fs $(PWD)/yazi/plugins/smart-enter.yazi $(HOME)/.config/yazi/plugins/smart-enter.yazi
+	ln -Fs $(PWD)/yazi/plugins/toggle-pane.yazi $(HOME)/.config/yazi/plugins/toggle-pane.yazi
 
 link/claude:
 	mkdir -p $(HOME)/.claude
