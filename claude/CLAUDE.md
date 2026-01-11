@@ -19,3 +19,12 @@
 ## Context
 - Update CLAUDE.md as needed
 - Document project-specific patterns
+
+## Design
+- Propose design before implementation
+- Present multiple options with pros/cons
+- Recommend simplest, most maintainable option
+- Identify future changes that could break the design
+
+## MCP
+- Never guess symbol names → Use get_symbols_overview first
