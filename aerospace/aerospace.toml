@@ -36,3 +36,7 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
+
+# レイアウト切り替え
+alt-shift-t = 'layout tiling'
+alt-shift-f = 'layout floating'
