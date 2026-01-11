@@ -32,6 +32,11 @@ make link/claude        # ~/.claude/配下にリンク
 make unlink             # リンク解除
 ```
 
+### yaziプラグイン管理
+```bash
+make yazi/install       # yaziプラグインをインストール（ya packコマンド使用）
+```
+
 ### macOS システム設定
 ```bash
 bash macos/defaults.sh  # macOS のシステム設定を適用（要再起動）
