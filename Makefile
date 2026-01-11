@@ -1,3 +1,46 @@
+PWD := $(shell pwd)
+
+.PHONY: link unlink link/home link/config link/claude setup package/install package/cleanup package/check package/dump
+
+link: link/home link/config link/claude
+
+link/home:
+	ln -Fs $(PWD)/zsh/zshrc $(HOME)/.zshrc
+	ln -Fs $(PWD)/git/gitconfig $(HOME)/.gitconfig
+	ln -Fs $(PWD)/vim/vimrc $(HOME)/.vimrc
+	ln -Fs $(PWD)/aerospace/aerospace.toml $(HOME)/.aerospace.toml
+
+link/config:
+	mkdir -p $(HOME)/.config/ghostty
+	ln -Fs $(PWD)/ghostty/config $(HOME)/.config/ghostty/config
+	mkdir -p $(HOME)/.config/borders
+	ln -Fs $(PWD)/borders/bordersrc $(HOME)/.config/borders/bordersrc
+	mkdir -p $(HOME)/.config/karabiner
+	ln -Fs $(PWD)/karabiner/karabiner.json $(HOME)/.config/karabiner/karabiner.json
+	mkdir -p $(HOME)/.config/peco
+	ln -Fs $(PWD)/peco/config.json $(HOME)/.config/peco/config.json
+	mkdir -p $(HOME)/.config/yazi
+	ln -Fs $(PWD)/yazi/yazi.toml $(HOME)/.config/yazi/yazi.toml
+	ln -Fs $(PWD)/yazi/keymap.toml $(HOME)/.config/yazi/keymap.toml
+	ln -Fs $(PWD)/yazi/init.lua $(HOME)/.config/yazi/init.lua
+
+link/claude:
+	mkdir -p $(HOME)/.claude
+	ln -Fs $(PWD)/claude/commands $(HOME)/.claude/commands
+	ln -Fs $(PWD)/claude/settings.json $(HOME)/.claude/settings.json
+	ln -Fs $(PWD)/claude/statusline.sh $(HOME)/.claude/statusline.sh
+	ln -Fs $(PWD)/claude/notify.sh $(HOME)/.claude/notify.sh
+
+unlink:
+	rm -f $(HOME)/.zshrc $(HOME)/.gitconfig $(HOME)/.vimrc $(HOME)/.aerospace.toml
+	rm -f $(HOME)/.config/ghostty/config
+	rm -f $(HOME)/.config/borders/bordersrc
+	rm -f $(HOME)/.config/karabiner/karabiner.json
+	rm -f $(HOME)/.config/peco/config.json
+	rm -rf $(HOME)/.config/yazi
+	rm -rf $(HOME)/.claude/commands
+	rm -f $(HOME)/.claude/settings.json $(HOME)/.claude/statusline.sh $(HOME)/.claude/notify.sh
+
 setup:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -11,23 +54,4 @@ package/check:
 	brew bundle check
 
 package/dump:
-	@#brew bundle dump --force --describe
 	brew bundle dump --force
-
-restore: _restore/karabiner _restore/claude
-
-_backup/karabiner:
-	cp -f ~/.config/karabiner/karabiner.json $(PWD)/templates/karabiner.json
-
-_restore/karabiner:
-	mkdir -p ~/.config/karabiner
-	rm -f ~/.config/karabiner/karabiner.json
-	ln -s $(PWD)/templates/karabiner.json ~/.config/karabiner/karabiner.json
-
-_restore/claude:
-	mkdir -p ~/.claude
-	rm -rf ~/.claude/commands
-	rm -f ~/.claude/settings.local.json
-	ln -s $(PWD)/.claude/commands ~/.claude/commands
-	ln -s $(PWD)/.claude/settings.local.json ~/.claude/settings.local.json
-
