@@ -1,99 +1,39 @@
 # クリーンインストール前の準備
 
-macOS をクリーンインストールする前に実施する手順です。年末の大掃除などで Mac をリフレッシュする際に参照してください。
+macOS をクリーンインストールする前に実施する手順。
 
-## 1. データのバックアップ
+## 1. バックアップ確認
 
-### 必須のバックアップ
-- [ ] iCloud Drive の同期が完了していることを確認
-- [ ] 1Password のバックアップ（クラウド同期確認）
+- [ ] iCloud Drive の同期完了
+- [ ] 1Password のクラウド同期確認
 - [ ] SSH 鍵のバックアップ（`~/.ssh/`）
-- [ ] GPG 鍵のバックアップ（使用している場合）
-- [ ] ローカルのみに存在する重要ファイルの確認
 
-### 確認すべき設定
-- [ ] Karabiner の設定が最新か確認（`templates/karabiner.json`）
-- [ ] VSCode/Cursor の拡張が Brewfile に反映されているか
-- [ ] dotfiles の変更がコミットされているか
+## 2. 設定の確認
 
-## 2. パッケージの精査
+- [ ] Karabiner の設定が最新か（`karabiner/karabiner.json`）
+- [ ] VSCode/Cursor 拡張が Brewfile に反映されているか
+- [ ] dotfiles の変更がコミット済みか
 
-### 現在のパッケージを確認
+## 3. パッケージの更新
+
 ```bash
-# 現在インストールされているパッケージを Brewfile に出力
+# 現在のパッケージを Brewfile に出力
 make package/dump
 
-# 差分を確認
+# 差分を確認してコミット
 git diff Brewfile
+git add -A && git commit -m "update packages" && git push
 ```
 
-### 不要パッケージの削除
-```bash
-# Brewfile にないパッケージを確認
-make package/check
+## 4. アプリ設定のエクスポート
 
-# 不要パッケージを削除
-make package/cleanup
-```
+### Raycast
+1. 「Export Settings & Data」で `.rayconfig` を iCloud Drive に保存
 
-### パッケージリストのレビュー
-Brewfile を開いて以下を確認：
-- [ ] 使っていないアプリはないか
-- [ ] 重複している機能のアプリはないか
-- [ ] VSCode/Cursor 拡張で不要なものはないか
+## 5. クリーンインストール
 
-## 3. 設定のエクスポート
-
-### このリポジトリを更新
-```bash
-cd ~/path/to/macbook-provisioning
-
-# Brewfile を更新
-make package/dump
-
-# 変更をコミット
-git add -A
-git commit -m "クリーンインストール前のパッケージ更新"
-git push
-```
-
-### アプリ固有の設定
-- [ ] BetterTouchTool の設定エクスポート
-- [ ] その他カスタマイズしたアプリの設定
-
-### Raycast の設定エクスポート
-1. Raycast を開く（⌘ + Space）
-2. 「Export Settings & Data」と入力して実行
-3. パスフレーズを設定（インポート時に必要）
-4. `.rayconfig` ファイルを iCloud Drive または安全な場所に保存
-
-## 4. アカウント情報の確認
-
-以下のサービスにログインできることを確認：
-- [ ] Apple ID
-- [ ] GitHub（SSH 鍵または認証アプリ）
-- [ ] 1Password
-- [ ] Dropbox
-- [ ] その他必要なサービス
-
-## 5. macOS のクリーンインストール
-
-### インストール方法
 1. Mac をシャットダウン
-2. 電源ボタンを長押しして起動オプションを表示（Apple Silicon Mac）
-3. 「オプション」を選択
-4. ディスクユーティリティで Macintosh HD を消去
-5. macOS を再インストール
+2. 電源ボタン長押しで起動オプション表示
+3. ディスクユーティリティで消去 → macOS 再インストール
 
-### 参考
-- [Mac を消去して工場出荷時の設定にリセットする - Apple サポート](https://support.apple.com/ja-jp/HT212749)
-
-## チェックリスト
-
-クリーンインストール前の最終確認：
-
-- [ ] このリポジトリが最新の状態で push されている
-- [ ] iCloud の同期が完了している
-- [ ] 重要なローカルファイルがバックアップされている
-- [ ] 各サービスへのログイン情報が確認できる
-- [ ] SSH 鍵がバックアップされている（または新規作成する準備ができている）
+参考: [Mac を消去して工場出荷時の設定にリセットする](https://support.apple.com/ja-jp/HT212749)

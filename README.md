@@ -15,8 +15,7 @@ cd macbook-provisioning
 export PATH=$PATH:/opt/homebrew/bin
 make setup
 make package/install
-cd dotfiles && make install && cd ..
-make restore
+make link
 ```
 
 ## 手動インストールが必要なアプリ
