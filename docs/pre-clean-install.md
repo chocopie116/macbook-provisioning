@@ -59,8 +59,13 @@ git push
 
 ### アプリ固有の設定
 - [ ] BetterTouchTool の設定エクスポート
-- [ ] Raycast の設定エクスポート（クラウド同期推奨）
 - [ ] その他カスタマイズしたアプリの設定
+
+### Raycast の設定エクスポート
+1. Raycast を開く（⌘ + Space）
+2. 「Export Settings & Data」と入力して実行
+3. パスフレーズを設定（インポート時に必要）
+4. `.rayconfig` ファイルを iCloud Drive または安全な場所に保存
 
 ## 4. アカウント情報の確認
 

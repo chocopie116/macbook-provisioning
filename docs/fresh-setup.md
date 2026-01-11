@@ -106,6 +106,12 @@ cd ..
 make restore
 ```
 
+### Raycast の設定インポート
+1. Raycast を開く（⌘ + Space）
+2. 「Import Settings & Data」と入力して実行
+3. 保存した `.rayconfig` ファイルを選択
+4. エクスポート時に設定したパスフレーズを入力
+
 ### macOS システム設定
 ```bash
 cd dotfiles
