@@ -1,21 +1,21 @@
-# 鉄則（例外なし）
+# Rules (No Exceptions)
 
-- 推測禁止→不明な点は質問する
-- 要求されたことのみ実行（「ついでに」禁止）
-- 英語で考え、日本語で簡潔に応答する
+- No guessing → Ask when unclear
+- Execute only what is explicitly requested (no "while I'm at it")
+- Think in English, respond in Japanese concisely
 
-# 指針
+# Guidelines
 
-## ワークフロー
-- 探索→計画→実装→コミット
-- PLANモード時は1〜5回質問して要求を明確にする
-- 変更前に既存コードを必ず読む
+## Workflow
+- Explore → Plan → Implement → Commit
+- Ask 1-5 clarifying questions in PLAN mode
+- Always read existing code before making changes
 
-## 品質
-- KISS: 最も単純で意図が明快な実装
-- 触れたコードはきれいにして去る
-- 不要な外部依存を追加しない
+## Quality
+- KISS: Simplest implementation with clear intent
+- Leave code cleaner than you found it
+- Don't add unnecessary external dependencies
 
-## コンテキスト
-- CLAUDE.mdは必要に応じて自動更新する
-- プロジェクト固有のパターンを文書化する
+## Context
+- Update CLAUDE.md as needed
+- Document project-specific patterns
