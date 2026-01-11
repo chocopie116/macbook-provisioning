@@ -26,6 +26,7 @@ link/config:
 
 link/claude:
 	mkdir -p $(HOME)/.claude
+	ln -Fs $(PWD)/claude/CLAUDE.md $(HOME)/.claude/CLAUDE.md
 	ln -Fs $(PWD)/claude/commands $(HOME)/.claude/commands
 	ln -Fs $(PWD)/claude/settings.json $(HOME)/.claude/settings.json
 	ln -Fs $(PWD)/claude/statusline.sh $(HOME)/.claude/statusline.sh
@@ -39,7 +40,7 @@ unlink:
 	rm -f $(HOME)/.config/peco/config.json
 	rm -rf $(HOME)/.config/yazi
 	rm -rf $(HOME)/.claude/commands
-	rm -f $(HOME)/.claude/settings.json $(HOME)/.claude/statusline.sh $(HOME)/.claude/notify.sh
+	rm -f $(HOME)/.claude/CLAUDE.md $(HOME)/.claude/settings.json $(HOME)/.claude/statusline.sh $(HOME)/.claude/notify.sh
 
 setup:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
