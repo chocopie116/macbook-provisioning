@@ -64,3 +64,4 @@ package/dump:
 
 yazi/install:
 	ya pkg install
+
