@@ -54,7 +54,8 @@ Claude Codeの機能を拡張する専門スキル。`claude/skills/`に配置�
 ## Development & Code Tools
 - **/skill-creator**: 新しいClaude Skill作成ガイドライン
 - **/skill-share**: スキルを作成しSlackで自動共有
-- **/webapp-testing**: Playwrightでローカルアプリのテスト
+- **/browser-agent**: agent-browserでWebアプリUIテスト
+- **/playwright-browser**: Playwright MCPでブラウザ操作
 - **/connect**: Gmail, Slack, GitHub等1000+サービス連携
 
 ## Productivity & Organization
