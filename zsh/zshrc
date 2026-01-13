@@ -120,6 +120,13 @@ function peco_src() {
 }
 zle -N peco_src
 
+function ccc() {
+    local src_dir=$( (ghq list --full-path; echo "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/notebook") | peco --query "$LBUFFER")
+    if [ -n "$src_dir" ]; then
+        cd "$src_dir" && claude --dangerously-skip-permissions
+    fi
+}
+
 # -------------------------------------
 # キーバインド
 # -------------------------------------
