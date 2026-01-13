@@ -110,9 +110,10 @@ function peco_select_history() {
 zle -N peco_select_history
 
 function peco_src() {
-    local src_dir=$(ghq list --full-path | peco --query "$LBUFFER")
+    # ghq listにnotebookを追加（iCloud上のObsidian vault）
+    local src_dir=$( (ghq list --full-path; echo "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/notebook") | peco --query "$LBUFFER")
     if [ -n "$src_dir" ]; then
-        BUFFER="cd $src_dir"
+        BUFFER="cd \"$src_dir\""
         zle accept-line
     fi
     zle -R -c
