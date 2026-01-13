@@ -38,6 +38,18 @@ alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 
+# モニター間フォーカス移動 (alt + 方向キー)
+alt-left = 'focus-monitor left'
+alt-right = 'focus-monitor right'
+alt-up = 'focus-monitor up'
+alt-down = 'focus-monitor down'
+
+# モニター間ウィンドウ移動 (alt + shift + 方向キー)
+alt-shift-left = 'move-node-to-monitor left'
+alt-shift-right = 'move-node-to-monitor right'
+alt-shift-up = 'move-node-to-monitor up'
+alt-shift-down = 'move-node-to-monitor down'
+
 # レイアウト切り替え
 alt-shift-t = 'layout tiling'
 alt-shift-f = 'layout floating'
