@@ -2,6 +2,9 @@
 # https://yazi-rs.github.io/docs/configuration/yazi
 
 [mgr]
+# 1パネル表示（親:現在:プレビュー）
+ratio = [0, 1, 0]
+
 # Show hidden files (dotfiles) by default
 show_hidden = true
 
