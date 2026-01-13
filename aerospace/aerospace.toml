@@ -1,18 +1,19 @@
-# AeroSpace 設定（シンプル版）
+# AeroSpace 設定（フローティングモード）
 # https://nikitabobko.github.io/AeroSpace/guide
 
 start-at-login = true
 
+# 新規ウィンドウはフローティングで開く
+after-startup-command = ['exec-and-forget sleep 1 && aerospace list-windows --all | while read id rest; do aerospace layout --window-id $id floating; done || true']
+
+# 全てのアプリをフローティングで開く
+[[on-window-detected]]
+run = 'layout floating'
+
 [key-mapping]
 preset = 'qwerty'
 
-[gaps]
-inner.horizontal = 3
-inner.vertical = 3
-outer.left = 3
-outer.bottom = 3
-outer.top = 3
-outer.right = 3
+# gapsはフローティングモードでは不要
 
 [mode.main.binding]
 # ワークスペース切り替え (alt + 数字)
