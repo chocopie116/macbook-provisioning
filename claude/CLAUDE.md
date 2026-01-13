@@ -9,6 +9,13 @@
 
 # Guidelines
 
+## JavaScript/TypeScript
+- Always use bun (`bun install`, `bun run`, `bunx`)
+- Exception: if existing lock file exists, use corresponding package manager:
+  - `package-lock.json` → npm
+  - `pnpm-lock.yaml` → pnpm
+  - `yarn.lock` → yarn
+
 ## Workflow
 - Explore → Plan → Implement → Commit
 - Ask 1-5 clarifying questions in PLAN mode
