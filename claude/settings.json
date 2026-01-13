@@ -19,5 +19,8 @@
     "command": "~/.claude/statusline.sh"
   },
   "spinnerTipsEnabled": false,
-  "alwaysThinkingEnabled": false
+  "alwaysThinkingEnabled": false,
+  "enabledPlugins": {
+    "example-skills@anthropic-agent-skills": true
+  }
 }
