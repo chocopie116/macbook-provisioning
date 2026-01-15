@@ -1,4 +1,5 @@
 ---
+name: stock-plan
 description: "Accumulate execution plans by asking detailed questions"
 ---
 

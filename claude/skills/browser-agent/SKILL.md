@@ -1,3 +1,8 @@
+---
+name: browser-agent
+description: "agent-browser CLIを使ってローカルアプリのUIをテストする。"
+---
+
 agent-browser CLIを使ってローカルアプリのUIをテストする。
 
 # 前提条件

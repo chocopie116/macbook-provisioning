@@ -1,4 +1,5 @@
 ---
+name: dig
 description: "Clarify ambiguities in plans with structured questions"
 allowed-tools:
   - Write

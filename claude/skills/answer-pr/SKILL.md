@@ -1,3 +1,8 @@
+---
+name: answer-pr
+description: "PRコメント対応"
+---
+
 Pull Request #$ARGUMENT の最新のコメントや指摘事項を確認して対応してください。
 
 # 作業ルール

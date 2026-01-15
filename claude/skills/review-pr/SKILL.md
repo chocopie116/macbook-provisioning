@@ -1,3 +1,8 @@
+---
+name: review-pr
+description: "PRレビュー実行"
+---
+
 Pull Request #$ARGUMENTS をレビューしてください。
 
 # 手順

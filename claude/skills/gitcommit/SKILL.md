@@ -1,6 +1,7 @@
 ---
+name: gitcommit
+description: "Create a git commit"
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
-description: Create a git commit
 ---
 
 ## Context

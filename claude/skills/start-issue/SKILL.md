@@ -1,3 +1,8 @@
+---
+name: start-issue
+description: "Issue着手手続き"
+---
+
 .claude/commands/start-issue.md
 Issue #$ARGUMENT の内容を確認して作業着手してください。
 

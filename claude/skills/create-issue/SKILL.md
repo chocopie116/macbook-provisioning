@@ -1,3 +1,8 @@
+---
+name: create-issue
+description: "BDD形式でGitHub Issue作成"
+---
+
 GitHub Issueを作成する前に、BDD形式で要件を整理します：
 
 ## ステップ1: 要件確認（対話形式）

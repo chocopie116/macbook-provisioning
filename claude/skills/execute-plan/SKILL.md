@@ -1,4 +1,5 @@
 ---
+name: execute-plan
 description: "Execute a specific plan from the stock"
 ---
 
