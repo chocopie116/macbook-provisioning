@@ -1,4 +1,5 @@
 ---
+name: dig
 description: "Clarify ambiguities in plans with structured questions"
 allowed-tools:
   - Write
@@ -10,6 +11,8 @@ allowed-tools:
   - TodoWrite
   - AskUserQuestion
 ---
+
+# Dig
 
 Read the current plan file and interview me in detail using the AskUserQuestionTool about literally anything.
 - Product Spec
