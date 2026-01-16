@@ -3,3 +3,6 @@ settings.local.json
 
 # yazi plugins (managed by ya pack)
 yazi/plugins/
+
+# node_modules
+node_modules/
