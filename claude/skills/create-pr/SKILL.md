@@ -1,8 +1,15 @@
+---
+name: create-pr
+description: "- 未コミットの変更やunpushの状態があれば、Skill ツールを使って `/ok` コマンドを先に呼び出してください"
+---
+
+# Create PR
+
 - 未コミットの変更やunpushの状態があれば、Skill ツールを使って `/ok` コマンドを先に呼び出してください
 - gh pr create で PR を作成してください
 - 作成した PR を open コマンドで開いてください
 
-# PR のフォーマット
+## PR のフォーマット
 
 ```
 ## 影響範囲

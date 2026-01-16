@@ -1,19 +1,26 @@
+---
+name: browser-agent
+description: "agent-browser CLIを使ってローカルアプリのUIをテストする。"
+---
+
+# Browser Agent
+
 agent-browser CLIを使ってローカルアプリのUIをテストする。
 
-# 前提条件
+## 前提条件
 
 - agent-browserがインストール済み（`npm install -g agent-browser`）
 - Chromiumダウンロード済み（`agent-browser install`）
 - 開発サーバーが起動していること（例: `pnpm dev`）
 
-# 手順
+## 手順
 
-## Step 1: プロジェクト情報の確認
+### Step 1: プロジェクト情報の確認
 
 1. `CLAUDE.md`を読み込み、プロジェクトの技術スタックを把握
 2. 対象URLを確認（通常は http://localhost:4321 または http://localhost:3000）
 
-## Step 2: 基本UI検査
+### Step 2: 基本UI検査
 
 以下を順次実行:
 
@@ -32,23 +39,23 @@ agent-browser screenshot --full-page
 agent-browser snapshot -i
 ```
 
-## Step 3: レスポンシブテスト
+### Step 3: レスポンシブテスト
 
 以下のビューポートで順次テスト:
 
-### Desktop (1920x1080)
+#### Desktop (1920x1080)
 ```bash
 agent-browser viewport 1920 1080
 agent-browser screenshot -o desktop.png
 ```
 
-### Tablet (768x1024)
+#### Tablet (768x1024)
 ```bash
 agent-browser viewport 768 1024
 agent-browser screenshot -o tablet.png
 ```
 
-### Mobile (375x667)
+#### Mobile (375x667)
 ```bash
 agent-browser viewport 375 667
 agent-browser screenshot -o mobile.png
@@ -56,7 +63,7 @@ agent-browser screenshot -o mobile.png
 
 各サイズでレイアウト崩れやオーバーフローを確認。
 
-## Step 4: インタラクションテスト
+### Step 4: インタラクションテスト
 
 スナップショットで取得した参照ID（@e1, @e2など）を使用:
 
@@ -71,7 +78,7 @@ agent-browser type @e2 "テスト入力"
 agent-browser scroll down 500
 ```
 
-## Step 5: 情報取得
+### Step 5: 情報取得
 
 ```bash
 # テキスト取得
@@ -84,7 +91,7 @@ agent-browser html @e1
 agent-browser attr @e1 href
 ```
 
-## Step 6: レポート作成
+### Step 6: レポート作成
 
 以下の形式でまとめる:
 
@@ -112,13 +119,13 @@ agent-browser attr @e1 href
 2. [改善提案]
 ```
 
-# 便利なオプション
+## 便利なオプション
 
 - `--headed`: ブラウザウィンドウを表示（デバッグ用）
 - `--json`: JSON形式で出力
 - `--session <name>`: セッション名を指定
 
-# 注意事項
+## 注意事項
 
 - サーバーが起動していない場合は明確にエラーを表示
 - スクリーンショットは `-o` で保存先を指定可能

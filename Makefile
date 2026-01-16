@@ -28,7 +28,6 @@ link/config:
 link/claude:
 	mkdir -p $(HOME)/.claude
 	ln -Fs $(PWD)/claude/CLAUDE.md $(HOME)/.claude/CLAUDE.md
-	ln -Fs $(PWD)/claude/commands $(HOME)/.claude/commands
 	ln -Fs $(PWD)/claude/skills $(HOME)/.claude/skills
 	ln -Fs $(PWD)/claude/agents $(HOME)/.claude/agents
 	ln -Fs $(PWD)/claude/settings.json $(HOME)/.claude/settings.json

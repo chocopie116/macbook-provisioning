@@ -1,7 +1,13 @@
-.claude/commands/start-issue.md
+---
+name: start-issue
+description: ".claude/commands/start-issue.md"
+---
+
+# Start Issue
+
 Issue #$ARGUMENT の内容を確認して作業着手してください。
 
-# 作業ルール
+## 作業ルール
 
 - 着手中の旨をIssueコメントに入力してください。
 - issueと番号とタイトルからブランチ名を元にブランチをきって作業開始してください。
