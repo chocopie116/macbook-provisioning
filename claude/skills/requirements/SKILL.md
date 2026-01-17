@@ -10,7 +10,7 @@ description: ISO/IEC/IEEE 15288に基づき、ヒアリング資料から要求�
 3つの入力モードに対応:
 
 1. **ディレクトリ指定**: `/requirements projects/taiho-kensetsu`
-   - 指定パス配下の `input/` を読み込み
+   - 指定パス配下の `source/` を読み込み
    - 出力先も指定パス配下
 
 2. **ファイル指定**: `/requirements path/to/hearing.md`
@@ -44,7 +44,7 @@ description: ISO/IEC/IEEE 15288に基づき、ヒアリング資料から要求�
 #### 1-A: 引数あり & ディレクトリの場合
 ```
 if $ARGUMENTS がディレクトリ:
-  - $ARGUMENTS/input/ の資料を全て読み込む
+  - $ARGUMENTS/source/ の資料を全て読み込む
   - 出力先 = $ARGUMENTS/
 ```
 
