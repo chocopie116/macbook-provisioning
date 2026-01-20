@@ -127,6 +127,10 @@ function ccc() {
     fi
 }
 
+function kcc() {
+    cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/kagemusha" && cc
+}
+
 # -------------------------------------
 # キーバインド
 # -------------------------------------
