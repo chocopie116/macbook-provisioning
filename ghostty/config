@@ -5,7 +5,7 @@ theme = Solarized Dark Higher Contrast
 
 # フォント
 font-family = "JetBrains Mono"
-font-family = "BIZ UDGothic Bold"
+font-family = "Osaka-Mono"
 font-size = 15
 font-thicken = true
 
