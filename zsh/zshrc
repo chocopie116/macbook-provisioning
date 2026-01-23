@@ -128,7 +128,7 @@ function ccc() {
 }
 
 function kcc() {
-    cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/kagemusha" && cc
+    cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/kagemusha" && claude --dangerously-skip-permissions
 }
 
 # -------------------------------------
