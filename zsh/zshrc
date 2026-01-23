@@ -127,7 +127,7 @@ function ccc() {
     fi
 }
 
-function kcc() {
+function kc() {
     cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/kagemusha" && claude --dangerously-skip-permissions
 }
 
@@ -149,8 +149,8 @@ alias z="source ~/.zshrc"
 alias cr="cursor"
 alias -g C='| pbcopy'
 alias y='yazi'
-alias cc='claude --dangerously-skip-permissions'
-alias ccr='claude -r --dangerously-skip-permissions'
+alias c='claude --dangerously-skip-permissions'
+alias cr='claude -r --dangerously-skip-permissions'
 
 function chpwd() { ls }
 
