@@ -3,6 +3,7 @@ tap "argon/mas" # Mac App Store CLIの公式パッケージ
 tap "FelixKratz/formulae" # JankyBorders等のツール
 tap "heroku/brew" # Herokuの公式パッケージ
 tap "homebrew/bundle" # Brewfileを使用したパッケージ管理
+tap "k1LoW/tap" # git-wt等のツール
 tap "homebrew/services" # バックグラウンドサービス管理
 tap "ngrok/ngrok" # ngrokの公式パッケージ
 tap "rcmdnk/file" # brew-fileなどのツール
@@ -26,6 +27,7 @@ brew "fzf" # コマンドラインファジーファインダー
 brew "gh" # GitHub CLI
 brew "ghq" # リモートリポジトリ管理ツール
 brew "git-delta" # gitの差分表示ツール
+brew "git-wt" # Git worktree管理ツール
 brew "heroku" # HerokuのCLIツール
 brew "imagemagick" # 画像処理ツール
 brew "jq" # JSONプロセッサ

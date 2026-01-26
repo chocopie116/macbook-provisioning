@@ -111,7 +111,7 @@ zle -N peco_select_history
 
 function peco_src() {
     # ghq listにkagemushaを追加（iCloud上のObsidian vault）
-    local src_dir=$( (ghq list --full-path; echo "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/kagemusha") | peco --query "$LBUFFER")
+    local src_dir=$( (ghq list --full-path; echo "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/kuromaku") | peco --query "$LBUFFER")
     if [ -n "$src_dir" ]; then
         BUFFER="cd \"$src_dir\""
         zle accept-line
@@ -121,14 +121,14 @@ function peco_src() {
 zle -N peco_src
 
 function ccc() {
-    local src_dir=$( (ghq list --full-path; echo "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/kagemusha") | peco --query "$LBUFFER")
+    local src_dir=$( (ghq list --full-path; echo "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/kuromaku") | peco --query "$LBUFFER")
     if [ -n "$src_dir" ]; then
         cd "$src_dir" && claude --dangerously-skip-permissions
     fi
 }
 
 function kc() {
-    cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/kagemusha" && claude --dangerously-skip-permissions
+    cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/kuromaku" && claude --dangerously-skip-permissions
 }
 
 # -------------------------------------
@@ -153,6 +153,22 @@ alias c='claude --dangerously-skip-permissions'
 alias cr='claude -r --dangerously-skip-permissions'
 
 function chpwd() { ls }
+
+# -------------------------------------
+# git-wt
+# -------------------------------------
+eval "$(git wt --init zsh)"
+
+function peco_wt() {
+    local wt=$(git wt list 2>/dev/null | peco --query "$LBUFFER")
+    if [ -n "$wt" ]; then
+        BUFFER="cd \"$wt\""
+        zle accept-line
+    fi
+    zle -R -c
+}
+zle -N peco_wt
+bindkey '^w' peco_wt
 
 # -------------------------------------
 # ツール
