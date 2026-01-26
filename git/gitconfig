@@ -67,3 +67,6 @@
 	rebase = false
 [hub]
 	protocol = ssh
+
+[wt]
+	basedir = .worktrees
