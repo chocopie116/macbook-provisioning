@@ -1,6 +1,6 @@
 PWD := $(shell pwd)
 
-.PHONY: link unlink link/home link/config link/claude setup package/install package/cleanup package/check package/dump yazi/install
+.PHONY: link unlink link/home link/config link/claude setup package/install package/cleanup package/check package/dump yazi/install npm/install
 
 link: link/home link/config link/claude
 
@@ -24,6 +24,10 @@ link/config:
 	ln -Fs $(PWD)/yazi/keymap.toml $(HOME)/.config/yazi/keymap.toml
 	ln -Fs $(PWD)/yazi/init.lua $(HOME)/.config/yazi/init.lua
 	ln -Fs $(PWD)/yazi/package.toml $(HOME)/.config/yazi/package.toml
+	mkdir -p $(HOME)/.config/zellij
+	ln -Fs $(PWD)/zellij/config.kdl $(HOME)/.config/zellij/config.kdl
+	mkdir -p $(HOME)/.config/lazygit
+	ln -Fs $(PWD)/lazygit/config.yml $(HOME)/.config/lazygit/config.yml
 
 link/claude:
 	mkdir -p $(HOME)/.claude
@@ -63,4 +67,7 @@ package/dump:
 
 yazi/install:
 	ya pkg install
+
+npm/install:
+	cat npm/global-packages.txt | xargs npm install -g
 

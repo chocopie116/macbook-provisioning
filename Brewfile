@@ -8,6 +8,7 @@ tap "homebrew/services" # バックグラウンドサービス管理
 tap "ngrok/ngrok" # ngrokの公式パッケージ
 tap "rcmdnk/file" # brew-fileなどのツール
 tap "nikitabobko/tap" # AeroSpaceタイリングウィンドウマネージャー
+tap "steipete/tap" # gogcli等のツール
 tap "stripe/stripe-cli" # Stripe CLIツール
 
 # Formulae
@@ -25,6 +26,7 @@ brew "ffmpeg" # 動画・音声処理ツール
 brew "flyctl" # Fly.ioのCLIツール
 brew "fzf" # コマンドラインファジーファインダー
 brew "gh" # GitHub CLI
+brew "gogcli" # App Store等のアプリ情報取得ツール
 brew "ghq" # リモートリポジトリ管理ツール
 brew "git-delta" # gitの差分表示ツール
 brew "git-wt" # Git worktree管理ツール
@@ -51,6 +53,8 @@ brew "tree" # ディレクトリツリー表示ツール
 brew "uv" # Python用の高速パッケージインストーラー
 brew "vim" # テキストエディタ
 brew "yazi" # ターミナルファイルエクスプローラー
+brew "zellij" # ターミナルマルチプレクサ（tmux代替）
+brew "lazygit" # ターミナルGit UI
 brew "wget" # ネットワークファイルダウンロード
 brew "zoxide" # スマートなcdコマンド
 brew "zplug" # Zshプラグイン管理
