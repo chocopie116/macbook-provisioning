@@ -24,8 +24,9 @@ link/config:
 	ln -Fs $(PWD)/yazi/keymap.toml $(HOME)/.config/yazi/keymap.toml
 	ln -Fs $(PWD)/yazi/init.lua $(HOME)/.config/yazi/init.lua
 	ln -Fs $(PWD)/yazi/package.toml $(HOME)/.config/yazi/package.toml
-	mkdir -p $(HOME)/.config/zellij
+	mkdir -p $(HOME)/.config/zellij/layouts
 	ln -Fs $(PWD)/zellij/config.kdl $(HOME)/.config/zellij/config.kdl
+	ln -Fs $(PWD)/zellij/layouts/web-dev.kdl $(HOME)/.config/zellij/layouts/web-dev.kdl
 	mkdir -p $(HOME)/.config/lazygit
 	ln -Fs $(PWD)/lazygit/config.yml $(HOME)/.config/lazygit/config.yml
 
