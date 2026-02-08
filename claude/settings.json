@@ -3,7 +3,11 @@
     "ENABLE_TOOL_SEARCH": "true"
   },
   "permissions": {
-    "allow": [],
+    "allow": [
+      "Read(**/.env.example)",
+      "Edit(**/.env.example)",
+      "Write(**/.env.example)"
+    ],
     "deny": [
       "Read(**/.env*)",
       "Edit(**/.env*)",
