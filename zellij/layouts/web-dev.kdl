@@ -1,0 +1,17 @@
+layout {
+    pane split_direction="vertical" {
+        pane size="60%" {
+            name "editor"
+        }
+        pane split_direction="horizontal" size="40%" {
+            pane {
+                name "server"
+                command "bun"
+                args "run" "dev"
+            }
+            pane {
+                name "terminal"
+            }
+        }
+    }
+}

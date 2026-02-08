@@ -1,0 +1,7 @@
+// Zellij configuration - minimal setup
+// デフォルトキーバインドを使用
+
+theme "catppuccin-mocha"
+
+// UIオプション
+pane_frames false

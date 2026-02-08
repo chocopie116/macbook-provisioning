@@ -189,3 +189,6 @@ alias claude-mem='bun "/Users/tsubasa/.claude/plugins/marketplaces/thedotmack/pl
 # ローカル設定
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
+
+# Added by Antigravity
+export PATH="/Users/tsubasa/.antigravity/antigravity/bin:$PATH"
