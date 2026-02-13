@@ -1,0 +1,48 @@
+#!/bin/bash
+# takt - tmux-based Claude Code orchestration session manager
+#
+# Usage:
+#   takt              # 3 workers, current directory
+#   takt 4            # 4 workers
+#   takt 3 /path/to   # specified directory
+
+SESSION="takt"
+NUM_WORKERS="${1:-3}"
+WORK_DIR="${2:-$(pwd)}"
+
+# Session exists → attach
+if tmux has-session -t "$SESSION" 2>/dev/null; then
+    tmux attach-session -t "$SESSION"
+    exit 0
+fi
+
+# Create session
+tmux new-session -d -s "$SESSION" -n "conductor" -c "$WORK_DIR"
+
+# Start claude in main pane
+tmux send-keys -t "$SESSION:conductor" "claude" Enter
+
+# Create help pane at bottom (8 lines)
+tmux split-window -t "$SESSION:conductor" -v -l 8 -c "$WORK_DIR"
+tmux send-keys -t "$SESSION:conductor.1" "cat << 'HELP'
+ ╔═══ TAKT ══════════════════════════════════════════════════╗
+ ║ Send:   tmux send-keys -t takt:worker-N \"msg\" Enter      ║
+ ║ Read:   tmux capture-pane -t takt:worker-N -p -S -100     ║
+ ║ Workers: worker-1 .. worker-$NUM_WORKERS                           ║
+ ║ Switch:  Ctrl+b 0/1/2/3  |  Detach: Ctrl+b d              ║
+ ╚════════════════════════════════════════════════════════════╝
+HELP" Enter
+
+# Focus back to claude pane
+tmux select-pane -t "$SESSION:conductor.0"
+
+# Create workers
+for i in $(seq 1 "$NUM_WORKERS"); do
+    tmux new-window -t "$SESSION" -n "worker-$i" -c "$WORK_DIR"
+    tmux send-keys -t "$SESSION:worker-$i" "claude" Enter
+    sleep 0.5
+done
+
+# Return to conductor and attach
+tmux select-window -t "$SESSION:conductor"
+tmux attach-session -t "$SESSION"
