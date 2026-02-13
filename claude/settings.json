@@ -1,6 +1,7 @@
 {
   "env": {
-    "ENABLE_TOOL_SEARCH": "true"
+    "ENABLE_TOOL_SEARCH": "true",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
   "permissions": {
     "allow": [
@@ -26,5 +27,6 @@
     "example-skills@anthropic-agent-skills": true,
     "code-simplifier@claude-plugins-official": true
   },
-  "spinnerTipsEnabled": false
+  "spinnerTipsEnabled": false,
+  "skipDangerousModePermissionPrompt": true
 }
