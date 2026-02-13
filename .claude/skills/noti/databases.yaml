@@ -1,0 +1,133 @@
+databases:
+  - name: DB_打ち合わせ
+    id: 11c5b62c-f12b-81ba-9a5a-c409e5b02a3e
+    title_property: タイトル
+    properties:
+      タイトル: { type: title }
+      商談種別: { type: multi_select }
+      会社: { type: relation, target: DB_会社 }
+      コンタクト: { type: relation, target: DB_コンタクト }
+      ハッシュタグ: { type: multi_select }
+      要約: { type: rich_text }
+      案件: { type: relation, target: DB_案件 }
+      作成日時: { type: created_time }
+
+  - name: DB_ナレッジソース
+    id: 2ee5b62c-f12b-80de-ae99-e2dcad4e1e00
+    title_property: タイトル
+    properties:
+      タイトル: { type: title }
+      ステータス: { type: select }
+      タグ: { type: multi_select }
+      原題: { type: rich_text }
+      テキスト: { type: rich_text }
+      カテゴリ: { type: multi_select }
+      公開日: { type: rich_text }
+      取得日: { type: rich_text }
+      URL 1: { type: url }
+
+  - name: DB_案件
+    id: 2b25b62c-f12b-8015-960e-c72451c750ec
+    title_property: タイトル
+    properties:
+      タイトル: { type: title }
+      保守金額: { type: number }
+      NA: { type: rich_text }
+      進行ステータス: { type: select }
+      営業ステータス: { type: status }
+      会社: { type: relation, target: DB_会社 }
+      提案書: { type: files }
+      打ち合わせ: { type: relation, target: DB_打ち合わせ }
+      ご提案サービス: { type: relation, target: DB_商品 }
+      NA日: { type: date }
+      受注金額: { type: number }
+      作成日時: { type: created_time }
+      アーカイブ: { type: checkbox }
+      最終更新日時: { type: last_edited_time }
+      NA通知先: { type: people }
+      提案金額: { type: number }
+
+  - name: DB_会社
+    id: 2e15b62c-f12b-8095-b23b-daefe36831f6
+    title_property: 会社名
+    properties:
+      会社名: { type: title }
+      案件: { type: relation, target: DB_案件 }
+      従業員数: { type: select }
+      コーポレートサイトURL: { type: url }
+      担当者: { type: relation, target: DB_コンタクト }
+      業種: { type: select }
+      選択: { type: select }
+      設立年: { type: number }
+      事業内容: { type: rich_text }
+      代表者名: { type: rich_text }
+      請求先メールアドレス: { type: email }
+      打ち合わせ: { type: relation, target: DB_打ち合わせ }
+      所在地: { type: rich_text }
+
+  - name: DB_単発請求
+    id: 18f5b62c-f12b-8017-aa39-e28f80b80915
+    title_property: 名前
+    properties:
+      名前: { type: title }
+      備考: { type: rich_text }
+      請求金額(税抜): { type: number }
+      請求先: { type: relation, target: DB_会社 }
+      🍡 DB_商品: { type: relation, target: DB_商品 }
+      請求日: { type: date }
+      請求名目: { type: rich_text }
+      請求書送付先: { type: rollup }
+
+  - name: DB_コンタクト
+    id: 2b25b62c-f12b-808f-8f70-f65f21e0fb5a
+    title_property: 担当者名
+    properties:
+      担当者名: { type: title }
+      連絡手段: { type: rich_text }
+      会社: { type: relation, target: DB_会社 }
+      NA通知先: { type: people }
+      NA日: { type: date }
+      住所: { type: phone_number }
+      作成日時: { type: created_time }
+      作成者: { type: created_by }
+      NA: { type: rich_text }
+      関係性: { type: multi_select }
+      名刺画像: { type: files }
+      最終更新日時: { type: last_edited_time }
+      出会い: { type: select }
+
+  - name: DB_定期請求
+    id: 2ec5b62c-f12b-8006-b8a9-f1be3dfee055
+    title_property: クライアント名
+    properties:
+      クライアント名: { type: title }
+      契約終了日: { type: rich_text }
+      月額請求額(税別): { type: number }
+      商品: { type: relation, target: DB_商品 }
+      備考: { type: rich_text }
+      初回請求日: { type: date }
+      会社: { type: relation, target: DB_会社 }
+      請求書送付先: { type: rollup }
+
+  - name: DB_商品
+    id: 2e75b62c-f12b-80b4-b356-ccc5f55df506
+    title_property: 名前
+    properties:
+      名前: { type: title }
+
+  - name: DB_Agentスキル
+    id: 2ee5b62c-f12b-805a-b965-f4f6258b6676
+    title_property: 名前
+    properties:
+      名前: { type: title }
+      概要: { type: rich_text }
+
+  - name: AIの最新要素技術まとめ
+    id: 15a5b62c-f12b-8057-aaac-f6dcfc85cd47
+    title_property: 呼称
+    properties:
+      呼称: { type: title }
+      実装例: { type: rich_text }
+      主なユースケース / 応用例: { type: rich_text }
+      技術概要: { type: rich_text }
+      AIがあることでどんな世界になるのか: { type: rich_text }
