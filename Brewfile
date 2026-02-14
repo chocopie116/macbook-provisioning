@@ -48,12 +48,11 @@ brew "ripgrep" # 高速grep代替コマンド
 brew "sevenzip" # 7-Zip圧縮・解凍ツール
 brew "stripe" # Stripe CLIツール
 brew "the_silver_searcher" # 高速コード検索ツール
-brew "tmux" # ターミナルマルチプレクサ（takt用）
+brew "tmux" # ターミナルマルチプレクサ
 brew "tree" # ディレクトリツリー表示ツール
 brew "uv" # Python用の高速パッケージインストーラー
 brew "vim" # テキストエディタ
 brew "yazi" # ターミナルファイルエクスプローラー
-brew "zellij" # ターミナルマルチプレクサ（tmux代替）
 brew "lazygit" # ターミナルGit UI
 brew "wget" # ネットワークファイルダウンロード
 brew "zoxide" # スマートなcdコマンド
