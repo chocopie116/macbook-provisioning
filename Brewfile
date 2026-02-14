@@ -26,6 +26,7 @@ brew "ffmpeg" # 動画・音声処理ツール
 brew "flyctl" # Fly.ioのCLIツール
 brew "fzf" # コマンドラインファジーファインダー
 brew "gh" # GitHub CLI
+brew "glow" # ターミナルMarkdownレンダラー
 brew "gogcli" # App Store等のアプリ情報取得ツール
 brew "ghq" # リモートリポジトリ管理ツール
 brew "git-delta" # gitの差分表示ツール

@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+"""Markdown viewer that converts mermaid diagrams to ASCII art via mermaid-ascii-diagrams, then displays with glow."""
+
+import os
+import subprocess
+import sys
+import tempfile
+
+
+def has_mermaid_block(content: str) -> bool:
+    return "```mermaid" in content
+
+
+def convert_mermaid_blocks(file_path: str) -> str | None:
+    """Convert mermaid blocks in a markdown file using mermaid-ascii (mermaid-ascii-diagrams)."""
+    try:
+        result = subprocess.run(
+            ["mermaid-ascii", "--markdown", file_path],
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            return result.stdout
+    except (subprocess.TimeoutExpired, FileNotFoundError):
+        pass
+    return None
+
+
+def main() -> None:
+    # Separate file path from glow options
+    file_path = None
+    glow_args: list[str] = []
+
+    for arg in sys.argv[1:]:
+        if file_path is None and not arg.startswith("-") and os.path.isfile(arg):
+            file_path = arg
+        else:
+            glow_args.append(arg)
+
+    # Disable word-wrap by default unless user explicitly sets -w
+    if not any(a in ("-w", "--width") for a in glow_args):
+        glow_args = ["-w", "0", *glow_args]
+
+    # No file: just run glow as-is
+    if not file_path:
+        if sys.stdin.isatty():
+            os.execvp("glow", ["glow", *glow_args])
+        else:
+            # stdin mode: write to temp file for mermaid processing
+            content = sys.stdin.read()
+            with tempfile.NamedTemporaryFile(mode="w", suffix=".md", delete=False) as tmp:
+                tmp.write(content)
+                file_path = tmp.name
+
+    with open(file_path) as f:
+        content = f.read()
+
+    if not has_mermaid_block(content):
+        os.execvp("glow", ["glow", file_path, *glow_args])
+
+    # Convert mermaid blocks to ASCII art
+    converted = convert_mermaid_blocks(file_path)
+    if converted is None:
+        # Conversion failed, show original
+        os.execvp("glow", ["glow", file_path, *glow_args])
+
+    # Replace mermaid blocks in original content with converted output
+    # mermaid-ascii --markdown outputs only the converted blocks, so we need to
+    # reconstruct the full document
+    import re
+    mermaid_re = re.compile(r"```mermaid\s*\n.*?```", re.DOTALL)
+    blocks = converted.strip().split("\n\n")
+
+    block_idx = 0
+    def replacer(match: re.Match[str]) -> str:
+        nonlocal block_idx
+        if block_idx < len(blocks):
+            replacement = blocks[block_idx]
+            block_idx += 1
+            return replacement
+        return match.group(0)
+
+    processed = mermaid_re.sub(replacer, content)
+
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".md", delete=False) as tmp:
+        tmp.write(processed)
+        tmp_path = tmp.name
+
+    try:
+        result = subprocess.run(["glow", tmp_path, *glow_args])
+        sys.exit(result.returncode)
+    finally:
+        os.unlink(tmp_path)
+
+
+if __name__ == "__main__":
+    main()

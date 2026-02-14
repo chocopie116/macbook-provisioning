@@ -11,6 +11,7 @@ link/home:
 	ln -Fs $(PWD)/aerospace/aerospace.toml $(HOME)/.aerospace.toml
 	mkdir -p $(HOME)/bin
 	ln -Fs $(PWD)/bin/takt $(HOME)/bin/takt
+	ln -Fs $(PWD)/bin/mdview $(HOME)/bin/mdview
 	ln -Fs $(PWD)/tmux/tmux.conf $(HOME)/.tmux.conf
 
 link/config:
