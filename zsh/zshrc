@@ -110,8 +110,7 @@ function peco_select_history() {
 zle -N peco_select_history
 
 function peco_src() {
-    # ghq listにkagemushaを追加（iCloud上のObsidian vault）
-    local src_dir=$( (ghq list --full-path; echo "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/kuromaku") | peco --query "$LBUFFER")
+    local src_dir=$(ghq list --full-path | peco --query "$LBUFFER")
     if [ -n "$src_dir" ]; then
         BUFFER="cd \"$src_dir\""
         zle accept-line
@@ -121,7 +120,7 @@ function peco_src() {
 zle -N peco_src
 
 function ccc() {
-    local src_dir=$( (ghq list --full-path; echo "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/kuromaku") | peco --query "$LBUFFER")
+    local src_dir=$(ghq list --full-path | peco --query "$LBUFFER")
     if [ -n "$src_dir" ]; then
         cd "$src_dir" && claude --dangerously-skip-permissions
     fi
