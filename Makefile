@@ -1,6 +1,6 @@
 PWD := $(shell pwd)
 
-.PHONY: link unlink link/home link/config link/claude copy/claude setup package/install package/cleanup package/check package/dump yazi/install npm/install
+.PHONY: link unlink link/home link/config copy/claude setup package/install package/cleanup package/check package/dump yazi/install npm/install
 
 link: link/home link/config copy/claude
 
