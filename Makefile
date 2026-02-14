@@ -1,8 +1,8 @@
 PWD := $(shell pwd)
 
-.PHONY: link unlink link/home link/config link/claude setup package/install package/cleanup package/check package/dump yazi/install npm/install
+.PHONY: link unlink link/home link/config link/claude copy/claude setup package/install package/cleanup package/check package/dump yazi/install npm/install
 
-link: link/home link/config link/claude
+link: link/home link/config copy/claude
 
 link/home:
 	ln -Fs $(PWD)/zsh/zshrc $(HOME)/.zshrc
@@ -30,14 +30,9 @@ link/config:
 	mkdir -p $(HOME)/.config/lazygit
 	ln -Fs $(PWD)/lazygit/config.yml $(HOME)/.config/lazygit/config.yml
 
-link/claude:
+copy/claude:
 	mkdir -p $(HOME)/.claude
-	ln -Fs $(PWD)/claude/CLAUDE.md $(HOME)/.claude/CLAUDE.md
-	ln -Fs $(PWD)/claude/skills $(HOME)/.claude/skills
-	ln -Fs $(PWD)/claude/agents $(HOME)/.claude/agents
-	ln -Fs $(PWD)/claude/settings.json $(HOME)/.claude/settings.json
-	ln -Fs $(PWD)/claude/statusline.sh $(HOME)/.claude/statusline.sh
-	ln -Fs $(PWD)/claude/notify.sh $(HOME)/.claude/notify.sh
+	rsync -a --delete --exclude='skills/' $(PWD)/claude/ $(HOME)/.claude/
 
 unlink:
 	rm -f $(HOME)/.zshrc $(HOME)/.gitconfig $(HOME)/.vimrc $(HOME)/.aerospace.toml
@@ -48,10 +43,8 @@ unlink:
 	rm -f $(HOME)/.config/karabiner/karabiner.json
 	rm -f $(HOME)/.config/peco/config.json
 	rm -rf $(HOME)/.config/yazi
-	rm -rf $(HOME)/.claude/commands
-	rm -rf $(HOME)/.claude/skills
-	rm -rf $(HOME)/.claude/agents
 	rm -f $(HOME)/.claude/CLAUDE.md $(HOME)/.claude/settings.json $(HOME)/.claude/statusline.sh $(HOME)/.claude/notify.sh
+	rm -rf $(HOME)/.claude/agents
 
 setup:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
