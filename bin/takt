@@ -2,13 +2,33 @@
 # takt - tmux-based Claude Code orchestration session manager
 #
 # Usage:
-#   takt              # 3 workers, current directory
-#   takt 4            # 4 workers
-#   takt 3 /path/to   # specified directory
+#   takt                          # no plan, 3 workers, current directory
+#   takt ~/notes/2026-02-14.md    # with plan file
+#   takt ~/notes/plan.md 4        # with 4 workers
+#   takt ~/notes/plan.md 3 /path  # full options
+#
+# Layout:
+#   ┌──────────────────┬───────────┐
+#   │   plan.md (30%)  │ worker-1  │
+#   ├──────────────────┤ worker-2  │
+#   │ orchestrator(70%)│ worker-3  │
+#   └──────────────────┴───────────┘
+#   Left 60% : Right 40%
 
+set -euo pipefail
+
+# Dependency check
+for cmd in tmux claude; do
+    if ! command -v "$cmd" &>/dev/null; then
+        echo "Error: $cmd is not installed" >&2
+        exit 1
+    fi
+done
+
+PLAN_FILE="${1:-}"
+NUM_WORKERS="${2:-3}"
+WORK_DIR="${3:-$(pwd)}"
 SESSION="takt"
-NUM_WORKERS="${1:-3}"
-WORK_DIR="${2:-$(pwd)}"
 
 # Session exists → attach
 if tmux has-session -t "$SESSION" 2>/dev/null; then
@@ -16,33 +36,49 @@ if tmux has-session -t "$SESSION" 2>/dev/null; then
     exit 0
 fi
 
-# Create session
-tmux new-session -d -s "$SESSION" -n "conductor" -c "$WORK_DIR"
+# --- Create layout ---
 
-# Start claude in main pane
-tmux send-keys -t "$SESSION:conductor" "claude" Enter
+# Create session (initial pane = plan viewer, top-left)
+tmux new-session -d -s "$SESSION" -c "$WORK_DIR"
+PLAN_PANE=$(tmux display-message -t "$SESSION" -p '#{pane_id}')
 
-# Create help pane at bottom (8 lines)
-tmux split-window -t "$SESSION:conductor" -v -l 8 -c "$WORK_DIR"
-tmux send-keys -t "$SESSION:conductor.1" "cat << 'HELP'
- ╔═══ TAKT ══════════════════════════════════════════════════╗
- ║ Send:   tmux send-keys -t takt:worker-N \"msg\" Enter      ║
- ║ Read:   tmux capture-pane -t takt:worker-N -p -S -100     ║
- ║ Workers: worker-1 .. worker-$NUM_WORKERS                           ║
- ║ Switch:  Ctrl+b 0/1/2/3  |  Detach: Ctrl+b d              ║
- ╚════════════════════════════════════════════════════════════╝
-HELP" Enter
+# Split right 40% for workers
+WORKERS_PANE=$(tmux split-window -h -t "$PLAN_PANE" -p 40 -c "$WORK_DIR" -P -F '#{pane_id}')
 
-# Focus back to claude pane
-tmux select-pane -t "$SESSION:conductor.0"
+# Split left pane: bottom 70% for orchestrator
+ORCHESTRATOR_PANE=$(tmux split-window -v -t "$PLAN_PANE" -p 70 -c "$WORK_DIR" -P -F '#{pane_id}')
 
-# Create workers
-for i in $(seq 1 "$NUM_WORKERS"); do
-    tmux new-window -t "$SESSION" -n "worker-$i" -c "$WORK_DIR"
-    tmux send-keys -t "$SESSION:worker-$i" "claude" Enter
+# Split right pane into N workers (equal size)
+WORKER_PANE_IDS=()
+CURRENT_PANE="$WORKERS_PANE"
+
+for i in $(seq 1 $((NUM_WORKERS - 1))); do
+    WORKER_PANE_IDS+=("$CURRENT_PANE")
+    remaining=$((NUM_WORKERS - i))
+    total=$((NUM_WORKERS - i + 1))
+    pct=$(( remaining * 100 / total ))
+    CURRENT_PANE=$(tmux split-window -v -t "$CURRENT_PANE" -p "$pct" -c "$WORK_DIR" -P -F '#{pane_id}')
+done
+WORKER_PANE_IDS+=("$CURRENT_PANE")
+
+# --- Start processes ---
+
+# Plan viewer (macOS compatible: no watch dependency)
+if [ -n "$PLAN_FILE" ]; then
+    tmux send-keys -t "$PLAN_PANE" "while true; do clear; cat '$PLAN_FILE' 2>/dev/null || echo 'Waiting for: $PLAN_FILE'; sleep 2; done" Enter
+else
+    tmux send-keys -t "$PLAN_PANE" "echo 'No plan file specified. Usage: takt <plan_file> [workers] [dir]'" Enter
+fi
+
+# Orchestrator
+tmux send-keys -t "$ORCHESTRATOR_PANE" "claude" Enter
+
+# Workers
+for pane_id in "${WORKER_PANE_IDS[@]}"; do
+    tmux send-keys -t "$pane_id" "claude" Enter
     sleep 0.5
 done
 
-# Return to conductor and attach
-tmux select-window -t "$SESSION:conductor"
+# Focus on orchestrator and attach
+tmux select-pane -t "$ORCHESTRATOR_PANE"
 tmux attach-session -t "$SESSION"
