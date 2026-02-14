@@ -8,6 +8,12 @@ on   = [ "d", "d" ]
 run  = "remove"
 desc = "ゴミ箱に移動"
 
+# Markdownファイルをmdview（glow + mermaid-ascii）で開く
+[[mgr.prepend_keymap]]
+on   = [ "m", "d" ]
+run  = "shell 'mdview -p $0' --block"
+desc = "mdviewでMarkdownプレビュー"
+
 # ファイル/ディレクトリのパスをクリップボードにコピー
 #（デフォルトはc->c,でファイル、c->dでディレクトリになっており、コマンド別れるのが嫌だったので）
 [[mgr.prepend_keymap]]
