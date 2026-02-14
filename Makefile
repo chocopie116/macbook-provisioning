@@ -10,7 +10,6 @@ link/home:
 	ln -Fs $(PWD)/vim/vimrc $(HOME)/.vimrc
 	ln -Fs $(PWD)/aerospace/aerospace.toml $(HOME)/.aerospace.toml
 	mkdir -p $(HOME)/bin
-	ln -Fs $(PWD)/bin/zj $(HOME)/bin/zj
 	ln -Fs $(PWD)/bin/takt $(HOME)/bin/takt
 	ln -Fs $(PWD)/tmux/tmux.conf $(HOME)/.tmux.conf
 
@@ -28,11 +27,6 @@ link/config:
 	ln -Fs $(PWD)/yazi/keymap.toml $(HOME)/.config/yazi/keymap.toml
 	ln -Fs $(PWD)/yazi/init.lua $(HOME)/.config/yazi/init.lua
 	ln -Fs $(PWD)/yazi/package.toml $(HOME)/.config/yazi/package.toml
-	mkdir -p $(HOME)/.config/zellij/layouts
-	ln -Fs $(PWD)/zellij/config.kdl $(HOME)/.config/zellij/config.kdl
-	@for layout in $(PWD)/zellij/layouts/*.kdl; do \
-		ln -Fs "$$layout" $(HOME)/.config/zellij/layouts/$$(basename "$$layout"); \
-	done
 	mkdir -p $(HOME)/.config/lazygit
 	ln -Fs $(PWD)/lazygit/config.yml $(HOME)/.config/lazygit/config.yml
 
@@ -47,7 +41,6 @@ link/claude:
 
 unlink:
 	rm -f $(HOME)/.zshrc $(HOME)/.gitconfig $(HOME)/.vimrc $(HOME)/.aerospace.toml
-	rm -f $(HOME)/bin/zj
 	rm -f $(HOME)/bin/takt
 	rm -f $(HOME)/.tmux.conf
 	rm -f $(HOME)/.config/ghostty/config
