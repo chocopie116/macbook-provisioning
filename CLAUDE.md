@@ -28,9 +28,14 @@ make package/cleanup    # 不要パッケージ削除
 ```bash
 make link               # 全設定をリンク
 make link/home          # ~/直下にリンク（zshrc, gitconfig, vimrc, aerospace.toml）
-make link/config        # ~/.config/配下にリンク（ghostty, borders, karabiner, peco, yazi）
+make link/config        # ~/.config/配下にリンク（ghostty, borders, kanata, peco, yazi）
 make link/claude        # ~/.claude/配下にリンク
 make unlink             # リンク解除
+```
+
+### Kanataセットアップ
+```bash
+make kanata/setup       # KanataのLaunchDaemonを設定（要sudo）
 ```
 
 ### yaziプラグイン管理
@@ -55,7 +60,7 @@ bash macos/defaults.sh  # macOS のシステム設定を適用（要再起動）
 ├── ghostty/            # ~/.config/ghostty/config
 ├── aerospace/          # ~/.aerospace.toml
 ├── borders/            # ~/.config/borders/bordersrc
-├── karabiner/          # ~/.config/karabiner/karabiner.json
+├── kanata/             # ~/.config/kanata/*.kbd
 ├── peco/               # ~/.config/peco/config.json
 ├── yazi/               # ~/.config/yazi/*
 ├── claude/             # ~/.claude/*

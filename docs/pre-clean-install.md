@@ -10,7 +10,7 @@ macOS をクリーンインストールする前に実施する手順。
 
 ## 2. 設定の確認
 
-- [ ] Karabiner の設定が最新か（`karabiner/karabiner.json`）
+- [ ] Kanata の設定が最新か（`kanata/macbook.kbd`, `kanata/keychron.kbd`）
 - [ ] VSCode/Cursor 拡張が Brewfile に反映されているか
 - [ ] dotfiles の変更がコミット済みか
 

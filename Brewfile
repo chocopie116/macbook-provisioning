@@ -83,7 +83,7 @@ cask "ghostty" # 高速ターミナルエミュレータ
 cask "google-japanese-ime" # 日本語入力メソッド
 cask "grandperspective" # ディスク使用量視覚化
 cask "gyazo" # スクリーンショット共有
-cask "karabiner-elements" # キーボードカスタマイズ
+cask "kanata" # クロスプラットフォームキーボードリマッパー
 cask "lark" # オールインワンコラボレーションプラットフォーム
 cask "libreoffice" # オフィススイート（DOCX/XLSX/PPTX変換用）
 cask "limitless" # AIミーティングアシスタント

@@ -1,0 +1,52 @@
+;; Kanata config for Keychron B1 Pro
+;; Migrated from Karabiner-Elements
+;;
+;; Key mappings:
+;;   1. CapsLock -> Left Control
+;;   2. Left Command: tap -> eisuu (eisu), hold -> left command
+;;   3. Right Command: tap -> kana (kana), hold -> right command
+;;   4. Escape -> Escape + eisuu
+;;   5. Ctrl+[ -> Ctrl+[ + eisuu (for vim)
+;;   6. Backslash <-> Delete/Backspace swap
+
+(defcfg
+  process-unmapped-keys yes
+  macos-dev-names-include (
+    "Keychron B1 Pro"
+  )
+)
+
+(defsrc
+  caps
+  esc
+  [
+  lmet
+  rmet
+  bspc
+  \
+)
+
+(defalias
+  ;; Left Command: tap -> eisuu, hold -> left meta
+  lcm (tap-hold-release 200 200 eisu lmet)
+
+  ;; Right Command: tap -> kana, hold -> right meta
+  rcm (tap-hold-release 200 200 kana rmet)
+
+  ;; Escape -> Escape + eisuu
+  esc (macro esc 5 eisu)
+
+  ;; [ key: Ctrl held -> Ctrl+[ + eisuu, otherwise -> [
+  ;; fork checks physical keys: lctl and caps (CapsLock remapped to Ctrl)
+  lbr (fork (macro C-[ 5 eisu) [ (lctl caps))
+)
+
+(deflayer default
+  lctl    ;; caps -> left control
+  @esc    ;; esc -> esc + eisuu
+  @lbr    ;; [ -> conditional on ctrl
+  @lcm    ;; lmet -> tap:eisuu / hold:lmet
+  @rcm    ;; rmet -> tap:kana / hold:rmet
+  \       ;; bspc -> backslash
+  bspc    ;; \ -> backspace
+)

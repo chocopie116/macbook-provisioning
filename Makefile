@@ -1,6 +1,6 @@
 PWD := $(shell pwd)
 
-.PHONY: link unlink link/home link/config copy/claude setup package/install package/cleanup package/check package/dump yazi/install npm/install
+.PHONY: link unlink link/home link/config copy/claude setup package/install package/cleanup package/check package/dump yazi/install npm/install kanata/setup
 
 link: link/home link/config copy/claude
 
@@ -19,8 +19,9 @@ link/config:
 	ln -Fs $(PWD)/ghostty/config $(HOME)/.config/ghostty/config
 	mkdir -p $(HOME)/.config/borders
 	ln -Fs $(PWD)/borders/bordersrc $(HOME)/.config/borders/bordersrc
-	mkdir -p $(HOME)/.config/karabiner
-	ln -Fs $(PWD)/karabiner/karabiner.json $(HOME)/.config/karabiner/karabiner.json
+	mkdir -p $(HOME)/.config/kanata
+	ln -Fs $(PWD)/kanata/macbook.kbd $(HOME)/.config/kanata/macbook.kbd
+	ln -Fs $(PWD)/kanata/keychron.kbd $(HOME)/.config/kanata/keychron.kbd
 	mkdir -p $(HOME)/.config/peco
 	ln -Fs $(PWD)/peco/config.json $(HOME)/.config/peco/config.json
 	mkdir -p $(HOME)/.config/yazi
@@ -41,7 +42,7 @@ unlink:
 	rm -f $(HOME)/.tmux.conf
 	rm -f $(HOME)/.config/ghostty/config
 	rm -f $(HOME)/.config/borders/bordersrc
-	rm -f $(HOME)/.config/karabiner/karabiner.json
+	rm -rf $(HOME)/.config/kanata
 	rm -f $(HOME)/.config/peco/config.json
 	rm -rf $(HOME)/.config/yazi
 	rm -f $(HOME)/.claude/CLAUDE.md $(HOME)/.claude/settings.json $(HOME)/.claude/statusline.sh $(HOME)/.claude/notify.sh
@@ -67,4 +68,13 @@ yazi/install:
 
 npm/install:
 	cat npm/global-packages.txt | xargs npm install -g
+
+kanata/setup:
+	sudo cp $(PWD)/kanata/com.kanata.macbook.plist /Library/LaunchDaemons/
+	sudo cp $(PWD)/kanata/com.kanata.keychron.plist /Library/LaunchDaemons/
+	sudo chown root:wheel /Library/LaunchDaemons/com.kanata.*.plist
+	sudo launchctl bootstrap system /Library/LaunchDaemons/com.kanata.macbook.plist
+	sudo launchctl enable system/com.kanata.macbook
+	sudo launchctl bootstrap system /Library/LaunchDaemons/com.kanata.keychron.plist
+	sudo launchctl enable system/com.kanata.keychron
 
