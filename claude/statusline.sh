@@ -5,57 +5,44 @@ input=$(cat)
 
 MODEL_DISPLAY=$(echo "$input" | jq -r '.model.display_name')
 CURRENT_DIR=$(echo "$input" | jq -r '.workspace.current_dir')
+DIR_NAME="${CURRENT_DIR##*/}"
 
-# Get git information
+# Get git branch
 GIT_BRANCH=""
-GIT_STATUS=""
 if git rev-parse &>/dev/null; then
   BRANCH=$(git branch --show-current)
   if [ -n "$BRANCH" ]; then
-    GIT_BRANCH="@ $BRANCH"
+    GIT_BRANCH="$BRANCH"
   else
-    COMMIT_HASH=$(git rev-parse --short HEAD 2>/dev/null)
-    if [ -n "$COMMIT_HASH" ]; then
-      GIT_BRANCH="@ HEAD ($COMMIT_HASH)"
-    fi
+    GIT_BRANCH="HEAD ($(git rev-parse --short HEAD 2>/dev/null))"
   fi
-
-  # Get number of changed files by type
-  modified_count=$(git status --porcelain 2>/dev/null | grep -c '^.M\|^M')
-  added_count=$(git status --porcelain 2>/dev/null | grep -c '^??\|^A')
-
-  GIT_STATUS=""
-  [ "$modified_count" -gt 0 ] && GIT_STATUS="${modified_count}M"
-  [ "$added_count" -gt 0 ] && GIT_STATUS="${GIT_STATUS} ${added_count}A"
-  GIT_STATUS=$(echo "$GIT_STATUS" | xargs)  # trim spaces
 fi
 
 # Get context_window information
 CONTEXT_SIZE=$(echo "$input" | jq -r '.context_window.context_window_size // 200000')
 USAGE=$(echo "$input" | jq '.context_window.current_usage // null')
 
-# Calculate current context usage
 if [ "$USAGE" != "null" ]; then
   current_tokens=$(echo "$USAGE" | jq '(.input_tokens // 0) + (.cache_creation_input_tokens // 0) + (.cache_read_input_tokens // 0)')
 else
   current_tokens=0
 fi
 
-# Calculate percentage
 percentage=$((current_tokens * 100 / CONTEXT_SIZE))
 
-# Format display
 format_tokens() {
   local tokens=$1
-  if [ "$tokens" -ge 1000 ]; then
-    local thousands=$((tokens / 1000))
-    local remainder=$((tokens % 1000))
-    if [ "$remainder" -ge 100 ]; then
-      local decimal=$((remainder / 100))
-      echo "${thousands}.${decimal}K"
+  if [ "$tokens" -ge 1000000 ]; then
+    local millions=$((tokens / 1000000))
+    local remainder=$(( (tokens % 1000000) / 100000 ))
+    if [ "$remainder" -gt 0 ]; then
+      echo "${millions}.${remainder}M"
     else
-      echo "${thousands}K"
+      echo "${millions}M"
     fi
+  elif [ "$tokens" -ge 1000 ]; then
+    local thousands=$((tokens / 1000))
+    echo "${thousands}k"
   else
     echo "$tokens"
   fi
@@ -64,16 +51,26 @@ format_tokens() {
 current_display=$(format_tokens "$current_tokens")
 context_display=$(format_tokens "$CONTEXT_SIZE")
 
-# Color coding for percentage
+# Color coding
 if [ "$percentage" -ge 80 ]; then
-  color="\033[31m"  # Red
+  bar_color="\033[31m"  # Red
 elif [ "$percentage" -ge 50 ]; then
-  color="\033[33m"  # Yellow
+  bar_color="\033[33m"  # Yellow
 else
-  color="\033[32m"  # Green
+  bar_color="\033[32m"  # Green
 fi
+reset="\033[0m"
 
-# Format output (single line)
-STATUS_LINE="${CURRENT_DIR##*/} ${GIT_BRANCH} | ${MODEL_DISPLAY} | ${current_display}/${context_display} (${color}${percentage}%\033[0m)"
-[ -n "$GIT_STATUS" ] && STATUS_LINE="${STATUS_LINE} | ${GIT_STATUS}"
-echo -e "$STATUS_LINE"
+# Build progress bar with block characters
+bar_width=20
+filled=$(( percentage * bar_width / 100 ))
+empty=$(( bar_width - filled ))
+bar=""
+for ((i=0; i<filled; i++)); do bar="${bar}█"; done
+for ((i=0; i<empty; i++)); do bar="${bar}░"; done
+
+# Format: [Opus 4.6] DirName/branch | ctx [bar] used/total
+LABEL="${DIR_NAME}"
+[ -n "$GIT_BRANCH" ] && LABEL="${LABEL}/${GIT_BRANCH}"
+
+echo -e "[${MODEL_DISPLAY}] ${LABEL} | ctx ${bar_color}${bar}${reset} ${current_display}/${context_display}"
