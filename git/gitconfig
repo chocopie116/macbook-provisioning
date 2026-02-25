@@ -49,6 +49,7 @@
   cpr= "!f() { git push -u origin HEAD; gh pr create --body \"$1\" --title \"[WIP]\"; gh pr view -w; }; f"
   wip = "!f() { git commit --allow-empty -m \"empty commit\"; git push -u origin HEAD; gh pr create --body \"$1\" --title \"[WIP]\"; gh pr view -w; }; f"
   ac = !git add -A && aicommits -a
+  do = !git add -A && yes | aicommits -a && git push origin $(git rev-parse --abbrev-ref HEAD)
 
 
 [filter "media"]
