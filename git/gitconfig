@@ -49,7 +49,7 @@
   cpr= "!f() { git push -u origin HEAD; gh pr create --body \"$1\" --title \"[WIP]\"; gh pr view -w; }; f"
   wip = "!f() { git commit --allow-empty -m \"empty commit\"; git push -u origin HEAD; gh pr create --body \"$1\" --title \"[WIP]\"; gh pr view -w; }; f"
   ac = !git add -A && aicommits -a
-  do = !git add -A && yes | aicommits -a && git push origin $(git rev-parse --abbrev-ref HEAD)
+  do = "!f() { git add -A && expect -c 'spawn aicommits -a; expect \"Yes\"; send \"\\r\"; expect eof' && git push origin $(git rev-parse --abbrev-ref HEAD); }; f"
 
 
 [filter "media"]
