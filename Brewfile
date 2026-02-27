@@ -14,22 +14,18 @@ tap "stripe/stripe-cli" # Stripe CLIツール
 # Formulae
 brew "asdf" # 複数の言語のバージョン管理ツール
 brew "automake" # Makefileの自動生成ツール
-brew "bat" # catの代替コマンド（シンタックスハイライト付き）
 brew "blackhole-2ch" # 画面収録用ツール
 brew "borders" # ウィンドウにボーダーを追加するツール
 brew "brew-file" # Brewfileの管理ツール
 brew "cmake" # クロスプラットフォームビルドツール
 brew "coreutils" # GNU基本コマンドラインツール
 brew "curl" # URLデータ転送ツール
-brew "fd" # findの代替コマンド（高速検索）
 brew "ffmpeg" # 動画・音声処理ツール
-brew "flyctl" # Fly.ioのCLIツール
 brew "fzf" # コマンドラインファジーファインダー
 brew "gh" # GitHub CLI
 brew "glow" # ターミナルMarkdownレンダラー
 brew "gogcli" # App Store等のアプリ情報取得ツール
 brew "ghq" # リモートリポジトリ管理ツール
-brew "git-delta" # gitの差分表示ツール
 brew "git-wt" # Git worktree管理ツール
 brew "heroku" # HerokuのCLIツール
 brew "imagemagick" # 画像処理ツール
@@ -66,7 +62,6 @@ cask "1password" # パスワードマネージャー
 cask "aerospace" # タイリングウィンドウマネージャー
 cask "alt-tab" # Windowsライクなアプリケーション切り替え
 cask "antigravity" # Antigravity
-cask "aqua-voice" # 音声入力アプリ
 cask "appcleaner" # アプリケーション完全削除ツール
 cask "arc" # 革新的なWebブラウザ
 cask "bartender" # メニューバー整理ツール
@@ -84,7 +79,6 @@ cask "google-japanese-ime" # 日本語入力メソッド
 cask "grandperspective" # ディスク使用量視覚化
 cask "gyazo" # スクリーンショット共有
 cask "karabiner-elements" # キーボードカスタマイズ
-cask "lark" # オールインワンコラボレーションプラットフォーム
 cask "libreoffice" # オフィススイート（DOCX/XLSX/PPTX変換用）
 cask "limitless" # AIミーティングアシスタント
 cask "microsoft-teams" # Microsoftのビジネスコミュニケーションプラットフォーム
