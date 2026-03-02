@@ -23,6 +23,7 @@ zplug 'zsh-users/zsh-completions', use:'src/_*', lazy:true
 zplug "mafredri/zsh-async", on:sindresorhus/pure
 zplug "sindresorhus/pure", use:pure.zsh
 zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-autosuggestions"
 zplug "mollifier/cd-gitroot"
 
 if ! zplug check --verbose; then
@@ -33,6 +34,10 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
+
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 # -------------------------------------
 # zshオプション
