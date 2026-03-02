@@ -73,4 +73,4 @@ for ((i=0; i<empty; i++)); do bar="${bar}░"; done
 LABEL="${DIR_NAME}"
 [ -n "$GIT_BRANCH" ] && LABEL="${LABEL}/${GIT_BRANCH}"
 
-echo -e "[${MODEL_DISPLAY}] ${LABEL} | ctx ${bar_color}${bar}${reset} ${current_display}/${context_display}"
+echo -e "[${MODEL_DISPLAY}] ${LABEL} | ctx ${bar_color}${bar} ${percentage}%${reset} ${current_display}/${context_display}"
