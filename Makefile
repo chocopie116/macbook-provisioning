@@ -33,7 +33,7 @@ link/config:
 
 copy/claude:
 	mkdir -p $(HOME)/.claude
-	rsync -a --delete --exclude='skills/' $(PWD)/claude/ $(HOME)/.claude/
+	rsync -a --delete --exclude='skills/' --exclude='projects/' --exclude='memory/' --exclude='teams/' --exclude='tasks/' --exclude='todos/' --exclude='.credentials' --exclude='statsig/' $(PWD)/claude/ $(HOME)/.claude/
 
 unlink:
 	rm -f $(HOME)/.zshrc $(HOME)/.gitconfig $(HOME)/.vimrc $(HOME)/.aerospace.toml
