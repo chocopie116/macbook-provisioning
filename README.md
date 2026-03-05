@@ -45,6 +45,7 @@ bash macos/defaults.sh  # macOS のシステム設定を適用（要再起動）
 ## ディレクトリ構成
 
 ```
+.
 ├── Brewfile              # Homebrew パッケージ定義（VSCode/Cursor 拡張含む）
 ├── Makefile              # プロビジョニングタスク
 ├── zsh/                  # ~/.zshrc
