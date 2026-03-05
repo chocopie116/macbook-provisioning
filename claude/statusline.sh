@@ -60,19 +60,6 @@ format_tokens() {
 current_fmt=$(format_tokens "$current_tokens")
 total_fmt=$(format_tokens "$CONTEXT_SIZE")
 
-# Get PR info for current branch
-PR_STR=""
-if [ -n "$GIT_BRANCH" ] && command -v gh &>/dev/null; then
-  pr_json=$(gh pr view --json number,url 2>/dev/null)
-  if [ -n "$pr_json" ]; then
-    pr_number=$(echo "$pr_json" | jq -r '.number // empty')
-    pr_url=$(echo "$pr_json" | jq -r '.url // empty')
-    if [ -n "$pr_number" ] && [ -n "$pr_url" ]; then
-      PR_STR="  \033]8;;${pr_url}\033\\${cyan}PR #${pr_number}${reset}\033]8;;\033\\"
-    fi
-  fi
-fi
-
 # Get git diff stats against main
 GIT_DIFF_STR=""
 if [ -n "$GIT_BRANCH" ] && git rev-parse &>/dev/null; then
@@ -89,7 +76,7 @@ fi
 
 # --- Line 1: repo / branch + diff ---
 LINE1="📁 ${bold}${DIR_NAME}${reset}"
-[ -n "$GIT_BRANCH" ] && LINE1="${LINE1}  🌿 ${bold}${GIT_BRANCH}${reset}${PR_STR}${GIT_DIFF_STR}"
+[ -n "$GIT_BRANCH" ] && LINE1="${LINE1}  🌿 ${bold}${GIT_BRANCH}${reset}${GIT_DIFF_STR}"
 
 # --- Line 2: model, context, usage ---
 ctx_color=$(color_for_pct "$ctx_percentage")
