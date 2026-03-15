@@ -2,16 +2,25 @@
 
 macOS の環境構築を自動化するプロビジョニングリポジトリ。Homebrew、各種ツール設定、エディタ拡張などを一括管理する。
 
-## クイックスタート
+## セットアップ
+
+新しい Mac でターミナルを開いて、これだけ:
 
 ```bash
-git clone git@github.com:chocopie116/macbook-provisioning.git
-cd macbook-provisioning
-export PATH=$PATH:/opt/homebrew/bin
-make setup              # Homebrew インストール
-make package/install    # パッケージインストール
-make link               # 設定ファイルのリンク作成
+curl -fsSL https://raw.githubusercontent.com/chocopie116/macbook-provisioning/main/bootstrap.sh | bash
 ```
+
+Xcode Command Line Tools のインストーラーが表示された場合は、完了後に再実行してください。
+
+このスクリプトが以下を自動で行います:
+
+1. Xcode Command Line Tools
+2. Homebrew
+3. リポジトリのクローン (`~/ghq/github.com/chocopie116/macbook-provisioning`)
+4. Homebrew パッケージ・Cask・MAS アプリ・VSCode 拡張のインストール
+5. 設定ファイルのシンボリックリンク作成
+6. yazi プラグインのインストール
+7. macOS システム設定の適用
 
 ## コマンド一覧
 
@@ -46,6 +55,7 @@ bash macos/defaults.sh  # macOS のシステム設定を適用（要再起動）
 
 ```
 .
+├── bootstrap.sh          # ワンライナーセットアップスクリプト
 ├── Brewfile              # Homebrew パッケージ定義（VSCode/Cursor 拡張含む）
 ├── Makefile              # プロビジョニングタスク
 ├── zsh/                  # ~/.zshrc
