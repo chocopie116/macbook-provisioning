@@ -72,16 +72,8 @@ bash macos/defaults.sh  # macOS のシステム設定を適用（要再起動）
 ├── claude/               # ~/.claude/*
 ├── npm/                  # グローバル npm パッケージ一覧
 ├── macos/                # macOS 設定スクリプト
-├── bin/                  # ユーティリティスクリプト（takt, mdview）
-└── docs/                 # セットアップドキュメント
+└── bin/                  # ユーティリティスクリプト（takt, mdview）
 ```
-
-## ドキュメント
-
-- [クリーンインストール前の準備](docs/pre-clean-install.md) - macOS リフレッシュ前のチェックリスト
-- [新規 Mac セットアップ手順](docs/fresh-setup.md) - クリーンインストール後のセットアップ
-- [AeroSpace ガイド](docs/aerospace-guide.md) - ウィンドウマネージャーの使い方
-- [Claude Code Skills](docs/claude-code-skills.md) - Claude Code カスタムスキル
 
 ## 手動インストールが必要なアプリ
 

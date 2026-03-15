@@ -10,8 +10,11 @@ echo "==> macOS provisioning start"
 if ! xcode-select -p &>/dev/null; then
   echo "==> Installing Xcode Command Line Tools..."
   xcode-select --install
-  echo "インストール完了後、このスクリプトを再実行してください"
-  exit 0
+  echo "==> ダイアログでインストールを進めてください。完了を待っています..."
+  until xcode-select -p &>/dev/null; do
+    sleep 5
+  done
+  echo "==> Xcode Command Line Tools installed"
 fi
 
 # 2. Homebrew
