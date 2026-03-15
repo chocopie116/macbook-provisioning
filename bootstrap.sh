@@ -41,7 +41,7 @@ cd "$REPO_DIR"
 
 # 4. Brew bundle
 echo "==> Installing packages via Homebrew..."
-brew bundle
+brew bundle || echo "==> Warning: brew bundle で一部失敗がありました。後で再実行してください: brew bundle"
 
 # 5. Symlink configs
 echo "==> Linking config files..."
