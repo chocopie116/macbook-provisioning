@@ -27,4 +27,4 @@ window-save-state = always
 
 # macOS 設定
 macos-titlebar-style = tabs
-macos-option-as-alt = true
+macos-option-as-alt = false
