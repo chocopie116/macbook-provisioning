@@ -6,7 +6,13 @@ REPO_DIR="$HOME/ghq/github.com/chocopie116/macbook-provisioning"
 
 echo "==> macOS provisioning start"
 
-# 1. Xcode Command Line Tools
+# 1. Claude Code
+if ! command -v claude &>/dev/null; then
+  echo "==> Installing Claude Code..."
+  curl -fsSL https://claude.ai/install.sh | bash
+fi
+
+# 2. Xcode Command Line Tools
 if ! xcode-select -p &>/dev/null; then
   echo "==> Installing Xcode Command Line Tools..."
   xcode-select --install
@@ -17,7 +23,7 @@ if ! xcode-select -p &>/dev/null; then
   echo "==> Xcode Command Line Tools installed"
 fi
 
-# 2. Homebrew
+# 3. Homebrew
 if ! command -v brew &>/dev/null; then
   echo "==> Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -27,7 +33,7 @@ if ! command -v brew &>/dev/null; then
   fi
 fi
 
-# 3. Clone repository
+# 4. Clone repository
 if [ ! -d "$REPO_DIR" ]; then
   echo "==> Cloning repository..."
   mkdir -p "$(dirname "$REPO_DIR")"
@@ -39,21 +45,21 @@ fi
 
 cd "$REPO_DIR"
 
-# 4. Brew bundle
+# 5. Brew bundle
 echo "==> Installing packages via Homebrew..."
 brew bundle || echo "==> Warning: brew bundle で一部失敗がありました。後で再実行してください: brew bundle"
 
-# 5. Symlink configs
+# 6. Symlink configs
 echo "==> Linking config files..."
 make link
 
-# 6. Yazi plugins
+# 7. Yazi plugins
 if command -v ya &>/dev/null; then
   echo "==> Installing yazi plugins..."
   ya pkg install
 fi
 
-# 7. macOS defaults
+# 8. macOS defaults
 echo "==> Applying macOS defaults..."
 bash macos/defaults.sh
 
