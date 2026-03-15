@@ -15,7 +15,7 @@ tap "stripe/stripe-cli" # Stripe CLIツール
 brew "asdf" # 複数の言語のバージョン管理ツール
 brew "automake" # Makefileの自動生成ツール
 brew "blackhole-2ch" # 画面収録用ツール
-brew "borders" # ウィンドウにボーダーを追加するツール
+brew "FelixKratz/formulae/borders" # ウィンドウにボーダーを追加するツール
 brew "brew-file" # Brewfileの管理ツール
 brew "cmake" # クロスプラットフォームビルドツール
 brew "coreutils" # GNU基本コマンドラインツール
