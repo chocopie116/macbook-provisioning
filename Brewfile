@@ -81,6 +81,7 @@ cask "gyazo" # スクリーンショット共有
 cask "karabiner-elements" # キーボードカスタマイズ
 cask "libreoffice" # オフィススイート（DOCX/XLSX/PPTX変換用）
 cask "limitless" # AIミーティングアシスタント
+cask "localsend" # ローカルネットワークファイル共有
 cask "microsoft-teams" # Microsoftのビジネスコミュニケーションプラットフォーム
 cask "ngrok" # ローカル環境の公開
 cask "notion" # ノートアプリ
