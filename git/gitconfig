@@ -56,6 +56,9 @@
   smudge = git media smudge %f
   required = true
 
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+
 [ghq]
   root = ~/ghq
 
